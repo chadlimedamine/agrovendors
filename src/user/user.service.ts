@@ -1,0 +1,96 @@
+import { Injectable } from '@nestjs/common';
+import { User } from '@prisma/client';
+import { PrismaService } from 'src/prisma/prisma.service';
+
+@Injectable()
+export class UserService {
+    constructor(private prisma: PrismaService){}
+    
+    async getUsers(filterOn: string | undefined, filterQuery: string | undefined, 
+        sortOn: string | undefined, isAscending: boolean = true, 
+        pageNumber: number = 1, pageSize: number = 10){
+
+            // ########## this is an optimized function to perform ####################
+            // ########## filtering, sorting, and pagination       ####################
+
+            // the list of users to be returned
+            let users: User[];
+
+            // filtering
+            if (filterOn){
+                if (filterOn === 'fullName'){
+                    users = await this.prisma.user.findMany({
+                        where: {
+                            fullName: {
+                                contains: filterQuery,
+                                mode: 'insensitive',
+                            }
+                        }
+                    });
+                }
+                else if (filterOn === 'associatedText'){
+                    users = await this.prisma.user.findMany({
+                        where: {
+                            associatedText: {
+                                contains: filterQuery,
+                                mode: 'insensitive',
+                            }
+                        }
+                    });
+                }
+            } else {
+                // if there is no filterOn query provided just return all the users
+                users = await this.prisma.user.findMany();
+            }
+
+            // if (sortOn){
+            //     if (sortOn === 'fullName'){
+            //         users = isAscending? await this.prisma.user.findMany({
+            //             orderBy: {
+            //                 fullName: 'asc',
+            //             }
+            //         }) : await this.prisma.user.findMany({
+            //             orderBy: {
+            //                 fullName: 'desc',
+            //             }
+            //         });
+            //     }
+            //     else if (sortOn === 'associatedText'){
+            //         users = isAscending? await this.prisma.user.findMany({
+            //             orderBy: {
+            //                 associatedText: 'asc',
+            //             }
+            //         }) : await this.prisma.user.findMany({
+            //             orderBy: {
+            //                 associatedText: 'desc',
+            //             }
+            //         });
+            //     }
+            // }
+
+            // sorting
+            if (sortOn){
+                if (sortOn === 'fullName'){
+                    users = isAscending ? users.sort((a, b) => a.fullName.localeCompare(b.fullName))
+                    : users.sort((a, b) => b.fullName.localeCompare(a.fullName));
+                }
+                else if (sortOn === 'associatedText'){
+                    users = isAscending? users.sort((a, b) => a.associatedText.localeCompare(b.associatedText))
+                    : users.sort((a, b) => b.associatedText.localeCompare(a.associatedText));
+                }
+            }
+
+            // pagination
+            const skipResults = (pageNumber - 1) * pageSize;
+            const lastItem = pageNumber * pageSize;
+
+            // users = await this.prisma.user.findMany({
+            //     skip: skipResults,
+            //     take: pageSize,
+            // });
+
+            users = users.slice(skipResults, lastItem);
+
+            return users;
+    }
+}
