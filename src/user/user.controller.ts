@@ -1,9 +1,11 @@
 import { Controller, Get, ParseBoolPipe, ParseIntPipe, Query, UseGuards } from '@nestjs/common';
 import { User } from '@prisma/client';
-import { GetUser } from 'src/auth/decorator';
+import { GetUser, Roles } from 'src/auth/decorator';
 import { JwtGuard } from 'src/auth/guard/jwt.guard';
 import { UserService } from './user.service';
 import { UserQueryDto } from './dto/user.query.dto/user.query.dto';
+import { Role } from 'src/auth/enum/role.enum';
+import { RolesGuard } from 'src/auth/guard/index.';
 
 @Controller('users')
 export class UserController {
@@ -15,6 +17,8 @@ export class UserController {
         return `phoneNumber: ${phoneNumber} and user info: ${JSON.stringify(user)}`;
     }
     
+    @Roles(Role.SuperAdmin)
+    @UseGuards(JwtGuard, RolesGuard)
     @Get()
     getUsers(@Query() query: UserQueryDto){
             

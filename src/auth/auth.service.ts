@@ -28,6 +28,7 @@ export class AuthService {
                 data: {
                     fullName: authDto.fullName,
                     hash: hash,
+                    roles: authDto.roles,
                 }
             });
 
