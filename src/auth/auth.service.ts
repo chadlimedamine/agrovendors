@@ -5,6 +5,7 @@ import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { AuthSigninDto, AuthSignupDto } from './dto';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
+import { Role } from './enum/role.enum';
 
 @Injectable()
 export class AuthService {
@@ -28,7 +29,7 @@ export class AuthService {
                 data: {
                     fullName: authDto.fullName,
                     hash: hash,
-                    roles: authDto.roles,
+                    roles: [Role.User]
                 }
             });
 

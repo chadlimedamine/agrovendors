@@ -1,5 +1,5 @@
 import { Type } from "class-transformer";
-import { IsEmail, IsNotEmpty, IsString } from "class-validator";
+import {IsNotEmpty, IsString } from "class-validator";
 
 export class AuthSignupDto {
     @IsString()
@@ -14,7 +14,7 @@ export class AuthSignupDto {
     @IsNotEmpty()
     password: string;
 
-    @IsNotEmpty()
-    @Type(() => String)
-    roles: string[]
+    // @IsNotEmpty()
+    // @Type(() => String)
+    // roles: string[]
 }

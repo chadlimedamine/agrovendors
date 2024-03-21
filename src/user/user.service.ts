@@ -1,5 +1,6 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
 import { User } from '@prisma/client';
+import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
@@ -92,5 +93,49 @@ export class UserService {
             users = users.slice(skipResults, lastItem);
 
             return users;
+    }
+
+    async getUserById(id: number){
+        try{
+            const user = await this.prisma.user.findUniqueOrThrow({
+                where: {
+                    id: id,
+                }
+            });
+            delete user.hash;
+            return user;
+        } catch (error){
+            if (error instanceof PrismaClientKnownRequestError){
+                if (error.code === 'P2025'){
+                    throw new NotFoundException("User doesn't exist!");
+                }else{
+                    throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+                }
+            }else{
+                throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+            } 
+        }
+    }
+
+    async deleteUser(id: number){
+        try{
+            // the related phone numbers will be deleted with cascade delete applied on the table
+            const deleteUser = await this.prisma.user.delete({
+                where: {
+                    id: id,
+                }
+            });
+            return deleteUser;
+        } catch (error){
+            if (error instanceof PrismaClientKnownRequestError){
+                if (error.code === 'P2025'){
+                    throw new NotFoundException("User doesn't exist!");
+                }else{
+                    throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+                }
+            }else{
+                throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+            } 
+        }
     }
 }

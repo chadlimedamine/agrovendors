@@ -1,4 +1,4 @@
-import { Controller, Get, ParseBoolPipe, ParseIntPipe, Query, UseGuards } from '@nestjs/common';
+import { Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseBoolPipe, ParseIntPipe, Post, Query, UseGuards } from '@nestjs/common';
 import { User } from '@prisma/client';
 import { GetUser, Roles } from 'src/auth/decorator';
 import { JwtGuard } from 'src/auth/guard/jwt.guard';
@@ -25,5 +25,19 @@ export class UserController {
         return this.userService.getUsers(query.filterOn, query.filterQuery, 
                                         query.sortOn, query.isAscending ?? true,
                                         query.pageNumber ?? 1, query.pageSize ?? 10);
+    }
+
+
+    @Get(':id')
+    getUserById(@Param('id', ParseIntPipe) id: number){
+        return this.userService.getUserById(id);
+    }
+
+    @Roles(Role.SuperAdmin)
+    @UseGuards(JwtGuard, RolesGuard)
+    @HttpCode(HttpStatus.NO_CONTENT)
+    @Delete(':id')
+    deleteUserByid(@Param('id', ParseIntPipe) id: number){
+        return this.userService.deleteUser(id);
     }
 }
