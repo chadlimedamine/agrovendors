@@ -1,20 +1,20 @@
 import { Injectable } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { PassportStrategy } from "@nestjs/passport";
-import { Phone, User } from "@prisma/client";
 import { ExtractJwt, Strategy } from "passport-jwt";
 import { PrismaService } from "src/prisma/prisma.service";
 
+
 @Injectable()
-export class JwtStrategy extends PassportStrategy(Strategy){
-    constructor(private prisma: PrismaService, config: ConfigService){
+export class AccessTokenJwtStrategy extends PassportStrategy(Strategy, 'jwt') {
+    constructor(private prisma: PrismaService, config: ConfigService) {
         super({
             jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-            secretOrKey: config.get('JWT_SECRET'),
+            secretOrKey: config.get('ACCESS_TOKEN_JWT_SECRET'),
         });
     }
 
-    async validate(payload: {sub: number, phoneNumber: string}){
+    async validate(payload: { sub: number; phoneNumber: string; }) {
 
         const user = await this.prisma.user.findUnique({
             where: {
@@ -27,11 +27,8 @@ export class JwtStrategy extends PassportStrategy(Strategy){
         // type PhoneNumber = {
         //     phoneNumber: string;
         //     }
-
         // type UserWithPhone = User & PhoneNumber;
-
         // const userWithPhone: UserWithPhone = {...user, phoneNumber: payload.phoneNumber};
-
-        return {...user, phoneNumber: payload.phoneNumber};
+        return { ...user, phoneNumber: payload.phoneNumber };
     }
 }

@@ -19,6 +19,7 @@ model User {
   updatedAt DateTime @updatedAt
   fullName String
   hash String?
+  hashedRefreshToken String?
   facebookProfileUrl String?
   associatedText String?
   phoneNumbers Phone[]

@@ -21,8 +21,10 @@ export class AuthService {
             // generate a salt
             const salt = await bcrypt.genSalt();
 
-            // generate hash
+            // generate password hash
             const hash = await bcrypt.hash(authDto.password, salt);
+
+            //  generate 
 
             // save user to DB
             const user = await this.prisma.user.create({
@@ -50,7 +52,9 @@ export class AuthService {
             }
 
             // return the newly created user
-            return this.signToken(user.id, authDto.phoneNumber);
+            const tokens = await this.getTokens(user.id, authDto.phoneNumber);
+            await this.updateRefreshTokenHash(user.id, tokens.refresh_token);
+            return tokens;
         } catch(error){
             if (error instanceof PrismaClientKnownRequestError){
                 if (error.code === 'P2002'){
@@ -98,8 +102,11 @@ export class AuthService {
 
                 if (!pwMatches)
                     throw new ForbiddenException('Password is incorrect!');
-                else
-                    return this.signToken(user.id, phoneNumber.phoneNumber);
+                else{
+                    const tokens = await this.getTokens(user.id, phoneNumber.phoneNumber);
+                    await this.updateRefreshTokenHash(user.id, tokens.refresh_token);
+                    return tokens;
+                }
             }else{
                 throw new NotFoundException("User doesn't exist");
             }
@@ -118,24 +125,91 @@ export class AuthService {
         }
     }
 
-    async signToken(userId: Number, phoneNumber: String): Promise<{access_token: String}>{
+    async logout(userId: number){
+        await this.prisma.user.update({
+            where: {
+                id: userId,
+            },
+            data: {
+                hashedRefreshToken: null,
+            }
+        });
+    }
+
+    async refreshTheTokens(userId: number, phoneNumber: string, refresh_token: string){
+        // get user
+        const user  = await this.prisma.user.findUnique({
+            where: {
+                id: userId,
+            }
+        });
+
+        // get hashedrefreshToken
+        const hashedrefreshToken = user.hashedRefreshToken;
+
+        // compare the provided refresh token with the hashed one to see if the user is loged out
+        const refreshTokenhashMachtes = await bcrypt.compare(refresh_token, hashedrefreshToken ?? '');
+
+        if (refreshTokenhashMachtes){
+            // get tokens
+            const tokens = await this.getTokens(user.id, phoneNumber);
+
+            // update the refresh token hash to DB
+            this.updateRefreshTokenHash(user.id, tokens.refresh_token);
+
+            // return ther tokens
+            return tokens;
+        }else{
+            throw new ForbiddenException('The user is logged out!');
+        }
+    }
+
+    async updateRefreshTokenHash(userid: number, refresh_token: string){
+        // hash the refresh token
+        const hashedrefreshToken = await bcrypt.hash(refresh_token, 10);
+
+        // update the hash to DB
+        await this.prisma.user.update({
+            where: {
+                id: userid,
+            },
+            data: {
+                hashedRefreshToken: hashedrefreshToken,
+            }
+        });
+    }
+
+    async getTokens(userId: Number, phoneNumber: String): Promise<{access_token: String, refresh_token: string}>{
         const payload = {
             sub: userId,
             phoneNumber
         };
 
-        const secret = this.config.get('JWT_SECRET');
+        const access_token_secret = this.config.get('ACCESS_TOKEN_JWT_SECRET');
+        const refresh_token_secret = this.config.get('REFRESH_TOKEN_JWT_SECRET');
 
-        const token = await this.jwt.signAsync(
-            payload,
-            {
-                secret: secret,
-                expiresIn: '15m',
-            },
-        );
+
+        const [access_token, refresh_token] = await Promise.all([
+            this.jwt.signAsync(
+                payload,
+                {
+                    secret: access_token_secret,
+                    expiresIn: 60 * 15,
+                },
+            ),
+            this.jwt.signAsync(
+                payload,
+                {
+                    secret: refresh_token_secret,
+                    expiresIn: 60 * 60 * 24 * 7,
+                },
+            )
+        ]); 
+        
 
         return {
-            access_token: token,
+            access_token: access_token,
+            refresh_token: refresh_token,
         };
     }
 }
