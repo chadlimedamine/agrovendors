@@ -4,9 +4,9 @@ import { GetUser } from 'src/auth/decorator';
 import { JwtGuard } from 'src/auth/guard/jwt.guard';
 import { UserService } from './user.service';
 import { UserQueryDto } from './dto/user.query.dto/user.query.dto';
-import { Role } from 'src/auth/enum/role.enum';
 import { PermissionsGuard } from 'src/authorization/permissions';
 import { Permissions } from 'src/authorization/decorator';
+import {Permission} from '@prisma/client';
 
 @Controller('users')
 export class UserController {
@@ -18,7 +18,8 @@ export class UserController {
         return `phoneNumber: ${phoneNumber} and user info: ${JSON.stringify(user)}`;
     }
     
-    @UseGuards(JwtGuard)
+    @UseGuards(JwtGuard, PermissionsGuard)
+    @Permissions(Permission.ReadUsers)
     @Get()
     getUsers(@Query() query: UserQueryDto){
             
@@ -28,13 +29,14 @@ export class UserController {
     }
 
     @UseGuards(JwtGuard, PermissionsGuard)
-    @Permissions('read:userById')
+    @Permissions(Permission.ReadUserById)
     @Get(':id')
     getUserById(@Param('id', ParseIntPipe) id: number){
         return this.userService.getUserById(id);
     }
 
-    @UseGuards(JwtGuard)
+    @UseGuards(JwtGuard, PermissionsGuard)
+    @Permissions(Permission.DeleteUserByid)
     @HttpCode(HttpStatus.NO_CONTENT)
     @Delete(':id')
     deleteUserByid(@Param('id', ParseIntPipe) id: number){

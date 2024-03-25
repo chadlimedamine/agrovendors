@@ -29,16 +29,6 @@ export class UserService {
                         }
                     });
                 }
-                else if (filterOn === 'associatedText'){
-                    users = await this.prisma.user.findMany({
-                        where: {
-                            associatedText: {
-                                contains: filterQuery,
-                                mode: 'insensitive',
-                            }
-                        }
-                    });
-                }
             } else {
                 // if there is no filterOn query provided just return all the users
                 users = await this.prisma.user.findMany();
@@ -74,10 +64,6 @@ export class UserService {
                 if (sortOn === 'fullName'){
                     users = isAscending ? users.sort((a, b) => a.fullName.localeCompare(b.fullName))
                     : users.sort((a, b) => b.fullName.localeCompare(a.fullName));
-                }
-                else if (sortOn === 'associatedText'){
-                    users = isAscending? users.sort((a, b) => a.associatedText.localeCompare(b.associatedText))
-                    : users.sort((a, b) => b.associatedText.localeCompare(a.associatedText));
                 }
             }
 

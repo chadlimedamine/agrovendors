@@ -5,7 +5,6 @@ import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { AuthSigninDto, AuthSignupDto } from './dto';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
-import { Role } from './enum/role.enum';
 
 @Injectable()
 export class AuthService {
@@ -31,7 +30,7 @@ export class AuthService {
                 data: {
                     fullName: authDto.fullName,
                     hash: hash,
-                    roles: [Role.User]
+                    roleId: 1
                 }
             });
 
@@ -52,7 +51,7 @@ export class AuthService {
             }
 
             // return the newly created user
-            const tokens = await this.getTokens(user.id, authDto.phoneNumber);
+            const tokens = await this.getTokens(user.id, authDto.phoneNumber, user.roleId);
             await this.updateRefreshTokenHash(user.id, tokens.refresh_token);
             return tokens;
         } catch(error){
@@ -103,7 +102,7 @@ export class AuthService {
                 if (!pwMatches)
                     throw new ForbiddenException('Password is incorrect!');
                 else{
-                    const tokens = await this.getTokens(user.id, phoneNumber.phoneNumber);
+                    const tokens = await this.getTokens(user.id, phoneNumber.phoneNumber, user.roleId);
                     await this.updateRefreshTokenHash(user.id, tokens.refresh_token);
                     return tokens;
                 }
@@ -152,7 +151,7 @@ export class AuthService {
 
         if (refreshTokenhashMachtes){
             // get tokens
-            const tokens = await this.getTokens(user.id, phoneNumber);
+            const tokens = await this.getTokens(user.id, phoneNumber, user.roleId);
 
             // update the refresh token hash to DB
             this.updateRefreshTokenHash(user.id, tokens.refresh_token);
@@ -179,10 +178,30 @@ export class AuthService {
         });
     }
 
-    async getTokens(userId: Number, phoneNumber: String): Promise<{access_token: String, refresh_token: string}>{
+    async getTokens(userId: Number, phoneNumber: String, roleId: number): Promise<{access_token: String, refresh_token: string}>{
+        // get the role of the user
+        const role = await this.prisma.role.findFirst({
+            where: {
+                id: roleId
+            }
+        });
+
+        // get the permissions associated with this role
+        const permissions = await this.prisma.rolePermissions.findMany({
+            where: {
+                roleId: roleId,
+            }
+        });
+
+        // get the permisson names 
+        const permissionNames = permissions.map(permission => permission.permission);
+
+        // create a jwt paylaod
         const payload = {
             sub: userId,
-            phoneNumber
+            phoneNumber,
+            role: role.name,
+            permissions: permissionNames
         };
 
         const access_token_secret = this.config.get('ACCESS_TOKEN_JWT_SECRET');
