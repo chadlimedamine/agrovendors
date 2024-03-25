@@ -32,7 +32,40 @@ async function main() {
         }
     }
   });
-  console.log({ mohamed, booba })
+  const userRole = await prisma.role.upsert({
+    where: {
+        id: 1,
+    },
+    update: {},
+    create: {
+        name: 'user',
+        permissions: {
+            createMany: {
+                data: [],
+            }
+        }
+    }
+  });
+
+  const adminRole = await prisma.role.upsert({
+    where: {
+        id: 2,
+    },
+    update: {},
+    create: {
+        name: 'admin',
+        permissions: {
+            createMany: {
+                data: [
+                    {permission: 'ReadUsers', assignedById: 1},
+                    {permission: 'ReadUserById', assignedById: 1},
+                    {permission: 'DeleteUserByid', assignedById: 1},
+                ],
+            }
+        }
+    },
+  });
+  console.log({ mohamed, booba, userRole, adminRole})
 }
 main()
   .then(async () => {
