@@ -65,7 +65,31 @@ async function main() {
         }
     },
   });
-  console.log({ mohamed, booba, userRole, adminRole})
+  const updateMohamed = await prisma.user.update({
+    where: {
+        id: 1,
+    },
+    data: {
+        role: {
+            connect: {
+                id: 2,
+            }
+        }
+    }
+  });
+  const updateBooba = await prisma.user.update({
+    where: {
+        id: 2,
+    },
+    data: {
+        role: {
+            connect: {
+                id: 1,
+            }
+        }
+    }
+  });
+  console.log({ mohamed, booba, userRole, adminRole, updateMohamed, updateBooba})
 }
 main()
   .then(async () => {
