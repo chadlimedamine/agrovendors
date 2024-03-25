@@ -14,7 +14,7 @@ export class AccessTokenJwtStrategy extends PassportStrategy(Strategy, 'jwt') {
         });
     }
 
-    async validate(payload: { sub: number; phoneNumber: string; }) {
+    async validate(payload: { sub: number; phoneNumber: string; role: string; permissions: string[]}) {
 
         const user = await this.prisma.user.findUnique({
             where: {
@@ -29,6 +29,6 @@ export class AccessTokenJwtStrategy extends PassportStrategy(Strategy, 'jwt') {
         //     }
         // type UserWithPhone = User & PhoneNumber;
         // const userWithPhone: UserWithPhone = {...user, phoneNumber: payload.phoneNumber};
-        return { ...user, phoneNumber: payload.phoneNumber };
+        return { ...user, phoneNumber: payload.phoneNumber, role: payload.role, permissions: payload.permissions };
     }
 }

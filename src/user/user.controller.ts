@@ -1,11 +1,12 @@
-import { Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseBoolPipe, ParseIntPipe, Post, Query, UseGuards } from '@nestjs/common';
+import { Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseBoolPipe, ParseIntPipe, Post, Query, SetMetadata, UseGuards } from '@nestjs/common';
 import { User } from '@prisma/client';
-import { GetUser, Roles } from 'src/auth/decorator';
+import { GetUser } from 'src/auth/decorator';
 import { JwtGuard } from 'src/auth/guard/jwt.guard';
 import { UserService } from './user.service';
 import { UserQueryDto } from './dto/user.query.dto/user.query.dto';
-import { Role } from 'src/auth/enum/role.enum';
-import { RolesGuard } from 'src/auth/guard/index.';
+import { PermissionsGuard } from 'src/authorization/permissions';
+import { Permissions } from 'src/authorization/decorator';
+import {Permission} from '@prisma/client';
 
 @Controller('users')
 export class UserController {
@@ -17,8 +18,8 @@ export class UserController {
         return `phoneNumber: ${phoneNumber} and user info: ${JSON.stringify(user)}`;
     }
     
-    @Roles(Role.SuperAdmin)
-    @UseGuards(JwtGuard, RolesGuard)
+    @UseGuards(JwtGuard, PermissionsGuard)
+    @Permissions(Permission.ReadUsers)
     @Get()
     getUsers(@Query() query: UserQueryDto){
             
@@ -27,14 +28,15 @@ export class UserController {
                                         query.pageNumber ?? 1, query.pageSize ?? 10);
     }
 
-
+    @UseGuards(JwtGuard, PermissionsGuard)
+    @Permissions(Permission.ReadUserById)
     @Get(':id')
     getUserById(@Param('id', ParseIntPipe) id: number){
         return this.userService.getUserById(id);
     }
 
-    @Roles(Role.SuperAdmin)
-    @UseGuards(JwtGuard, RolesGuard)
+    @UseGuards(JwtGuard, PermissionsGuard)
+    @Permissions(Permission.DeleteUserByid)
     @HttpCode(HttpStatus.NO_CONTENT)
     @Delete(':id')
     deleteUserByid(@Param('id', ParseIntPipe) id: number){
