@@ -1,6 +1,9 @@
 import { PrismaClient } from '@prisma/client'
+import * as bcrypt from 'bcrypt'
+
 const prisma = new PrismaClient()
 async function main() {
+    const passwordHash = await bcrypt.hash('blablablapassword', 10); 
   const mohamed = await prisma.user.upsert({
     where: {
         id: 1,
@@ -8,6 +11,7 @@ async function main() {
     update: {},
     create: {
         fullName: 'Mohamed Amine Chadli',
+        hash: passwordHash,
         phoneNumbers: {
             create: {
                 phoneNumber: '0657558214',
@@ -22,6 +26,7 @@ async function main() {
     update: {},
     create: {
         fullName: 'Aboubakr Belgacem',
+        hash: passwordHash,
         phoneNumbers: {
             createMany: {
                 data: [
