@@ -22,6 +22,8 @@ model User {
   hashedRefreshToken String?
   facebookProfileUrl String?
   phoneNumbers Phone[]
+  roleId Int?
+  role Role? @relation(fields: [roleId], references: [id])
   grantingPermissions RolePermissions[]
   offers Offer[]
 }
@@ -50,12 +52,13 @@ model Role {
   updatedAt DateTime @updatedAt
   name String 
   permissions RolePermissions[]
+  users User[]
 }
 
 enum Permission {
-  readUserById 
-  readUsers
-  deleteUserByid
+  ReadUserById 
+  ReadUsers
+  DeleteUserByid
 }
 
 model RolePermissions {
