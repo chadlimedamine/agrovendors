@@ -21,9 +21,9 @@ model User {
   hash String?
   hashedRefreshToken String?
   facebookProfileUrl String?
-  associatedText String?
   phoneNumbers Phone[]
-  roles String[]
+  grantingPermissions RolePermissions[]
+  offers Offer[]
 }
 
 model Phone {
@@ -33,4 +33,41 @@ model Phone {
   phoneNumber String @unique
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId Int
+}
+
+model Offer {
+  id Int @id @default(autoincrement())
+  name String?
+  description String?
+  image String?
+  ownerId Int
+  owner User @relation(fields: [ownerId], references: [id])
+}
+
+model Role {
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name String 
+  permissions RolePermissions[]
+}
+
+model Permission {
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name String
+  roles RolePermissions[]
+}
+
+model RolePermissions {
+  roleId Int
+  role Role @relation(fields: [roleId], references: [id])
+  permissionid Int
+  permission Permission @relation(fields: [permissionid], references: [id])
+  assignedAt DateTime @default(now())
+  assignedById Int
+  assignedBy User @relation(fields: [assignedById], references: [id])
+
+  @@id([roleId, permissionid])
 }
