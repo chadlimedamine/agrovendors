@@ -52,22 +52,18 @@ model Role {
   permissions RolePermissions[]
 }
 
-model Permission {
-  id Int @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  name String
-  roles RolePermissions[]
+enum Permission {
+  readUserById 
+  readUsers
+  deleteUserByid
 }
 
 model RolePermissions {
+  id Int @id @default(autoincrement())
   roleId Int
   role Role @relation(fields: [roleId], references: [id])
-  permissionid Int
-  permission Permission @relation(fields: [permissionid], references: [id])
+  permission Permission 
   assignedAt DateTime @default(now())
   assignedById Int
   assignedBy User @relation(fields: [assignedById], references: [id])
-
-  @@id([roleId, permissionid])
 }
