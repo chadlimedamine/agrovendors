@@ -6,7 +6,8 @@ import { UserService } from './user.service';
 import { UserQueryDto } from './dto/user.query.dto/user.query.dto';
 import { Role } from 'src/auth/enum/role.enum';
 import { RolesGuard } from 'src/auth/guard/index.';
-import { PermissionsGuard } from 'src/authorization/permissions/permissions.guard';
+import { PermissionsGuard } from 'src/authorization/permissions';
+import { Permissions } from 'src/authorization/decorator';
 
 @Controller('users')
 export class UserController {
@@ -29,7 +30,7 @@ export class UserController {
     }
 
     @UseGuards(JwtGuard, PermissionsGuard)
-    @SetMetadata('permissions', ['read:userById'])
+    @Permissions('read:userById')
     @Get(':id')
     getUserById(@Param('id', ParseIntPipe) id: number){
         return this.userService.getUserById(id);
