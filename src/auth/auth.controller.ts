@@ -23,13 +23,13 @@ export class AuthController {
 
     @UseGuards(JwtGuard)
     @Post('logout')
-    @HttpCode(HttpStatus.OK)
+    @HttpCode(HttpStatus.NO_CONTENT)
     logout(@GetUser('id') userId: number){
         return this.authService.logout(userId);
     }
 
     @UseGuards(JwtRefreshTokenGuard)
-    @Post('refresh')
+    @Post('refresh-tokens')
     @HttpCode(HttpStatus.OK)
     refreshTokens(@GetUser('id') userId: number, 
                 @GetUser('phoneNumber') phoneNumber: string, 
