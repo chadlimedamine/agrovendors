@@ -25,7 +25,8 @@ model User {
   roleId Int?
   role Role? @relation(fields: [roleId], references: [id])
   grantingPermissions RolePermissions[]
-  offers Offer[]
+  offers Offer[] @relation("ownOffers")
+  creatdOffers Offer[] @relation("createdOffers")
 }
 
 model Phone {
@@ -39,11 +40,23 @@ model Phone {
 
 model Offer {
   id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
   name String?
   description String?
-  image String?
+  images Image[]
   ownerId Int
-  owner User @relation(fields: [ownerId], references: [id])
+  owner User @relation("ownOffers", fields: [ownerId], references: [id])
+  createdById Int
+  createdBy User @relation("createdOffers", fields: [createdById], references: [id])
+}
+
+model Image {
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  path String
+  belognsToId Int
+  belognsTo Offer @relation(fields: [belognsToId], references: [id])
 }
 
 model Role {
