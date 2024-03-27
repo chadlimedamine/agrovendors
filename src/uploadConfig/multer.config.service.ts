@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { MulterModuleOptions, MulterOptionsFactory } from "@nestjs/platform-express";
-import multer from "multer";
+import * as multer from "multer";
 import {v4 as uuid} from 'uuid';
 
 @Injectable()
