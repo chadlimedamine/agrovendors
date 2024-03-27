@@ -4,7 +4,6 @@ import { GetUser } from 'src/auth/decorator';
 import { CreateOfferDto } from './dto/create.offer.dto';
 import { OfferService } from './offer.service';
 import { FilesInterceptor } from '@nestjs/platform-express';
-import multer, { StorageEngine } from 'multer';
 
 @Controller('offers')
 export class OfferController {
