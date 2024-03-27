@@ -25,7 +25,8 @@ model User {
   roleId Int?
   role Role? @relation(fields: [roleId], references: [id])
   grantingPermissions RolePermissions[]
-  offers Offer[]
+  offers Offer[] @relation("ownOffers")
+  creatdOffers Offer[] @relation("createdOffers")
 }
 
 model Phone {
@@ -45,7 +46,9 @@ model Offer {
   description String?
   images Image[]
   ownerId Int
-  owner User @relation(fields: [ownerId], references: [id])
+  owner User @relation("ownOffers", fields: [ownerId], references: [id])
+  createdById Int
+  createdBy User @relation("createdOffers", fields: [createdById], references: [id])
 }
 
 model Image {
