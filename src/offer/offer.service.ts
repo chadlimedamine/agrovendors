@@ -39,5 +39,6 @@ export class OfferService {
                 }
             }
         }));
+
     }
 }

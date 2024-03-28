@@ -8,7 +8,7 @@ export class MulterConfigService implements MulterOptionsFactory {
   createMulterOptions(): MulterModuleOptions {
 
     const imagesOfferStorageEngine = multer.diskStorage({
-        destination: 'offerImages/',
+        destination: 'Images/',
         filename: (req, file, cb) => {
             const uniqueFileName = Date.now() + '_' + uuid();
             cb(null, uniqueFileName + file.filename)

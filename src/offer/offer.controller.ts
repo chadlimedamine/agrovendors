@@ -1,32 +1,49 @@
-import { Body, Controller, FileTypeValidator, MaxFileSizeValidator, Param, ParseFilePipe, ParseIntPipe, Post, UploadedFiles, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, FileTypeValidator, MaxFileSizeValidator, Param, ParseFilePipe, ParseIntPipe, Post, UploadedFiles, UseGuards, UseInterceptors } from '@nestjs/common';
 import { User } from '@prisma/client';
 import { GetUser } from 'src/auth/decorator';
 import { CreateOfferDto } from './dto/create.offer.dto';
 import { OfferService } from './offer.service';
-import { FilesInterceptor } from '@nestjs/platform-express';
+import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
+import { JwtGuard } from 'src/auth/guard/jwt.guard';
+import { diskStorage } from 'multer';
+import {v4 as uuid} from 'uuid';
+
 
 @Controller('offers')
 export class OfferController {
     constructor(private offerService: OfferService){}
 
     @Post()
+    @UseGuards(JwtGuard)
     createOwnOffer(@GetUser() user: User, @Body() offer: CreateOfferDto){
         return this.offerService.createOwnOffer(user.id, offer.name, offer.description);
     }
 
-    @Post('images/:id')
-    @UseInterceptors(FilesInterceptor('files', 12))
+    @Post(':id/images')
+    @UseGuards(JwtGuard)
+    @UseInterceptors(FilesInterceptor('files', 12, {
+        storage: diskStorage({
+          destination: function (req: any, file, cb) {
+            var newAbsoluteDir = "offerImages";
+            cb(null, newAbsoluteDir);
+          },
+          filename: function (req, file, cb) {
+            cb(null, Date.now() + uuid() + ".jpeg");
+          },
+        }),
+      }))
     uploadImages(@Param('id', ParseIntPipe) offerId: number,
     @UploadedFiles(
         new ParseFilePipe(
             {
                 validators: [
-                    new MaxFileSizeValidator({maxSize: 1000}),
+                    new MaxFileSizeValidator({maxSize: 10000}),
                     new FileTypeValidator({fileType: 'jpeg'}),
                 ]
             }
         )
     ) files: Array<Express.Multer.File>){
+
         return this.offerService.uplaodImages(offerId, files);
     }
 }

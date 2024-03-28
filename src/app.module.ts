@@ -6,7 +6,6 @@ import { ConfigModule } from '@nestjs/config';
 import { AuthorizationModule } from './authorization/authorization.module';
 
 import { OfferModule } from './offer/offer.module';
-import { OfferController } from './offer/offer.controller';
 import { MulterModule } from '@nestjs/platform-express';
 import { MulterConfigService } from './uploadConfig/multer.config.service';
 
@@ -18,9 +17,8 @@ import { MulterConfigService } from './uploadConfig/multer.config.service';
     PrismaModule, 
     AuthorizationModule, 
     OfferModule,
-    MulterModule.registerAsync({
-      useClass: MulterConfigService
+    MulterModule.register({
+      dest: 'offerImages'
     })],
-  controllers: [OfferController, ],
 })
 export class AppModule {}
