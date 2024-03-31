@@ -7,6 +7,8 @@ import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
 import { JwtGuard } from 'src/auth/guard/jwt.guard';
 import { diskStorage } from 'multer';
 import {v4 as uuid} from 'uuid';
+import { existsSync, mkdirSync } from 'fs';
+import * as path from 'path';
 
 
 @Controller('offers')
@@ -24,7 +26,18 @@ export class OfferController {
     @UseInterceptors(FilesInterceptor('files', 12, {
         storage: diskStorage({
           destination: function (req: any, file, cb) {
-            var newAbsoluteDir = "offerImages";
+            const imagesDir = "Images";
+            const newAbsoluteDir = path.join(imagesDir, "Offers");
+            try{
+              if (!existsSync(imagesDir)){
+                mkdirSync(imagesDir);
+              }
+              if (!existsSync(newAbsoluteDir)){
+                mkdirSync(newAbsoluteDir);
+              }
+            }catch(error){
+              console.log(error);
+            }
             cb(null, newAbsoluteDir);
           },
           filename: function (req, file, cb) {
