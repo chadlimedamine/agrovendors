@@ -1,4 +1,4 @@
-import { Body, Controller, FileTypeValidator, MaxFileSizeValidator, Param, ParseFilePipe, ParseIntPipe, Post, UploadedFiles, UseGuards, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, FileTypeValidator, Get, Header, MaxFileSizeValidator, Param, ParseFilePipe, ParseIntPipe, Post, StreamableFile, UploadedFiles, UseGuards, UseInterceptors } from '@nestjs/common';
 import { User } from '@prisma/client';
 import { GetUser } from 'src/auth/decorator';
 import { CreateOfferDto } from './dto/create.offer.dto';
@@ -59,5 +59,15 @@ export class OfferController {
     ) files: Array<Express.Multer.File>){
 
         return this.offerService.uplaodImages(offerId, files);
+    }
+
+    @UseGuards(JwtGuard)
+    @Header('Content-Type', 'application/jpeg')
+    @Header('Content-Disposition', 'attachment; filename="offer_image.jpeg"')
+    @Get(':offerId/images/:id')
+    getOfferImagebyId(
+      @Param('offerId', ParseIntPipe) offerId: number,
+      @Param('id', ParseIntPipe) id: number){
+      return this.offerService.getOfferImagebyId(id, offerId);
     }
 }
