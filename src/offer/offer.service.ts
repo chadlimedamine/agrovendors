@@ -1,11 +1,12 @@
 import { HttpException, Injectable, InternalServerErrorException, NotFoundException, StreamableFile } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { createReadStream, existsSync } from 'fs';
 import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
 export class OfferService {
-    constructor(private prisma: PrismaService){}
+    constructor(private prisma: PrismaService, private config: ConfigService){}
 
     async createOwnOffer(userId: number, name: string, description: string | undefined){
         // create the offer
@@ -29,6 +30,37 @@ export class OfferService {
         return offer;
     }
 
+    async getOfferImages(offerId: number){
+        try{
+            // get the offer to check if it exists
+            const offer = await this.prisma.offer.findFirstOrThrow({
+                where: {
+                    id: offerId,
+                }
+            });
+
+            // get all the iages that belongs to the offer of interest
+            const images = await this.prisma.image.findMany({
+                where: {
+                    belognsToId: offerId
+                }
+            });
+
+            // get the URLs of the images
+            return images.map(image => `${this.config.get('APP_URL')}/offers/${offerId}/images/${image.id}`);
+
+        }catch(error){
+            if (error instanceof PrismaClientKnownRequestError){
+                if (error.code === 'P2025'){
+                    throw new NotFoundException('Offer not found!');
+                }else{
+                    throw new InternalServerErrorException();
+                }
+            }else{
+                throw new InternalServerErrorException();
+            }
+        }
+    }
     async uplaodImages(offerId: number, files: Array<Express.Multer.File>){
         try{
             // check if the offer exists

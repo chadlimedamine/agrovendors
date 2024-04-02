@@ -70,4 +70,12 @@ export class OfferController {
       @Param('id', ParseIntPipe) id: number){
       return this.offerService.getOfferImagebyId(id, offerId);
     }
+
+    @UseGuards(JwtGuard)
+    @Get(':offerid/images')
+    getOfferimages(
+      @Param('offerid', ParseIntPipe) offerId: number
+    ){
+      return this.offerService.getOfferImages(offerId);
+    }
 }
