@@ -5,7 +5,20 @@ import { PrismaModule } from './prisma/prisma.module';
 import { ConfigModule } from '@nestjs/config';
 import { AuthorizationModule } from './authorization/authorization.module';
 
+import { OfferModule } from './offer/offer.module';
+import { MulterModule } from '@nestjs/platform-express';
+import { MulterConfigService } from './uploadConfig/multer.config.service';
+
 @Module({
-  imports: [ConfigModule.forRoot({isGlobal: true}), AuthModule, UserModule, PrismaModule, AuthorizationModule],
+  imports: [
+    ConfigModule.forRoot({isGlobal: true}), 
+    AuthModule, 
+    UserModule, 
+    PrismaModule, 
+    AuthorizationModule, 
+    OfferModule,
+    MulterModule.register({
+      dest: 'offerImages'
+    })],
 })
 export class AppModule {}
