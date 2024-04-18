@@ -1,4 +1,4 @@
-import { HttpException, HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
+import { HttpStatus, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { User } from '@prisma/client';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { PrismaService } from 'src/prisma/prisma.service';
@@ -95,10 +95,10 @@ export class UserService {
                 if (error.code === 'P2025'){
                     throw new NotFoundException("User doesn't exist!");
                 }else{
-                    throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+                    throw new InternalServerErrorException();
                 }
             }else{
-                throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+                throw new InternalServerErrorException();
             } 
         }
     }
@@ -117,10 +117,10 @@ export class UserService {
                 if (error.code === 'P2025'){
                     throw new NotFoundException("User doesn't exist!");
                 }else{
-                    throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+                    throw new InternalServerErrorException();
                 }
             }else{
-                throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+                throw new InternalServerErrorException();
             } 
         }
     }
