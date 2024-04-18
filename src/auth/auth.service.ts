@@ -1,4 +1,4 @@
-import { ConflictException, ForbiddenException, HttpCode, HttpException, HttpStatus, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
+import { ConflictException, ForbiddenException, HttpCode, HttpStatus, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import * as bcrypt from 'bcrypt';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
@@ -70,10 +70,10 @@ export class AuthService {
                     throw new ConflictException('a user with that phone number already exists!');
                 }
 
-                throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+                throw new InternalServerErrorException();
             }
 
-            throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+            throw new InternalServerErrorException();
         }
     }
 
