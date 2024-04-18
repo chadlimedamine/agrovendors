@@ -1,4 +1,4 @@
-import { ConflictException, ForbiddenException, HttpCode, HttpException, HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
+import { ConflictException, ForbiddenException, HttpCode, HttpException, HttpStatus, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import * as bcrypt from 'bcrypt';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
@@ -114,13 +114,13 @@ export class AuthService {
                 if (error.code === 'P2025')
                     throw new NotFoundException('user not found!');
                 else
-                    throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+                    throw new InternalServerErrorException();
             }
 
             if (error instanceof ForbiddenException)
                 throw error;
 
-            throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+            throw new InternalServerErrorException();
         }
     }
 
