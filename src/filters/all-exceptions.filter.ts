@@ -5,8 +5,7 @@ import {
     HttpException,
     HttpStatus,
   } from '@nestjs/common';
-  import { HttpAdapterHost } from '@nestjs/core';
-import { STATUS_CODES } from 'http';
+import { HttpAdapterHost } from '@nestjs/core';
 import { LoggingService } from 'src/logging/logging.service';
   
   @Catch()
