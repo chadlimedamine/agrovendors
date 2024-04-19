@@ -74,10 +74,10 @@ export class AuthService {
                     throw new ConflictException('a user with that phone number already exists!');
                 }
 
-                throw new InternalServerErrorException();
+                throw error;
             }
 
-            throw new InternalServerErrorException();
+            throw error;
         }
     }
 
@@ -131,7 +131,7 @@ export class AuthService {
                 if (error.code === 'P2025')
                     throw new NotFoundException('user not found!');
                 else
-                    throw new InternalServerErrorException();
+                    throw error;
             }
 
             if (error instanceof ForbiddenException)
