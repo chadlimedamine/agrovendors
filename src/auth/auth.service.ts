@@ -84,9 +84,13 @@ export class AuthService {
     async signin(authDto: AuthSigninDto){
         try{
             // info log testing
-            this.logger.logInfo('testing the info logger!', 'auth.service.signin');
-            // throw an error just for testing purposes
-            throw new TypeError('this is a testing thrown error');
+            // this.logger.logInfo('testing the info logger!', 'auth.service.signin');
+            
+            // // throw an error just for testing purposes
+            // throw new TypeError('this is a testing thrown error');
+            
+            // start profiling
+            //const profiler = this.logger.startProfiling();
 
             // check if the user exists using its related phone number
             const phoneNumber = await this.prisma.phone.findFirstOrThrow({
@@ -113,6 +117,10 @@ export class AuthService {
                 else{
                     const tokens = await this.getTokens(user.id, phoneNumber.phoneNumber, user.roleId);
                     await this.updateRefreshTokenHash(user.id, tokens.refresh_token);
+                    
+                    // save the profiling result after successfully finishin the service call
+                    //profiler.done({message: 'auth.service.signin', phoneNumber: authDto.phoneNumber});
+                    
                     return tokens;
                 }
             }else{

@@ -2,6 +2,7 @@ import { Injectable, InternalServerErrorException, NotFoundException, Streamable
 import { ConfigService } from '@nestjs/config';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { createReadStream, existsSync } from 'fs';
+import { ArgumentOutOfRangeError } from 'rxjs';
 import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
@@ -32,6 +33,9 @@ export class OfferService {
 
     async getOfferImages(offerId: number){
         try{
+            // throw an error for testing purposes
+            // throw new RangeError();
+
             // get the offer to check if it exists
             const offer = await this.prisma.offer.findFirstOrThrow({
                 where: {
@@ -54,10 +58,10 @@ export class OfferService {
                 if (error.code === 'P2025'){
                     throw new NotFoundException('Offer not found!');
                 }else{
-                    throw new InternalServerErrorException();
+                    throw error;
                 }
             }else{
-                throw new InternalServerErrorException();
+                throw error;
             }
         }
     }
@@ -121,10 +125,10 @@ export class OfferService {
                 if (error.code === 'P2025'){
                     throw new NotFoundException('Not found Image or Offer!');
                 }else{
-                    throw new InternalServerErrorException();
+                    throw error;
                 }
             }else{
-                throw new InternalServerErrorException();
+                throw error;
             }
         }
     }
