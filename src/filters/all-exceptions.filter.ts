@@ -7,10 +7,13 @@ import {
   } from '@nestjs/common';
   import { HttpAdapterHost } from '@nestjs/core';
 import { STATUS_CODES } from 'http';
+import { LoggingService } from 'src/logging/logging.service';
   
   @Catch()
   export class AllExceptionsFilter implements ExceptionFilter {
-    constructor(private readonly httpAdapterHost: HttpAdapterHost) {}
+    constructor(private readonly httpAdapterHost: HttpAdapterHost,
+      private readonly logging: LoggingService
+    ) {}
   
     catch(exception: unknown, host: ArgumentsHost): void {
       // In certain situations `httpAdapter` might not be available in the
@@ -37,6 +40,9 @@ import { STATUS_CODES } from 'http';
         message: message,
         statusCode: httpStatus,
       };
+
+      // log the error
+      this.logging.log({exception: `${exception}`});
   
       httpAdapter.reply(ctx.getResponse(), responseBody, httpStatus);
     }

@@ -10,8 +10,8 @@ async function bootstrap() {
     whitelist: true,
     forbidNonWhitelisted: true,
   }));
-  const httpAdapter = app.get(HttpAdapterHost);
-  app.useGlobalFilters(new AllExceptionsFilter(httpAdapter) , new HttpExceptionFilter());
+  // const httpAdapter = app.get(HttpAdapterHost);
+  // app.useGlobalFilters(new AllExceptionsFilter(httpAdapter) , new HttpExceptionFilter());
   await app.listen(3001);
 }
 bootstrap();
