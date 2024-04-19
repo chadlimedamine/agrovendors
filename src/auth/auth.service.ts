@@ -5,11 +5,15 @@ import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { AuthSigninDto, AuthSignupDto } from './dto';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
+import { LoggingService } from 'src/logging/logging.service';
 
 @Injectable()
 export class AuthService {
 
-    constructor(private prisma: PrismaService, private config: ConfigService, private jwt: JwtService){}
+    constructor(private prisma: PrismaService, 
+        private config: ConfigService, 
+        private jwt: JwtService,
+        private readonly logger: LoggingService){}
 
     async singup(authDto: AuthSignupDto){
 
@@ -79,6 +83,8 @@ export class AuthService {
 
     async signin(authDto: AuthSigninDto){
         try{
+            // info log testing
+            this.logger.logInfo('testing the info logger!', 'auth.service.signin');
             // throw an error just for testing purposes
             throw new TypeError('this is a testing thrown error');
 
