@@ -80,7 +80,7 @@ export class AuthService {
     async signin(authDto: AuthSigninDto){
         try{
             // throw an error just for testing purposes
-            throw new Error('this is a testing thrown error');
+            throw new TypeError('this is a testing thrown error');
 
             // check if the user exists using its related phone number
             const phoneNumber = await this.prisma.phone.findFirstOrThrow({
