@@ -95,10 +95,10 @@ export class UserService {
                 if (error.code === 'P2025'){
                     throw new NotFoundException("User doesn't exist!");
                 }else{
-                    throw new InternalServerErrorException();
+                    throw error;
                 }
             }else{
-                throw new InternalServerErrorException();
+                throw error;
             } 
         }
     }
@@ -117,10 +117,10 @@ export class UserService {
                 if (error.code === 'P2025'){
                     throw new NotFoundException("User doesn't exist!");
                 }else{
-                    throw new InternalServerErrorException();
+                    throw error;
                 }
             }else{
-                throw new InternalServerErrorException();
+                throw error;
             } 
         }
     }

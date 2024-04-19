@@ -90,10 +90,10 @@ export class OfferService {
                 if (error.code === 'P2025'){
                     throw new NotFoundException('Offer not found! You cannot add images to a non existing offer.');
                 }else{
-                    throw new InternalServerErrorException();
+                    throw error;
                 }
             }else{
-                throw new InternalServerErrorException();
+                throw error;
             }
         }
 
@@ -115,7 +115,7 @@ export class OfferService {
 
         // check if the image exists on the hard drive
         if (!existsSync(image.path)){
-            throw new InternalServerErrorException();
+            throw new InternalServerErrorException('file not found on the disk');
         }
         const imageFile = createReadStream(image.path);
         return new StreamableFile(imageFile);
