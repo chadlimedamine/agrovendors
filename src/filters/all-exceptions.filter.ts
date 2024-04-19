@@ -42,7 +42,7 @@ import { LoggingService } from 'src/logging/logging.service';
       };
 
       // log the error
-      this.logging.log({exception: `${exception}`});
+      this.logging.globalLog(message, exception as Error);
   
       httpAdapter.reply(ctx.getResponse(), responseBody, httpStatus);
     }

@@ -15,7 +15,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
 
     // log the 500 status code caught exception
     if (status === 500)
-      this.logging.log('log error of internal server error');
+      this.logging.globalLog('log error of internal server error', exception);
 
     response
     .status(status)

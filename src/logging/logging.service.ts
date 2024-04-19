@@ -11,7 +11,7 @@ export class LoggingService {
         this.globalLogger = winston.loggers.get('GlobalLogger');
     }
 
-    log(message){
-        this.globalLogger.error(message);
+    globalLog(message, error: Error){
+        this.globalLogger.error(message, error);
     }
 }
