@@ -1,15 +1,19 @@
-import { ConflictException, ForbiddenException, HttpCode, HttpException, HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
+import { ConflictException, ForbiddenException, HttpCode, HttpStatus, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import * as bcrypt from 'bcrypt';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { AuthSigninDto, AuthSignupDto } from './dto';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
+import { LoggingService } from 'src/logging/logging.service';
 
 @Injectable()
 export class AuthService {
 
-    constructor(private prisma: PrismaService, private config: ConfigService, private jwt: JwtService){}
+    constructor(private prisma: PrismaService, 
+        private config: ConfigService, 
+        private jwt: JwtService,
+        private readonly logger: LoggingService){}
 
     async singup(authDto: AuthSignupDto){
 
@@ -70,15 +74,24 @@ export class AuthService {
                     throw new ConflictException('a user with that phone number already exists!');
                 }
 
-                throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+                throw error;
             }
 
-            throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+            throw error;
         }
     }
 
     async signin(authDto: AuthSigninDto){
         try{
+            // info log testing
+            // this.logger.logInfo('testing the info logger!', 'auth.service.signin');
+            
+            // // throw an error just for testing purposes
+            // throw new TypeError('this is a testing thrown error');
+            
+            // start profiling
+            //const profiler = this.logger.startProfiling();
+
             // check if the user exists using its related phone number
             const phoneNumber = await this.prisma.phone.findFirstOrThrow({
                 where: {
@@ -104,6 +117,10 @@ export class AuthService {
                 else{
                     const tokens = await this.getTokens(user.id, phoneNumber.phoneNumber, user.roleId);
                     await this.updateRefreshTokenHash(user.id, tokens.refresh_token);
+                    
+                    // save the profiling result after successfully finishin the service call
+                    //profiler.done({message: 'auth.service.signin', phoneNumber: authDto.phoneNumber});
+                    
                     return tokens;
                 }
             }else{
@@ -114,13 +131,14 @@ export class AuthService {
                 if (error.code === 'P2025')
                     throw new NotFoundException('user not found!');
                 else
-                    throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+                    throw error;
             }
 
             if (error instanceof ForbiddenException)
                 throw error;
 
-            throw new HttpException(error, HttpStatus.INTERNAL_SERVER_ERROR);
+            throw error;
+            // throw new InternalServerErrorException();
         }
     }
 

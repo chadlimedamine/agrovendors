@@ -30,7 +30,7 @@ async function main() {
         phoneNumbers: {
             createMany: {
                 data: [
-                    {phoneNumber: '0676526179'},
+                    {phoneNumber: '0657558215'},
                     {phoneNumber: '0775472740'}
                 ],
             }
