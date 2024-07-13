@@ -133,9 +133,27 @@ export class UserService {
             const user = await this.prisma.user.findUniqueOrThrow({
                 where: {
                     id: id,
+                },
+                select: {
+                    id: true,
+                    fullName: true, 
+                    facebookProfileUrl: true,
+                    role: {
+                        select: {
+                            id: true,
+                            name: true
+                        }
+                    },
+                    phoneNumbers: {
+                        select: {
+                            id: true,
+                            phoneNumber: true,
+                        }
+                    },
+                    offers: true,
                 }
             });
-            delete user.hash;
+            
             return user;
         } catch (error){
             if (error instanceof PrismaClientKnownRequestError){
