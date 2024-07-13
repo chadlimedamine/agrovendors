@@ -55,7 +55,7 @@ export class AuthService {
             }
 
             // return the newly created user
-            const tokens = await this.getTokens(user.id, authDto.phoneNumber, user.roleId);
+            const tokens = await this.generateTokens(user.id, authDto.phoneNumber, user.roleId);
             await this.updateRefreshTokenHash(user.id, tokens.refresh_token);
             return tokens;
         } catch(error){
@@ -115,7 +115,7 @@ export class AuthService {
                 if (!pwMatches)
                     throw new ForbiddenException('Password is incorrect!');
                 else{
-                    const tokens = await this.getTokens(user.id, phoneNumber.phoneNumber, user.roleId);
+                    const tokens = await this.generateTokens(user.id, phoneNumber.phoneNumber, user.roleId);
                     await this.updateRefreshTokenHash(user.id, tokens.refresh_token);
                     
                     // save the profiling result after successfully finishin the service call
@@ -169,7 +169,7 @@ export class AuthService {
 
         if (refreshTokenhashMachtes){
             // get tokens
-            const tokens = await this.getTokens(user.id, phoneNumber, user.roleId);
+            const tokens = await this.generateTokens(user.id, phoneNumber, user.roleId);
 
             // update the refresh token hash to DB
             this.updateRefreshTokenHash(user.id, tokens.refresh_token);
@@ -196,7 +196,7 @@ export class AuthService {
         });
     }
 
-    async getTokens(userId: Number, phoneNumber: String, roleId: number): Promise<{access_token: String, refresh_token: string}>{
+    async generateTokens(userId: Number, phoneNumber: String, roleId: number): Promise<{access_token: String, refresh_token: string}>{
         // get the role of the user
         const role = await this.prisma.role.findFirst({
             where: {
