@@ -14,8 +14,8 @@ export class UserController {
 
     @UseGuards(JwtGuard)
     @Get('me')
-    getMe(@GetUser() user: User, @GetUser('phoneNumber') phoneNumber: string){
-        return `phoneNumber: ${phoneNumber} and user info: ${JSON.stringify(user)}`;
+    getMe(@GetUser() user){
+        return this.userService.getAuthenticatedUser(user);
     }
     
     @UseGuards(JwtGuard, PermissionsGuard)

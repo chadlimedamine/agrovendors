@@ -6,6 +6,10 @@ import { PrismaService } from 'src/prisma/prisma.service';
 @Injectable()
 export class UserService {
     constructor(private prisma: PrismaService){}
+
+    async getAuthenticatedUser(user){
+        return user;
+    }
     
     async getUsers(filterOn: string | undefined, filterQuery: string | undefined, 
         sortOn: string | undefined, isAscending: boolean = true, 
@@ -15,7 +19,7 @@ export class UserService {
             // ########## filtering, sorting, and pagination       ####################
 
             // the list of users to be returned
-            let users: User[];
+            let users: Partial<User>[];
 
             // filtering
             if (filterOn){
@@ -26,12 +30,55 @@ export class UserService {
                                 contains: filterQuery,
                                 mode: 'insensitive',
                             }
+                        },
+                        select: {
+                            id: true,
+                            fullName: true,
+                            role: {
+                                select: {
+                                    id: true,
+                                    name: true,
+                                }
+                            },
+                            createdAt: true,
+                            updatedAt: true,
+                            facebookProfileUrl: true,
+                            phoneNumbers: {
+                                select: {
+                                   id: true,
+                                   phoneNumber: true, 
+                                }
+                            },
+                            offers: true
                         }
                     });
                 }
             } else {
                 // if there is no filterOn query provided just return all the users
-                users = await this.prisma.user.findMany();
+                users = await this.prisma.user.findMany(
+                    {
+                        select: {
+                            id: true,
+                            fullName: true,
+                            role: {
+                                select: {
+                                    id: true,
+                                    name: true,
+                                }
+                            },
+                            createdAt: true,
+                            updatedAt: true,
+                            facebookProfileUrl: true,
+                            phoneNumbers: {
+                                select: {
+                                   id: true,
+                                   phoneNumber: true, 
+                                }
+                            },
+                            offers: true
+                        }
+                    }
+                );
             }
 
             // if (sortOn){
