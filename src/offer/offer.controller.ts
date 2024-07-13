@@ -22,6 +22,16 @@ export class OfferController {
         return this.offerService.createOwnOffer(user.id, offer.name, offer.description);
     }
 
+    @Get(':id')
+    @UseGuards(JwtGuard)
+    getOfferById(
+      @GetUser() user: User, 
+      @Body() offer: CreateOfferDto,
+      @Param('id', ParseIntPipe) offerId: number,
+    ){
+        return this.offerService.getOfferById(offerId);
+    }
+
     @Post(':id/images')
     @UseGuards(JwtGuard)
     @UseInterceptors(FilesInterceptor('files', 12, {
@@ -51,7 +61,7 @@ export class OfferController {
         new ParseFilePipe(
             {
                 validators: [
-                    new MaxFileSizeValidator({maxSize: 10000}),
+                    new MaxFileSizeValidator({maxSize: 100000}),
                     new FileTypeValidator({fileType: 'jpeg'}),
                 ]
             }
