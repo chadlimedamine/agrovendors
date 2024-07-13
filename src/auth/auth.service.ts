@@ -64,7 +64,7 @@ export class AuthService {
                     
                     // delete the user if it exists
                     if (userId){
-                        this.prisma.user.delete({
+                        await this.prisma.user.delete({
                             where: {
                                 id: userId,
                             }
