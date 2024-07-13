@@ -13,7 +13,7 @@
     "db:dev:rm": "docker compose rm dev-db -s -f -v",
     "db:dev:up": "docker compose up dev-db -d",
     "db:dev:seed": "prisma db seed",
-    "db:dev:restart": "yarn db:dev:rm && yarn db:dev:up && timeout 3 && yarn prisma:dev:deploy && yarn db:dev:seed",
+    "db:dev:restart": "yarn db:dev:rm && yarn db:dev:up && timeout 3 && yarn prisma:dev:deploy && timeout 3 && yarn db:dev:seed",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
