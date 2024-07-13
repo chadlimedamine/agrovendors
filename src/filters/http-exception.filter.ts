@@ -10,7 +10,13 @@ export class HttpExceptionFilter implements ExceptionFilter {
     const response = ctx.getResponse<Response>();
     const request = ctx.getRequest<Request>();
     const status = exception.getStatus();
-    const message = exception.message;
+    let message: string | unknown = exception.message;
+    const exceptionResponse: string | object = exception.getResponse();
+    if (typeof exceptionResponse === 'object') {
+      if ('message' in  exceptionResponse) {
+        message = exceptionResponse.message;
+      }
+    }
     const error = exception.name;
 
     // log the 500 status code caught exception
