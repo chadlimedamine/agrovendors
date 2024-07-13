@@ -47,6 +47,29 @@ export class OfferService {
         return offer;
     }
 
+    async getMyOffers(currentUserId: number) {
+        const user = await this.prisma.user.findFirst(
+            {
+                where: {
+                    id: currentUserId,
+                }
+            }
+        );
+
+        if (!user)
+            throw new NotFoundException('user not found!');
+
+        const offers = await this.prisma.offer.findMany(
+            {
+                where: {
+                    ownerId: currentUserId,
+                }
+            }
+        );
+
+        return offers;
+    }
+
     async getOfferImages(offerId: number){
         try{
             // throw an error for testing purposes

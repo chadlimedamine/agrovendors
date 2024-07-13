@@ -25,11 +25,17 @@ export class OfferController {
     @Get(':id')
     @UseGuards(JwtGuard)
     getOfferById(
-      @GetUser() user: User, 
-      @Body() offer: CreateOfferDto,
       @Param('id', ParseIntPipe) offerId: number,
     ){
         return this.offerService.getOfferById(offerId);
+    }
+
+    @Get()
+    @UseGuards(JwtGuard)
+    getMyOffers(
+      @GetUser('id') currentUserId: number,
+    ){
+        return this.offerService.getMyOffers(currentUserId);
     }
 
     @Post(':id/images')
