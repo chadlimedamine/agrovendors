@@ -31,6 +31,22 @@ export class OfferService {
         return offer;
     }
 
+    async getOfferById(offerId: number) {
+        const offer = await this.prisma.offer.findFirst({
+            where: {
+                id: offerId
+            },
+            include: {
+                images: true
+            }
+        });
+
+        if (!offer) 
+            throw new NotFoundException("offer doesn't exists");
+
+        return offer;
+    }
+
     async getOfferImages(offerId: number){
         try{
             // throw an error for testing purposes

@@ -23,6 +23,7 @@ export class AccessTokenJwtStrategy extends PassportStrategy(Strategy, 'jwt') {
         });
 
         delete user.hash;
+        delete user.hashedRefreshToken;
 
         // type PhoneNumber = {
         //     phoneNumber: string;
