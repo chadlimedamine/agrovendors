@@ -1,4 +1,4 @@
-import { ConflictException, ForbiddenException, HttpCode, HttpStatus, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
+import { ConflictException, ForbiddenException, HttpCode, HttpStatus, Injectable, InternalServerErrorException, NotFoundException, UnprocessableEntityException } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import * as bcrypt from 'bcrypt';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
@@ -64,14 +64,34 @@ export class AuthService {
                     
                     // delete the user if it exists
                     if (userId){
-                        this.prisma.user.delete({
+                        await this.prisma.user.delete({
                             where: {
                                 id: userId,
                             }
                         });
                     }
 
-                    throw new ConflictException('a user with that phone number already exists!');
+                    // check if the password for this user is empty
+                    const phoneNumber = await this.prisma.phone.findUnique(
+                        {
+                            where: {
+                                phoneNumber: authDto.phoneNumber
+                            }
+                        }
+                    );
+
+                    const user = await this.prisma.user.findUnique(
+                        {
+                            where: {
+                                id: phoneNumber.userId
+                            }
+                        }
+                    );
+
+                    if (!user.hash)
+                        throw new UnprocessableEntityException(`An account for this phone number '${phoneNumber.phoneNumber}' was already created for you. You should now create a password for it!`)
+                    
+                    throw new ConflictException('a user with that phone number already exists! You should log in!');
                 }
 
                 throw error;
