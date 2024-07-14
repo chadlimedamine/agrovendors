@@ -14,16 +14,16 @@ export class UserController {
 
     @UseGuards(JwtGuard)
     @Get('me')
-    getMe(@GetUser() user){
-        return this.userService.getAuthenticatedUser(user);
+    async getMe(@GetUser() user){
+        return await this.userService.getAuthenticatedUser(user);
     }
     
     @UseGuards(JwtGuard, PermissionsGuard)
     @Permissions(Permission.ReadUsers)
     @Get()
-    getUsers(@Query() query: UserQueryDto){
+    async getUsers(@Query() query: UserQueryDto){
             
-        return this.userService.getUsers(query.filterOn, query.filterQuery, 
+        return await this.userService.getUsers(query.filterOn, query.filterQuery, 
                                         query.sortOn, query.isAscending ?? true,
                                         query.pageNumber ?? 1, query.pageSize ?? 10);
     }
@@ -31,15 +31,15 @@ export class UserController {
     @UseGuards(JwtGuard, PermissionsGuard)
     @Permissions(Permission.ReadUserById)
     @Get(':id')
-    getUserById(@Param('id', ParseIntPipe) id: number){
-        return this.userService.getUserById(id);
+    async getUserById(@Param('id', ParseIntPipe) id: number){
+        return await this.userService.getUserById(id);
     }
 
     @UseGuards(JwtGuard, PermissionsGuard)
     @Permissions(Permission.DeleteUserByid)
     @HttpCode(HttpStatus.NO_CONTENT)
     @Delete(':id')
-    deleteUserByid(@Param('id', ParseIntPipe) id: number){
-        return this.userService.deleteUser(id);
+    async deleteUserByid(@Param('id', ParseIntPipe) id: number){
+        return await this.userService.deleteUser(id);
     }
 }
