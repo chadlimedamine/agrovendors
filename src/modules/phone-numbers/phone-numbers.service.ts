@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 import { AddPhoneNumberDto } from './dto';
 
@@ -20,6 +20,17 @@ export class PhoneNumbersService {
 
         if (!user)
             throw new NotFoundException('User not found!');
+
+        const phone = await this.prismaService.phone.findUnique(
+            {
+                where: {
+                    phoneNumber: addPhoneNumberDto.phoneNumber
+                }
+            }
+        );
+
+        if (phone)
+            throw new ConflictException('phone number already exists!');
 
         const createdPhoneNumber = await this.prismaService.phone.create(
             {
@@ -87,7 +98,8 @@ export class PhoneNumbersService {
         const deletedPhone = await this.prismaService.phone.delete(
             {
                 where: {
-                    id: phoneId
+                    id: phoneId,
+                    userId: currentUserId
                 }
             }
         );
