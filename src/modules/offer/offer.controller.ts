@@ -19,24 +19,24 @@ export class OfferController {
 
     @Post()
     @UseGuards(JwtGuard)
-    createOwnOffer(@GetUser() user: User, @Body() offer: CreateOfferDto){
-        return this.offerService.createOwnOffer(user.id, offer.name, offer.description);
+    async createOwnOffer(@GetUser() user: User, @Body() offer: CreateOfferDto){
+        return await this.offerService.createOwnOffer(user.id, offer.name, offer.description);
     }
 
     @Get(':id')
     @UseGuards(JwtGuard)
-    getOfferById(
+    async getOfferById(
       @Param('id', ParseIntPipe) offerId: number,
     ){
-        return this.offerService.getOfferById(offerId);
+        return await this.offerService.getOfferById(offerId);
     }
 
     @Get()
     @UseGuards(JwtGuard)
-    getMyOffers(
+    async getMyOffers(
       @GetUser('id') currentUserId: number,
     ){
-        return this.offerService.getMyOffers(currentUserId);
+        return await this.offerService.getMyOffers(currentUserId);
     }
 
     @Post(':id/images')
@@ -63,7 +63,7 @@ export class OfferController {
           },
         }),
       }))
-    uploadImages(@Param('id', ParseIntPipe) offerId: number,
+    async uploadImages(@Param('id', ParseIntPipe) offerId: number,
     @UploadedFiles(
         new ParseFilePipe(
             {
@@ -77,24 +77,24 @@ export class OfferController {
         )
     ) files: Array<Express.Multer.File>){
 
-        return this.offerService.uplaodImages(offerId, files);
+        return await this.offerService.uplaodImages(offerId, files);
     }
 
     @UseGuards(JwtGuard)
     @Header('Content-Type', 'application/jpeg')
     @Header('Content-Disposition', 'attachment; filename="offer_image.jpeg"')
     @Get(':offerId/images/:id')
-    getOfferImagebyId(
+    async getOfferImagebyId(
       @Param('offerId', ParseIntPipe) offerId: number,
       @Param('id', ParseIntPipe) id: number){
-      return this.offerService.getOfferImagebyId(id, offerId);
+      return await this.offerService.getOfferImagebyId(id, offerId);
     }
 
     @UseGuards(JwtGuard)
     @Get(':offerid/images')
-    getOfferimages(
+    async getOfferimages(
       @Param('offerid', ParseIntPipe) offerId: number
     ){
-      return this.offerService.getOfferImages(offerId);
+      return await this.offerService.getOfferImages(offerId);
     }
 }

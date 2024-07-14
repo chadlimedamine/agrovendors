@@ -11,29 +11,29 @@ export class AuthController {
     constructor(private authService: AuthService){}
 
     @Post('signup')
-    signup(@Body() authSignupDto: AuthSignupDto){
-        return this.authService.singup(authSignupDto);
+    async signup(@Body() authSignupDto: AuthSignupDto){
+        return await this.authService.singup(authSignupDto);
     }
 
     @HttpCode(HttpStatus.OK)
     @Post('signin')
-    signin(@Body() authSigninDto: AuthSigninDto){
-        return this.authService.signin(authSigninDto);
+    async signin(@Body() authSigninDto: AuthSigninDto){
+        return await this.authService.signin(authSigninDto);
     }
 
     @UseGuards(JwtGuard)
     @Post('logout')
     @HttpCode(HttpStatus.NO_CONTENT)
-    logout(@GetUser('id') userId: number){
-        return this.authService.logout(userId);
+    async logout(@GetUser('id') userId: number){
+        return await this.authService.logout(userId);
     }
 
     @UseGuards(JwtRefreshTokenGuard)
     @Post('refresh-tokens')
     @HttpCode(HttpStatus.OK)
-    refreshTokens(@GetUser('id') userId: number, 
+    async refreshTokens(@GetUser('id') userId: number, 
                 @GetUser('phoneNumber') phoneNumber: string, 
                 @GetUser('refresh_token') refresh_token: string){
-                    return this.authService.refreshTheTokens(userId, phoneNumber, refresh_token);
+                    return await this.authService.refreshTheTokens(userId, phoneNumber, refresh_token);
     }
 }
