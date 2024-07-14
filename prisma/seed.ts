@@ -1,5 +1,7 @@
-import { PrismaClient } from '@prisma/client'
-import * as bcrypt from 'bcrypt'
+import { PrismaClient } from '@prisma/client';
+import * as bcrypt from 'bcrypt';
+import * as csv from 'csv-parser';
+import { createReadStream } from 'node:fs';
 
 const prisma = new PrismaClient()
 async function main() {
@@ -95,6 +97,17 @@ async function main() {
     }
   });
   console.log({ mohamed, booba, userRole, adminRole, updateMohamed, updateBooba})
+
+  // read scrapped data and put it in an array
+  const results = [];
+
+  createReadStream('cleaned_Agriculture_people_data.csv', { encoding: 'utf-8' })
+  .pipe(csv())
+  .on('data', (data) => results.push(data))
+  .on('end', () => {
+    console.log(results[0]);
+  });
+  
 }
 main()
   .then(async () => {
