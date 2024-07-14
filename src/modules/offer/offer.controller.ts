@@ -1,10 +1,10 @@
 import { Body, Controller, FileTypeValidator, Get, Header, MaxFileSizeValidator, Param, ParseFilePipe, ParseIntPipe, Post, StreamableFile, UploadedFiles, UseGuards, UseInterceptors } from '@nestjs/common';
 import { User } from '@prisma/client';
-import { GetUser } from 'src/auth/decorator';
+import { GetUser } from 'src/modules/auth/decorator';
 import { CreateOfferDto } from './dto/create.offer.dto';
 import { OfferService } from './offer.service';
 import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
-import { JwtGuard } from 'src/auth/guard/jwt.guard';
+import { JwtGuard } from 'src/modules/auth/guard/jwt.guard';
 import { diskStorage } from 'multer';
 import {v4 as uuid} from 'uuid';
 import { existsSync } from 'fs';
