@@ -138,6 +138,10 @@ export class UserService {
                     id: true,
                     fullName: true, 
                     facebookProfileUrl: true,
+                    createdAt: true,
+                    updatedAt: true,
+                    creatdOffers: true,
+                    grantingPermissions: true,
                     role: {
                         select: {
                             id: true,
