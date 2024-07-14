@@ -12,6 +12,7 @@ import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
 import { HttpExceptionFilter } from './filters/http-exception.filter';
 import { AllExceptionsFilter } from './filters/all-exceptions.filter';
 import { ProfilingInterceptor } from './interceptors/profiling/profiling.interceptor';
+import { PhoneNumbersModule } from './modules/phone-numbers/phone-numbers.module';
 
 @Module({
   imports: [
@@ -24,7 +25,8 @@ import { ProfilingInterceptor } from './interceptors/profiling/profiling.interce
     MulterModule.register({
       dest: 'offerImages'
     }),
-    LoggingModule],
+    LoggingModule,
+    PhoneNumbersModule],
     providers: [
       {
         provide: APP_FILTER,
