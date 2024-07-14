@@ -1,7 +1,7 @@
 import { HttpStatus, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { User } from '@prisma/client';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from 'src/modules/prisma/prisma.service';
 
 @Injectable()
 export class UserService {
@@ -138,6 +138,10 @@ export class UserService {
                     id: true,
                     fullName: true, 
                     facebookProfileUrl: true,
+                    createdAt: true,
+                    updatedAt: true,
+                    creatdOffers: true,
+                    grantingPermissions: true,
                     role: {
                         select: {
                             id: true,

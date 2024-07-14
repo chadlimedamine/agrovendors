@@ -3,7 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { createReadStream, existsSync } from 'fs';
 import { ArgumentOutOfRangeError } from 'rxjs';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from 'src/modules/prisma/prisma.service';
 
 @Injectable()
 export class OfferService {
