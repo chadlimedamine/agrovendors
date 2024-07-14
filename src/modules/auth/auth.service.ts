@@ -1,11 +1,11 @@
 import { ConflictException, ForbiddenException, HttpCode, HttpStatus, Injectable, InternalServerErrorException, NotFoundException, UnprocessableEntityException } from '@nestjs/common';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from 'src/modules/prisma/prisma.service';
 import * as bcrypt from 'bcrypt';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { AuthSigninDto, AuthSignupDto } from './dto';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
-import { LoggingService } from 'src/logging/logging.service';
+import { LoggingService } from 'src/modules/logging/logging.service';
 
 @Injectable()
 export class AuthService {

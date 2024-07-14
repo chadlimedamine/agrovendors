@@ -1,11 +1,11 @@
 import { Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseBoolPipe, ParseIntPipe, Post, Query, SetMetadata, UseGuards } from '@nestjs/common';
 import { User } from '@prisma/client';
-import { GetUser } from 'src/auth/decorator';
-import { JwtGuard } from 'src/auth/guard/jwt.guard';
+import { GetUser } from 'src/modules/auth/decorator';
+import { JwtGuard } from 'src/modules/auth/guard/jwt.guard';
 import { UserService } from './user.service';
 import { UserQueryDto } from './dto/user.query.dto/user.query.dto';
-import { PermissionsGuard } from 'src/authorization/permissions';
-import { Permissions } from 'src/authorization/decorator';
+import { PermissionsGuard } from 'src/modules/authorization/permissions';
+import { Permissions } from 'src/modules/authorization/decorator';
 import {Permission} from '@prisma/client';
 
 @Controller('users')
