@@ -1,6 +1,6 @@
 import { CallHandler, ExecutionContext, HttpException, Injectable, NestInterceptor, NotFoundException } from '@nestjs/common';
 import { Observable, catchError, tap, throwError } from 'rxjs';
-import { LoggingService } from 'src/logging/logging.service';
+import { LoggingService } from 'src/modules/logging/logging.service';
 
 @Injectable()
 export class ProfilingInterceptor implements NestInterceptor {
