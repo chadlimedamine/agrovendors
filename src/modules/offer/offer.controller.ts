@@ -10,6 +10,7 @@ import {v4 as uuid} from 'uuid';
 import { existsSync } from 'fs';
 import * as path from 'path';
 import { mkdir } from 'fs/promises';
+import { CustomFileTypeValidator } from 'src/validators';
 
 
 @Controller('offers')
@@ -68,7 +69,9 @@ export class OfferController {
             {
                 validators: [
                     new MaxFileSizeValidator({maxSize: 100000}),
-                    new FileTypeValidator({fileType: 'jpeg'}),
+                    new CustomFileTypeValidator({
+                      fileType: ['image/jpeg', 'image/png'],
+                    }),
                 ]
             }
         )
