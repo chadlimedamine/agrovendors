@@ -3,8 +3,9 @@ import { GetUser } from '../auth/decorator';
 import { AddPhoneNumberDto } from './dto';
 import { PhoneNumbersService } from './phone-numbers.service';
 import { JwtGuard } from '../auth/guard/jwt.guard';
-import { ApiBadRequestResponse, ApiConflictResponse, ApiForbiddenResponse, ApiInternalServerErrorResponse, ApiNotFoundResponse, ApiUnauthorizedResponse } from '@nestjs/swagger';
+import { ApiBadRequestResponse, ApiConflictResponse, ApiForbiddenResponse, ApiInternalServerErrorResponse, ApiNotFoundResponse, ApiTags, ApiUnauthorizedResponse } from '@nestjs/swagger';
 
+@ApiTags('Phone Numbers')
 @Controller('phone-numbers')
 export class PhoneNumbersController {
     constructor(private phoneNumbersService: PhoneNumbersService) {}

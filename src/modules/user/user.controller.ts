@@ -7,8 +7,9 @@ import { UserQueryDto } from './dto/user.query.dto/user.query.dto';
 import { PermissionsGuard } from 'src/modules/authorization/permissions';
 import { Permissions } from 'src/modules/authorization/decorator';
 import {Permission} from '@prisma/client';
-import { ApiBadRequestResponse, ApiForbiddenResponse, ApiInternalServerErrorResponse, ApiNotFoundResponse, ApiUnauthorizedResponse } from '@nestjs/swagger';
+import { ApiBadRequestResponse, ApiForbiddenResponse, ApiInternalServerErrorResponse, ApiNotFoundResponse, ApiTags, ApiUnauthorizedResponse } from '@nestjs/swagger';
 
+@ApiTags('Users')
 @Controller('users')
 export class UserController {
     constructor(private userService: UserService){}

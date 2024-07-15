@@ -11,9 +11,10 @@ import { existsSync } from 'fs';
 import * as path from 'path';
 import { mkdir } from 'fs/promises';
 import { CustomFileTypeValidator } from 'src/validators';
-import { ApiBadRequestResponse, ApiForbiddenResponse, ApiInternalServerErrorResponse, ApiNotFoundResponse, ApiUnauthorizedResponse } from '@nestjs/swagger';
+import { ApiBadRequestResponse, ApiForbiddenResponse, ApiInternalServerErrorResponse, ApiNotFoundResponse, ApiTags, ApiUnauthorizedResponse } from '@nestjs/swagger';
 
 
+@ApiTags('Offers')
 @Controller('offers')
 export class OfferController {
     constructor(private offerService: OfferService){}
