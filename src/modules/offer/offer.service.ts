@@ -88,8 +88,8 @@ export class OfferService {
                             createdAt: true,
                             updatedAt: true,
                             name: true,
-                            createdBy: true,
-                            owner: true,
+                            createdById: true,
+                            ownerId: true,
                             images: true,
                         }
                     });
@@ -107,8 +107,8 @@ export class OfferService {
                             createdAt: true,
                             updatedAt: true,
                             name: true,
-                            createdBy: true,
-                            owner: true,
+                            createdById: true,
+                            ownerId: true,
                             images: true,
                         }
                     }
@@ -290,8 +290,8 @@ export class OfferService {
                             createdAt: true,
                             updatedAt: true,
                             name: true,
-                            createdBy: true,
-                            owner: true,
+                            createdById: true,
+                            ownerId: true,
                             images: true,
                         }
                     });
@@ -306,8 +306,8 @@ export class OfferService {
                             createdAt: true,
                             updatedAt: true,
                             name: true,
-                            createdBy: true,
-                            owner: true,
+                            createdById: true,
+                            ownerId: true,
                             images: true,
                         }
                     }
