@@ -5,22 +5,34 @@ import { JwtGuard } from './guard/jwt.guard';
 import { GetUser } from './decorator';
 import { User } from '@prisma/client';
 import { JwtRefreshTokenGuard } from './guard/jwt.refresh.token.guard';
+import { ApiBadRequestResponse, ApiConflictResponse, ApiForbiddenResponse, ApiInternalServerErrorResponse, ApiNotFoundResponse, ApiUnauthorizedResponse, ApiUnprocessableEntityResponse } from '@nestjs/swagger';
 
 @Controller('auth')
 export class AuthController {
     constructor(private authService: AuthService){}
 
+    @ApiInternalServerErrorResponse()
+    @ApiBadRequestResponse()
+    @ApiUnprocessableEntityResponse({description: 'An account for this phone number was already created for you. You should now create a password for it!'})
+    @ApiConflictResponse({description: 'a user with that phone number already exists! You should log in!'})
     @Post('signup')
     async signup(@Body() authSignupDto: AuthSignupDto){
         return await this.authService.singup(authSignupDto);
     }
 
+    @ApiInternalServerErrorResponse()
+    @ApiBadRequestResponse()
+    @ApiForbiddenResponse({description: 'Incorrect password'})
+    @ApiNotFoundResponse({description: 'User not found'})
     @HttpCode(HttpStatus.OK)
     @Post('signin')
     async signin(@Body() authSigninDto: AuthSigninDto){
         return await this.authService.signin(authSigninDto);
     }
 
+    @ApiInternalServerErrorResponse()
+    @ApiBadRequestResponse()
+    @ApiUnauthorizedResponse()
     @UseGuards(JwtGuard)
     @Post('logout')
     @HttpCode(HttpStatus.NO_CONTENT)
@@ -28,6 +40,9 @@ export class AuthController {
         return await this.authService.logout(userId);
     }
 
+    @ApiInternalServerErrorResponse()
+    @ApiBadRequestResponse()
+    @ApiForbiddenResponse()
     @UseGuards(JwtRefreshTokenGuard)
     @Post('refresh-tokens')
     @HttpCode(HttpStatus.OK)
