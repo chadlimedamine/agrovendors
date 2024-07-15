@@ -11,18 +11,26 @@ import { existsSync } from 'fs';
 import * as path from 'path';
 import { mkdir } from 'fs/promises';
 import { CustomFileTypeValidator } from 'src/validators';
+import { ApiBadRequestResponse, ApiForbiddenResponse, ApiInternalServerErrorResponse, ApiNotFoundResponse, ApiUnauthorizedResponse } from '@nestjs/swagger';
 
 
 @Controller('offers')
 export class OfferController {
     constructor(private offerService: OfferService){}
 
+    @ApiInternalServerErrorResponse()
+    @ApiBadRequestResponse()
+    @ApiUnauthorizedResponse()
     @Post()
     @UseGuards(JwtGuard)
     async createOwnOffer(@GetUser() user: User, @Body() offer: CreateOfferDto){
         return await this.offerService.createOwnOffer(user.id, offer.name, offer.description);
     }
 
+    @ApiInternalServerErrorResponse()
+    @ApiBadRequestResponse()
+    @ApiUnauthorizedResponse()
+    @ApiNotFoundResponse({description: 'User not found'})
     @Get('/me')
     @UseGuards(JwtGuard)
     async getMyOffers(
@@ -36,6 +44,10 @@ export class OfferController {
         );
     }
     
+    @ApiInternalServerErrorResponse()
+    @ApiBadRequestResponse()
+    @ApiUnauthorizedResponse()
+    @ApiNotFoundResponse({description: 'Offer not found'})
     @Get('/:id')
     @UseGuards(JwtGuard)
     async getOfferById(
@@ -44,6 +56,10 @@ export class OfferController {
         return await this.offerService.getOfferById(offerId);
     }
 
+    @ApiInternalServerErrorResponse()
+    @ApiBadRequestResponse()
+    @ApiUnauthorizedResponse()
+    @ApiNotFoundResponse({description: 'Offer not found'})
     @Post('/:id/images')
     @UseGuards(JwtGuard)
     @UseInterceptors(FilesInterceptor('files', 12, {
@@ -85,6 +101,10 @@ export class OfferController {
         return await this.offerService.uplaodImages(offerId, files);
     }
 
+    @ApiInternalServerErrorResponse()
+    @ApiBadRequestResponse()
+    @ApiUnauthorizedResponse()
+    @ApiNotFoundResponse({description: 'Offer or Image not found'})
     @UseGuards(JwtGuard)
     @Header('Content-Type', 'application/jpeg')
     @Header('Content-Disposition', 'attachment; filename="offer_image.jpeg"')
@@ -95,6 +115,10 @@ export class OfferController {
       return await this.offerService.getOfferImagebyId(id, offerId);
     }
 
+    @ApiInternalServerErrorResponse()
+    @ApiBadRequestResponse()
+    @ApiUnauthorizedResponse()
+    @ApiNotFoundResponse({description: 'Offer not found'})
     @UseGuards(JwtGuard)
     @Get('/:offerid/images')
     async getOfferimages(
@@ -103,6 +127,8 @@ export class OfferController {
       return await this.offerService.getOfferImages(offerId);
     }
 
+    @ApiInternalServerErrorResponse()
+    @ApiBadRequestResponse()
     // @UseGuards(JwtGuard)
     @Get()
     async getOffers(
