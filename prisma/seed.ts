@@ -98,14 +98,62 @@ async function main() {
   });
   console.log({ mohamed, booba, userRole, adminRole, updateMohamed, updateBooba})
 
-  // read scrapped data and put it in an array
-  const results = [];
+  // seed scrapped data and put in in db
 
   createReadStream('cleaned_Agriculture_people_data.csv', { encoding: 'utf-8' })
   .pipe(csv())
-  .on('data', (data) => results.push(data))
-  .on('end', () => {
-    console.log(results[0]);
+  .on('data', async (data) => {
+    const phone = await prisma.phone.findUnique(
+        {
+            where: {
+                phoneNumber: data.PhoneNumber
+            }
+        }
+    );
+
+    if (phone) {
+        const offer = await prisma.offer.create(
+            {
+                data: {
+                    description: data.PostText,
+                    ownerId: phone.userId,
+                    createdById: phone.userId 
+                }
+            }
+        );
+    } else {
+        const user = await prisma.user.create(
+            {
+                data: {
+                    fullName: data.UserFullName,
+                    facebookProfileUrl: data.UserProfileUrl,
+                    roleId: 1
+                }
+            }
+        );
+
+        const createdPhone = await prisma.phone.create(
+            {
+                data: {
+                    phoneNumber: data.PhoneNumber,
+                    userId: user.id
+                }
+            }
+        );
+
+        const offer = await prisma.offer.create(
+            {
+                data: {
+                    description: data.PostText,
+                    ownerId: user.id,
+                    createdById: user.id,
+                }
+            }
+        );
+    }
+  })
+  .on('end', (data) => {
+    console.log(data);
   });
   
 }
