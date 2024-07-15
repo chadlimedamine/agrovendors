@@ -1,5 +1,6 @@
 import { Injectable, InternalServerErrorException, NotFoundException, StreamableFile } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { Offer } from '@prisma/client';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { createReadStream, existsSync } from 'fs';
 import { ArgumentOutOfRangeError } from 'rxjs';
@@ -31,7 +32,8 @@ export class OfferService {
         return offer;
     }
 
-    async getOfferById(offerId: number) {
+    async getOfferById(
+        offerId: number) {
         const offer = await this.prisma.offer.findFirst({
             where: {
                 id: offerId
@@ -47,7 +49,11 @@ export class OfferService {
         return offer;
     }
 
-    async getMyOffers(currentUserId: number) {
+    async getMyOffers(
+        currentUserId: number,
+        filterOn: string | undefined, filterQuery: string | undefined, 
+        sortOn: string | undefined, isAscending: boolean = true, 
+        pageNumber: number = 1, pageSize: number = 10) {
         const user = await this.prisma.user.findFirst(
             {
                 where: {
@@ -59,15 +65,101 @@ export class OfferService {
         if (!user)
             throw new NotFoundException('user not found!');
 
-        const offers = await this.prisma.offer.findMany(
-            {
-                where: {
-                    ownerId: currentUserId,
+        // ########## this is an optimized function to perform ####################
+            // ########## filtering, sorting, and pagination       ####################
+
+            // the list of users to be returned
+            let offers: Partial<Offer>[];
+
+            // filtering
+            if (filterOn){
+                if (filterOn === 'description'){
+                    offers = await this.prisma.offer.findMany({
+                        where: {
+                            description: {
+                                contains: filterQuery,
+                                mode: 'insensitive',
+                            },
+                            ownerId: currentUserId,
+                        },
+                        select: {
+                            id: true,
+                            description: true,
+                            createdAt: true,
+                            updatedAt: true,
+                            name: true,
+                            createdById: true,
+                            ownerId: true,
+                            images: true,
+                        }
+                    });
+                }
+            } else {
+                // if there is no filterOn query provided just return all the users
+                offers = await this.prisma.offer.findMany(
+                    {
+                        where: {
+                            ownerId: currentUserId,
+                        },
+                        select: {
+                            id: true,
+                            description: true,
+                            createdAt: true,
+                            updatedAt: true,
+                            name: true,
+                            createdById: true,
+                            ownerId: true,
+                            images: true,
+                        }
+                    }
+                );
+            }
+
+            // if (sortOn){
+            //     if (sortOn === 'fullName'){
+            //         users = isAscending? await this.prisma.user.findMany({
+            //             orderBy: {
+            //                 fullName: 'asc',
+            //             }
+            //         }) : await this.prisma.user.findMany({
+            //             orderBy: {
+            //                 fullName: 'desc',
+            //             }
+            //         });
+            //     }
+            //     else if (sortOn === 'associatedText'){
+            //         users = isAscending? await this.prisma.user.findMany({
+            //             orderBy: {
+            //                 associatedText: 'asc',
+            //             }
+            //         }) : await this.prisma.user.findMany({
+            //             orderBy: {
+            //                 associatedText: 'desc',
+            //             }
+            //         });
+            //     }
+            // }
+
+            // sorting
+            if (sortOn){
+                if (sortOn === 'description'){
+                    offers = isAscending ? offers.sort((a, b) => a.description.localeCompare(b.description))
+                    : offers.sort((a, b) => b.description.localeCompare(a.description));
                 }
             }
-        );
 
-        return offers;
+            // pagination
+            const skipResults = (pageNumber - 1) * pageSize;
+            const lastItem = pageNumber * pageSize;
+
+            // users = await this.prisma.user.findMany({
+            //     skip: skipResults,
+            //     take: pageSize,
+            // });
+
+            offers = offers.slice(skipResults, lastItem);
+
+            return offers;
     }
 
     async getOfferImages(offerId: number){
@@ -170,5 +262,102 @@ export class OfferService {
                 throw error;
             }
         }
+    }
+
+    async getOffers(filterOn: string | undefined, filterQuery: string | undefined, 
+        sortOn: string | undefined, isAscending: boolean = true, 
+        pageNumber: number = 1, pageSize: number = 10){
+
+            // ########## this is an optimized function to perform ####################
+            // ########## filtering, sorting, and pagination       ####################
+
+            // the list of users to be returned
+            let offers: Partial<Offer>[];
+
+            // filtering
+            if (filterOn){
+                if (filterOn === 'description'){
+                    offers = await this.prisma.offer.findMany({
+                        where: {
+                            description: {
+                                contains: filterQuery,
+                                mode: 'insensitive',
+                            }
+                        },
+                        select: {
+                            id: true,
+                            description: true,
+                            createdAt: true,
+                            updatedAt: true,
+                            name: true,
+                            createdById: true,
+                            ownerId: true,
+                            images: true,
+                        }
+                    });
+                }
+            } else {
+                // if there is no filterOn query provided just return all the users
+                offers = await this.prisma.offer.findMany(
+                    {
+                        select: {
+                            id: true,
+                            description: true,
+                            createdAt: true,
+                            updatedAt: true,
+                            name: true,
+                            createdById: true,
+                            ownerId: true,
+                            images: true,
+                        }
+                    }
+                );
+            }
+
+            // if (sortOn){
+            //     if (sortOn === 'fullName'){
+            //         users = isAscending? await this.prisma.user.findMany({
+            //             orderBy: {
+            //                 fullName: 'asc',
+            //             }
+            //         }) : await this.prisma.user.findMany({
+            //             orderBy: {
+            //                 fullName: 'desc',
+            //             }
+            //         });
+            //     }
+            //     else if (sortOn === 'associatedText'){
+            //         users = isAscending? await this.prisma.user.findMany({
+            //             orderBy: {
+            //                 associatedText: 'asc',
+            //             }
+            //         }) : await this.prisma.user.findMany({
+            //             orderBy: {
+            //                 associatedText: 'desc',
+            //             }
+            //         });
+            //     }
+            // }
+
+            // sorting
+            if (sortOn){
+                if (sortOn === 'description'){
+                    offers = isAscending ? offers.sort((a, b) => a.description.localeCompare(b.description))
+                    : offers.sort((a, b) => b.description.localeCompare(a.description));
+                }
+            }
+
+            // pagination
+            const skipResults = (pageNumber - 1) * pageSize;
+            const lastItem = pageNumber * pageSize;
+
+            // users = await this.prisma.user.findMany({
+            //     skip: skipResults,
+            //     take: pageSize,
+            // });
+
+            offers = offers.slice(skipResults, lastItem);
+
+            return offers;
     }
 }
