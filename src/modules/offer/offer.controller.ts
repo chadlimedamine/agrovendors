@@ -1,7 +1,7 @@
-import { Body, Controller, FileTypeValidator, Get, Header, MaxFileSizeValidator, Param, ParseFilePipe, ParseIntPipe, Post, StreamableFile, UploadedFiles, UseGuards, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, FileTypeValidator, Get, Header, MaxFileSizeValidator, Param, ParseFilePipe, ParseIntPipe, Post, Query, StreamableFile, UploadedFiles, UseGuards, UseInterceptors } from '@nestjs/common';
 import { User } from '@prisma/client';
 import { GetUser } from 'src/modules/auth/decorator';
-import { CreateOfferDto } from './dto/create.offer.dto';
+import { CreateOfferDto, OfferQueryDto } from './dto/create.offer.dto';
 import { OfferService } from './offer.service';
 import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
 import { JwtGuard } from 'src/modules/auth/guard/jwt.guard';
@@ -23,7 +23,20 @@ export class OfferController {
         return await this.offerService.createOwnOffer(user.id, offer.name, offer.description);
     }
 
-    @Get(':id')
+    @Get('/me')
+    @UseGuards(JwtGuard)
+    async getMyOffers(
+      @GetUser('id') currentUserId: number,
+      @Query() query: OfferQueryDto
+    ){
+        return await this.offerService.getMyOffers(currentUserId,
+          query.filterOn, query.filterQuery, 
+                                        query.sortOn, query.isAscending ?? true,
+                                        query.pageNumber ?? 1, query.pageSize ?? 10
+        );
+    }
+    
+    @Get('/:id')
     @UseGuards(JwtGuard)
     async getOfferById(
       @Param('id', ParseIntPipe) offerId: number,
@@ -31,15 +44,7 @@ export class OfferController {
         return await this.offerService.getOfferById(offerId);
     }
 
-    @Get()
-    @UseGuards(JwtGuard)
-    async getMyOffers(
-      @GetUser('id') currentUserId: number,
-    ){
-        return await this.offerService.getMyOffers(currentUserId);
-    }
-
-    @Post(':id/images')
+    @Post('/:id/images')
     @UseGuards(JwtGuard)
     @UseInterceptors(FilesInterceptor('files', 12, {
         storage: diskStorage({
@@ -91,10 +96,21 @@ export class OfferController {
     }
 
     @UseGuards(JwtGuard)
-    @Get(':offerid/images')
+    @Get('/:offerid/images')
     async getOfferimages(
       @Param('offerid', ParseIntPipe) offerId: number
     ){
       return await this.offerService.getOfferImages(offerId);
+    }
+
+    // @UseGuards(JwtGuard)
+    @Get()
+    async getOffers(
+      @Query() query: OfferQueryDto
+    ){
+            
+        return await this.offerService.getOffers(query.filterOn, query.filterQuery, 
+                                        query.sortOn, query.isAscending ?? true,
+                                        query.pageNumber ?? 1, query.pageSize ?? 10);
     }
 }
