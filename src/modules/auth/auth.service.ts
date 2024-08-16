@@ -251,7 +251,7 @@ export class AuthService {
                 payload,
                 {
                     secret: access_token_secret,
-                    expiresIn: 60 * 15 * 10,
+                    expiresIn: 60 * 15 * 10 * 10 * 10,
                 },
             ),
             this.jwt.signAsync(

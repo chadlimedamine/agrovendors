@@ -106,7 +106,7 @@ export class OfferController {
     @ApiBadRequestResponse()
     @ApiUnauthorizedResponse()
     @ApiNotFoundResponse({description: 'Offer or Image not found'})
-    @UseGuards(JwtGuard)
+    // @UseGuards(JwtGuard)
     @Header('Content-Type', 'application/jpeg')
     @Header('Content-Disposition', 'attachment; filename="offer_image.jpeg"')
     @Get(':offerId/images/:id')
@@ -128,6 +128,19 @@ export class OfferController {
       return await this.offerService.getOfferImages(offerId);
     }
 
+    // @ApiInternalServerErrorResponse()
+    // @ApiBadRequestResponse()
+    // // @UseGuards(JwtGuard)
+    // @Get()
+    // async getOffers(
+    //   @Query() query: OfferQueryDto
+    // ){
+            
+    //     return await this.offerService.getOffers(query.filterOn, query.filterQuery, 
+    //                                     query.sortOn, query.isAscending ?? true,
+    //                                     query.pageNumber ?? 1, query.pageSize ?? 10);
+    // }
+
     @ApiInternalServerErrorResponse()
     @ApiBadRequestResponse()
     // @UseGuards(JwtGuard)
@@ -136,8 +149,6 @@ export class OfferController {
       @Query() query: OfferQueryDto
     ){
             
-        return await this.offerService.getOffers(query.filterOn, query.filterQuery, 
-                                        query.sortOn, query.isAscending ?? true,
-                                        query.pageNumber ?? 1, query.pageSize ?? 10);
+        return await this.offerService.getOffers(query.filterOn, query.filterQuery);
     }
 }

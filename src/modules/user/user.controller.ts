@@ -42,8 +42,8 @@ export class UserController {
     @ApiUnauthorizedResponse()
     @ApiForbiddenResponse()
     @ApiNotFoundResponse({description: 'user not found'})
-    @UseGuards(JwtGuard, PermissionsGuard)
-    @Permissions(Permission.ReadUserById)
+    // @UseGuards(JwtGuard, PermissionsGuard)
+    // @Permissions(Permission.ReadUserById)
     @Get(':id')
     async getUserById(@Param('id', ParseIntPipe) id: number){
         return await this.userService.getUserById(id);
