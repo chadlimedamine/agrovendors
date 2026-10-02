@@ -98,9 +98,9 @@ async function main() {
   });
   console.log({ mohamed, booba, userRole, adminRole, updateMohamed, updateBooba})
 
-  // seed scrapped data and put in in db
+  // seed mock offers (same format as scraped marketplace posts)
 
-  createReadStream('cleaned_Agriculture_people_data.csv', { encoding: 'utf-8' })
+  createReadStream('prisma/data/mock_agriculture_offers.csv', { encoding: 'utf-8' })
   .pipe(csv())
   .on('data', async (data) => {
     const phone = await prisma.phone.findUnique(

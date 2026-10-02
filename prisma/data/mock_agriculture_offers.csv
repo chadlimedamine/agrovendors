@@ -1,0 +1,877 @@
+id,Url,PostingTime,UserFullName,UserProfileUrl,PhoneNumber,PostText
+0,https://example.com/agrovendors-demo/posts/100000,2023-08-29T09:59:32.000Z,Karim Haddad,https://example.com/agrovendors-demo/sellers/seller-001,0500000136,عندي 121 قنطار جزر للبيع، من الفلاح للمستهلك المكان: تيارت بسعر الجملة واتساب 0500000136
+1,https://example.com/agrovendors-demo/posts/100001,2023-08-27T23:09:44.000Z,Rachid Brahimi,https://example.com/agrovendors-demo/sellers/seller-002,0600000240,"كاين خرشف محصول هذا الموسم للبيع، 77 صندوق
+باتنة
+بسعر الجملة
+بدون توصيل
+المهتم يتصل على 0600000240"
+2,https://example.com/agrovendors-demo/posts/100002,2023-08-27T17:11:25.000Z,Ilyes Larbi,https://example.com/agrovendors-demo/sellers/seller-003,0700000171,"عندي 146 صندوق خس للبيع، درجة أولى
+الموقع ولاية الأغواط
+60 دج للكيلو
+بدون توصيل
+المهتم يتصل على 0700000171"
+3,https://example.com/agrovendors-demo/posts/100003,2023-08-23T05:04:18.000Z,فلاح قسنطينة,https://example.com/agrovendors-demo/sellers/seller-004,0700000010,"عندي 399 صندوق خرشف للبيع، نوعية ممتازة
+المكان: قسنطينة
+بسعر الجملة
+النقل على حساب المشتري
+المهتم يتصل على 0700000010"
+4,https://example.com/agrovendors-demo/posts/100004,2023-08-21T19:54:48.000Z,Yacine Mebarki,https://example.com/agrovendors-demo/sellers/seller-005,0700000092,للبيع ثوم مقشر محصول هذا الموسم. الكمية: 253 كيلو سكيكدة 810 دج للكيلو التوصيل متوفر لكل الولايات 📞 0700000092
+5,https://example.com/agrovendors-demo/posts/100005,2023-08-18T23:40:57.000Z,Bilal Ziani,https://example.com/agrovendors-demo/sellers/seller-006,0500000277,"متوفر عنب محصول هذا الموسم، الكمية 12 قنطار
+متواجد في بجاية
+السعر قابل للنقاش
+النقل على حساب المشتري
+اتصلوا بنا 0500000277"
+6,https://example.com/agrovendors-demo/posts/100006,2023-08-16T18:03:49.000Z,Adel Belkacem,https://example.com/agrovendors-demo/sellers/seller-007,0600000048,متوفر جزر سلعة نقية، الكمية 170 قنطار المكان: بجاية أسعار مناسبة للتجار التوصيل إلى 58 ولاية الهاتف 0600000048
+7,https://example.com/agrovendors-demo/posts/100007,2023-08-15T05:38:21.000Z,مزرعة الزيتون,https://example.com/agrovendors-demo/sellers/seller-008,0600000149,كاين جزر درجة أولى للبيع، 26 طن الموقع ولاية سطيف 100 دج للكيلو التوصيل إلى 58 ولاية واتساب 0600000149
+8,https://example.com/agrovendors-demo/posts/100008,2023-08-13T03:11:18.000Z,Samir Bouzid,https://example.com/agrovendors-demo/sellers/seller-009,0500000159,كاين بطاطا محصول هذا الموسم للبيع، 129 قنطار المكان: سكيكدة بسعر الجملة واتساب 0500000159
+9,https://example.com/agrovendors-demo/posts/100009,2023-08-11T17:39:24.000Z,Fares Zerrouki,https://example.com/agrovendors-demo/sellers/seller-010,0600000088,"عندي 1179 بالة تبن للبيع، درجة أولى
+متواجد في تيبازة
+أسعار مناسبة للتجار
+بدون توصيل
+الهاتف 0600000088"
+10,https://example.com/agrovendors-demo/posts/100010,2023-08-11T07:14:57.000Z,Amine Ferhat,https://example.com/agrovendors-demo/sellers/seller-011,0700000195,عندي 145 قنطار قمح للبيع، سلعة نقية الشلف 4830 دج للقنطار بدون توصيل واتساب 0700000195
+11,https://example.com/agrovendors-demo/posts/100011,2023-08-11T03:23:45.000Z,Redouane Ouali,https://example.com/agrovendors-demo/sellers/seller-012,0700000008,للبيع زيتون سلعة نقية. الكمية: 89 قنطار متواجد في سكيكدة بسعر معقول التوصيل إلى 58 ولاية 📞 0700000008
+12,https://example.com/agrovendors-demo/posts/100012,2023-08-10T18:11:33.000Z,أبو كريم,https://example.com/agrovendors-demo/sellers/seller-013,0600000153,"للبيع جزر من الفلاح للمستهلك. الكمية: 110 قنطار
+متواجد في الوادي
+السعر 70 دج للكيلو
+بدون توصيل
+اتصلوا بنا 0600000153"
+13,https://example.com/agrovendors-demo/posts/100013,2023-08-10T11:45:06.000Z,أبو حمزة,https://example.com/agrovendors-demo/sellers/seller-014,0600000219,"متوفر باذنجان درجة أولى، الكمية 177 قنطار
+خنشلة
+بسعر معقول
+بدون توصيل
+المهتم يتصل على 0600000219"
+14,https://example.com/agrovendors-demo/posts/100014,2023-08-04T07:59:07.000Z,Nabil Bensaid,https://example.com/agrovendors-demo/sellers/seller-015,0500000067,"متوفر قمح درجة أولى، الكمية 147 قنطار
+الشلف
+أسعار مناسبة للتجار
+اتصلوا بنا 0500000067"
+15,https://example.com/agrovendors-demo/posts/100015,2023-08-02T17:30:22.000Z,فلاح المدية,https://example.com/agrovendors-demo/sellers/seller-016,0600000051,عندي 34 صندوق خس للبيع، محصول هذا الموسم متواجد في المدية بسعر الجملة النقل على حساب المشتري للتواصل: 0600000051
+16,https://example.com/agrovendors-demo/posts/100016,2023-08-02T15:58:53.000Z,Djamel Amrani,https://example.com/agrovendors-demo/sellers/seller-017,0700000292,كاين بيض من الفلاح للمستهلك للبيع، 539 صفيحة المكان: بومرداس بسعر الجملة المهتم يتصل على 0700000292
+17,https://example.com/agrovendors-demo/posts/100017,2023-08-01T16:00:00.000Z,Djamel Rahmani,https://example.com/agrovendors-demo/sellers/seller-018,0700000202,للبيع فراولة مباشرة من المزرعة. الكمية: 300 صندوق الموقع ولاية أدرار بسعر معقول النقل على حساب المشتري واتساب 0700000202
+18,https://example.com/agrovendors-demo/posts/100018,2023-07-29T05:54:30.000Z,فلاح بسكرة,https://example.com/agrovendors-demo/sellers/seller-019,0500000168,"للبيع فول محصول هذا الموسم. الكمية: 109 قنطار
+متواجد في بسكرة
+بسعر الجملة
+اتصلوا بنا 0500000168"
+19,https://example.com/agrovendors-demo/posts/100019,2023-07-27T10:09:18.000Z,Lyes Bensaid,https://example.com/agrovendors-demo/sellers/seller-020,0500000064,"متوفر بطاطا محصول هذا الموسم، الكمية 180 قنطار
+المكان: الشلف
+50 دج للكيلو
+إمكانية التوصيل
+📞 0500000064"
+20,https://example.com/agrovendors-demo/posts/100020,2023-07-27T09:08:18.000Z,Omar Benali,https://example.com/agrovendors-demo/sellers/seller-021,0500000222,"للبيع تمر دقلة نور مباشرة من المزرعة. الكمية: 179 قنطار
+تلمسان
+السعر 640 دج للكيلو
+بدون توصيل
+المهتم يتصل على 0500000222"
+21,https://example.com/agrovendors-demo/posts/100021,2023-07-25T10:41:11.000Z,Khaled Rahmani,https://example.com/agrovendors-demo/sellers/seller-022,0700000073,عندي 34 صندوق تفاح للبيع، من الفلاح للمستهلك المكان: مستغانم أسعار مناسبة للتجار بدون توصيل 📞 0700000073
+22,https://example.com/agrovendors-demo/posts/100022,2023-07-23T20:42:46.000Z,فلاح ميلة,https://example.com/agrovendors-demo/sellers/seller-023,0700000160,"عندي 95 قنطار ثوم للبيع، درجة أولى
+ميلة
+السعر 380 دج للكيلو
+التوصيل إلى 58 ولاية
+واتساب 0700000160"
+23,https://example.com/agrovendors-demo/posts/100023,2023-07-20T02:11:39.000Z,Adel Khelifi,https://example.com/agrovendors-demo/sellers/seller-024,0600000151,عندي 216 كيلو ثوم مقشر للبيع، محصول هذا الموسم الموقع ولاية بسكرة بسعر الجملة التوصيل إلى 58 ولاية الهاتف 0600000151
+24,https://example.com/agrovendors-demo/posts/100024,2023-07-19T12:29:46.000Z,Mourad Meziane,https://example.com/agrovendors-demo/sellers/seller-025,0700000196,"متوفر مشمش نوعية ممتازة، الكمية 181 قنطار
+المكان: تلمسان
+بسعر معقول
+📞 0700000196"
+25,https://example.com/agrovendors-demo/posts/100025,2023-07-15T00:17:45.000Z,Lyes Bensaid,https://example.com/agrovendors-demo/sellers/seller-026,0600000274,"للبيع خرشف مباشرة من المزرعة. الكمية: 191 صندوق
+الموقع ولاية تيبازة
+بسعر معقول
+بدون توصيل
+واتساب 0600000274"
+26,https://example.com/agrovendors-demo/posts/100026,2023-07-14T22:22:59.000Z,Ilyes Bensaid,https://example.com/agrovendors-demo/sellers/seller-027,0700000234,عندي 179 قنطار باذنجان للبيع، نوعية ممتازة المكان: ميلة أسعار مناسبة للتجار النقل على حساب المشتري الهاتف 0700000234
+27,https://example.com/agrovendors-demo/posts/100027,2023-07-14T06:28:08.000Z,Nadia Cherif,https://example.com/agrovendors-demo/sellers/seller-028,0600000053,للبيع لفت سلعة نقية. الكمية: 42 قنطار الشلف أسعار مناسبة للتجار إمكانية التوصيل 📞 0600000053
+28,https://example.com/agrovendors-demo/posts/100028,2023-07-05T19:24:46.000Z,فلاح الوادي,https://example.com/agrovendors-demo/sellers/seller-029,0700000256,متوفر زيت زيتون من الفلاح للمستهلك، الكمية 904 لتر متواجد في الوادي السعر 1360 دج للتر للتواصل: 0700000256
+29,https://example.com/agrovendors-demo/posts/100029,2023-07-04T03:19:34.000Z,مزرعة الهضاب,https://example.com/agrovendors-demo/sellers/seller-030,0700000111,للبيع ثوم سلعة نقية. الكمية: 13 طن متواجد في خنشلة 680 دج للكيلو 📞 0700000111
+30,https://example.com/agrovendors-demo/posts/100030,2023-06-30T16:51:25.000Z,مزرعة الزيتون,https://example.com/agrovendors-demo/sellers/seller-031,0600000102,"عندي 20 طن ثوم للبيع، محصول هذا الموسم
+المكان: قسنطينة
+530 دج للكيلو
+بدون توصيل
+واتساب 0600000102"
+31,https://example.com/agrovendors-demo/posts/100031,2023-06-30T10:56:22.000Z,Rachid Ziani,https://example.com/agrovendors-demo/sellers/seller-032,0500000247,كاين لفت سلعة نقية للبيع، 33 قنطار الموقع ولاية سكيكدة بسعر الجملة التوصيل إلى 58 ولاية الهاتف 0500000247
+32,https://example.com/agrovendors-demo/posts/100032,2023-06-29T18:18:13.000Z,Meriem Sahraoui,https://example.com/agrovendors-demo/sellers/seller-033,0600000038,عندي 106 قنطار مشمش للبيع، درجة أولى الموقع ولاية الوادي 260 دج للكيلو النقل على حساب المشتري اتصلوا بنا 0600000038
+33,https://example.com/agrovendors-demo/posts/100033,2023-06-29T17:47:02.000Z,أبو عمر,https://example.com/agrovendors-demo/sellers/seller-034,0600000275,عندي 93 قنطار زيتون للبيع، درجة أولى المكان: غليزان أسعار مناسبة للتجار التوصيل متوفر لكل الولايات واتساب 0600000275
+34,https://example.com/agrovendors-demo/posts/100034,2023-06-26T13:00:36.000Z,Anis Slimani,https://example.com/agrovendors-demo/sellers/seller-035,0600000239,متوفر لفت درجة أولى، الكمية 191 قنطار متواجد في أدرار السعر قابل للنقاش التوصيل إلى 58 ولاية 📞 0600000239
+35,https://example.com/agrovendors-demo/posts/100035,2023-06-25T16:42:01.000Z,Mourad Djebbar,https://example.com/agrovendors-demo/sellers/seller-036,0500000258,كاين ثوم محصول هذا الموسم للبيع، 27 طن متواجد في تيبازة بسعر الجملة التوصيل إلى 58 ولاية للتواصل: 0500000258
+36,https://example.com/agrovendors-demo/posts/100036,2023-06-23T21:41:39.000Z,Anis Bouzid,https://example.com/agrovendors-demo/sellers/seller-037,0700000063,للبيع دلاع من الفلاح للمستهلك. الكمية: 8 طن الموقع ولاية ورقلة السعر قابل للنقاش بدون توصيل 📞 0700000063
+37,https://example.com/agrovendors-demo/posts/100037,2023-06-22T19:29:57.000Z,Djamel Meziane,https://example.com/agrovendors-demo/sellers/seller-038,0700000005,"متوفر بيض محصول هذا الموسم، الكمية 699 صفيحة
+المكان: البليدة
+السعر قابل للنقاش
+بدون توصيل
+اتصلوا بنا 0700000005"
+38,https://example.com/agrovendors-demo/posts/100038,2023-06-22T16:31:05.000Z,Yasmine Amrani,https://example.com/agrovendors-demo/sellers/seller-039,0600000084,كاين عنب نوعية ممتازة للبيع، 241 صندوق بومرداس بسعر معقول واتساب 0600000084
+39,https://example.com/agrovendors-demo/posts/100039,2023-06-22T04:20:37.000Z,فلاح خنشلة,https://example.com/agrovendors-demo/sellers/seller-040,0700000096,عندي 9 طن برتقال للبيع، سلعة نقية متواجد في خنشلة أسعار مناسبة للتجار النقل على حساب المشتري الهاتف 0700000096
+40,https://example.com/agrovendors-demo/posts/100040,2023-06-21T14:02:30.000Z,Yasmine Meziane,https://example.com/agrovendors-demo/sellers/seller-041,0500000043,"كاين جزر سلعة نقية للبيع، 16 طن
+المكان: خنشلة
+90 دج للكيلو
+التوصيل متوفر لكل الولايات
+اتصلوا بنا 0500000043"
+41,https://example.com/agrovendors-demo/posts/100041,2023-06-20T09:52:22.000Z,Hamza Lounis,https://example.com/agrovendors-demo/sellers/seller-042,0700000128,"كاين تفاح مباشرة من المزرعة للبيع، 364 صندوق
+المكان: تيبازة
+السعر قابل للنقاش
+النقل على حساب المشتري
+اتصلوا بنا 0700000128"
+42,https://example.com/agrovendors-demo/posts/100042,2023-06-15T01:16:40.000Z,Fatima Messaoudi,https://example.com/agrovendors-demo/sellers/seller-043,0500000074,"عندي 190 قنطار تفاح للبيع، سلعة نقية
+الموقع ولاية معسكر
+السعر قابل للنقاش
+بدون توصيل
+واتساب 0500000074"
+43,https://example.com/agrovendors-demo/posts/100043,2023-06-14T11:29:28.000Z,Ilyes Benamar,https://example.com/agrovendors-demo/sellers/seller-044,0600000272,"للبيع مشمش من الفلاح للمستهلك. الكمية: 205 صندوق
+الوادي
+بسعر معقول
+إمكانية التوصيل
+واتساب 0600000272"
+44,https://example.com/agrovendors-demo/posts/100044,2023-06-12T03:22:06.000Z,Fatima Lounis,https://example.com/agrovendors-demo/sellers/seller-045,0600000116,عندي 68 قنطار دلاع للبيع، نوعية ممتازة متواجد في قسنطينة بسعر معقول التوصيل متوفر لكل الولايات الهاتف 0600000116
+45,https://example.com/agrovendors-demo/posts/100045,2023-06-11T08:17:50.000Z,مزرعة الخير,https://example.com/agrovendors-demo/sellers/seller-046,0500000194,"عندي 671 صفيحة بيض للبيع، درجة أولى
+الشلف
+بسعر معقول
+التوصيل إلى 58 ولاية
+المهتم يتصل على 0500000194"
+46,https://example.com/agrovendors-demo/posts/100046,2023-06-10T03:51:25.000Z,فلاح وهران,https://example.com/agrovendors-demo/sellers/seller-047,0600000030,"كاين عسل طبيعي من الفلاح للمستهلك للبيع، 34 كيلو
+وهران
+بسعر معقول
+بدون توصيل
+الهاتف 0600000030"
+47,https://example.com/agrovendors-demo/posts/100047,2023-06-09T14:49:16.000Z,Ilyes Belaid,https://example.com/agrovendors-demo/sellers/seller-048,0600000249,"عندي 139 قنطار فلفل حار للبيع، محصول هذا الموسم
+الموقع ولاية معسكر
+السعر قابل للنقاش
+للتواصل: 0600000249"
+48,https://example.com/agrovendors-demo/posts/100048,2023-06-08T16:13:22.000Z,أبو كريم,https://example.com/agrovendors-demo/sellers/seller-049,0500000119,"متوفر فلفل حلو مباشرة من المزرعة، الكمية 40 صندوق
+الوادي
+أسعار مناسبة للتجار
+بدون توصيل
+📞 0500000119"
+49,https://example.com/agrovendors-demo/posts/100049,2023-06-08T00:58:42.000Z,Khadidja Mansouri,https://example.com/agrovendors-demo/sellers/seller-050,0500000039,"للبيع باذنجان درجة أولى. الكمية: 426 صندوق
+المكان: قسنطينة
+السعر 130 دج للكيلو
+النقل على حساب المشتري
+📞 0500000039"
+50,https://example.com/agrovendors-demo/posts/100050,2023-06-04T11:47:58.000Z,Adel Belaid,https://example.com/agrovendors-demo/sellers/seller-051,0600000019,متوفر زيتون من الفلاح للمستهلك، الكمية 16 قنطار متواجد في الوادي السعر 400 دج للكيلو إمكانية التوصيل 📞 0600000019
+51,https://example.com/agrovendors-demo/posts/100051,2023-06-04T01:28:16.000Z,فلاح غليزان,https://example.com/agrovendors-demo/sellers/seller-052,0500000060,"متوفر فلفل حار درجة أولى، الكمية 379 صندوق
+غليزان
+السعر قابل للنقاش
+بدون توصيل
+واتساب 0500000060"
+52,https://example.com/agrovendors-demo/posts/100052,2023-06-03T15:45:39.000Z,Abdelkader Brahimi,https://example.com/agrovendors-demo/sellers/seller-053,0600000209,"متوفر قرعة من الفلاح للمستهلك، الكمية 265 صندوق
+الموقع ولاية ورقلة
+السعر 70 دج للكيلو
+للتواصل: 0600000209"
+53,https://example.com/agrovendors-demo/posts/100053,2023-06-02T00:52:54.000Z,Tarek Lounis,https://example.com/agrovendors-demo/sellers/seller-054,0500000183,"عندي 85 قنطار شعير للبيع، محصول هذا الموسم
+باتنة
+بسعر معقول
+التوصيل إلى 58 ولاية
+📞 0500000183"
+54,https://example.com/agrovendors-demo/posts/100054,2023-06-01T20:41:39.000Z,Khadidja Ziani,https://example.com/agrovendors-demo/sellers/seller-055,0700000037,للبيع قرعة مباشرة من المزرعة. الكمية: 240 صندوق الموقع ولاية برج بوعريريج بسعر الجملة التوصيل إلى 58 ولاية المهتم يتصل على 0700000037
+55,https://example.com/agrovendors-demo/posts/100055,2023-05-30T19:06:19.000Z,Rachid Amrani,https://example.com/agrovendors-demo/sellers/seller-056,0600000101,"كاين بطيخ مباشرة من المزرعة للبيع، 175 قنطار
+متواجد في خنشلة
+بسعر الجملة
+التوصيل إلى 58 ولاية
+للتواصل: 0600000101"
+56,https://example.com/agrovendors-demo/posts/100056,2023-05-29T17:49:30.000Z,Bilal Saadi,https://example.com/agrovendors-demo/sellers/seller-057,0600000121,"للبيع قمح درجة أولى. الكمية: 66 قنطار
+جيجل
+5190 دج للقنطار
+التوصيل متوفر لكل الولايات
+المهتم يتصل على 0600000121"
+57,https://example.com/agrovendors-demo/posts/100057,2023-05-28T18:39:12.000Z,Khadidja Slimani,https://example.com/agrovendors-demo/sellers/seller-058,0700000178,"للبيع زيت زيتون من الفلاح للمستهلك. الكمية: 1562 لتر
+سيدي بلعباس
+السعر 1100 دج للتر
+بدون توصيل
+المهتم يتصل على 0700000178"
+58,https://example.com/agrovendors-demo/posts/100058,2023-05-27T05:51:44.000Z,Amina Lounis,https://example.com/agrovendors-demo/sellers/seller-059,0600000142,كاين برتقال من الفلاح للمستهلك للبيع، 16 طن الموقع ولاية سكيكدة بسعر الجملة بدون توصيل الهاتف 0600000142
+59,https://example.com/agrovendors-demo/posts/100059,2023-05-24T21:59:12.000Z,Hamza Sahraoui,https://example.com/agrovendors-demo/sellers/seller-060,0600000124,كاين ثوم مقشر محصول هذا الموسم للبيع، 289 كيلو الموقع ولاية غليزان أسعار مناسبة للتجار إمكانية التوصيل المهتم يتصل على 0600000124
+60,https://example.com/agrovendors-demo/posts/100060,2023-05-18T14:34:20.000Z,Nabil Benamar,https://example.com/agrovendors-demo/sellers/seller-061,0500000244,عندي 129 قنطار عنب للبيع، درجة أولى متواجد في غرداية السعر 310 دج للكيلو المهتم يتصل على 0500000244
+61,https://example.com/agrovendors-demo/posts/100061,2023-05-10T11:22:00.000Z,Riad Bensaid,https://example.com/agrovendors-demo/sellers/seller-062,0500000227,"للبيع قرعة محصول هذا الموسم. الكمية: 13 قنطار
+المكان: عين الدفلى
+بسعر الجملة
+إمكانية التوصيل
+اتصلوا بنا 0500000227"
+62,https://example.com/agrovendors-demo/posts/100062,2023-05-08T23:25:51.000Z,مزرعة الهضاب,https://example.com/agrovendors-demo/sellers/seller-063,0500000216,"كاين شعير محصول هذا الموسم للبيع، 161 قنطار
+متواجد في باتنة
+أسعار مناسبة للتجار
+التوصيل متوفر لكل الولايات
+اتصلوا بنا 0500000216"
+63,https://example.com/agrovendors-demo/posts/100063,2023-05-08T06:29:28.000Z,Amina Lounis,https://example.com/agrovendors-demo/sellers/seller-064,0700000173,"عندي 63 قنطار برتقال للبيع، درجة أولى
+متواجد في ميلة
+السعر 170 دج للكيلو
+التوصيل إلى 58 ولاية
+المهتم يتصل على 0700000173"
+64,https://example.com/agrovendors-demo/posts/100064,2023-05-06T07:11:17.000Z,أبو ياسين,https://example.com/agrovendors-demo/sellers/seller-065,0500000252,كاين قمح من الفلاح للمستهلك للبيع، 11 قنطار الموقع ولاية تيبازة أسعار مناسبة للتجار بدون توصيل 📞 0500000252
+65,https://example.com/agrovendors-demo/posts/100065,2023-05-04T04:33:07.000Z,مزرعة النخيل,https://example.com/agrovendors-demo/sellers/seller-066,0500000011,"للبيع بطاطا من الفلاح للمستهلك. الكمية: 19 قنطار
+أدرار
+أسعار مناسبة للتجار
+الهاتف 0500000011"
+66,https://example.com/agrovendors-demo/posts/100066,2023-04-30T15:14:28.000Z,Karim Messaoudi,https://example.com/agrovendors-demo/sellers/seller-067,0600000016,"عندي 1381 لتر زيت زيتون للبيع، محصول هذا الموسم
+المكان: برج بوعريريج
+أسعار مناسبة للتجار
+إمكانية التوصيل
+اتصلوا بنا 0600000016"
+67,https://example.com/agrovendors-demo/posts/100067,2023-04-30T08:08:35.000Z,أبو ياسين,https://example.com/agrovendors-demo/sellers/seller-068,0500000225,"عندي 49 قنطار زيتون للبيع، محصول هذا الموسم
+المكان: مستغانم
+بسعر الجملة
+بدون توصيل
+📞 0500000225"
+68,https://example.com/agrovendors-demo/posts/100068,2023-04-27T10:28:54.000Z,Nadia Ouali,https://example.com/agrovendors-demo/sellers/seller-069,0700000224,"متوفر ثوم محصول هذا الموسم، الكمية 168 قنطار
+الموقع ولاية تلمسان
+أسعار مناسبة للتجار
+النقل على حساب المشتري
+المهتم يتصل على 0700000224"
+69,https://example.com/agrovendors-demo/posts/100069,2023-04-27T07:27:52.000Z,Amina Taleb,https://example.com/agrovendors-demo/sellers/seller-070,0600000044,"للبيع عسل طبيعي مباشرة من المزرعة. الكمية: 104 كيلو
+المكان: غليزان
+5310 دج للكيلو
+إمكانية التوصيل
+الهاتف 0600000044"
+70,https://example.com/agrovendors-demo/posts/100070,2023-04-25T01:46:02.000Z,فلاح المدية,https://example.com/agrovendors-demo/sellers/seller-071,0500000122,متوفر دلاع درجة أولى، الكمية 25 طن الموقع ولاية المدية السعر 50 دج للكيلو التوصيل إلى 58 ولاية المهتم يتصل على 0500000122
+71,https://example.com/agrovendors-demo/posts/100071,2023-04-23T01:25:16.000Z,Ilyes Larbi,https://example.com/agrovendors-demo/sellers/seller-072,0600000217,"للبيع طماطم من الفلاح للمستهلك. الكمية: 59 صندوق
+المكان: باتنة
+السعر 120 دج للكيلو
+التوصيل متوفر لكل الولايات
+واتساب 0600000217"
+72,https://example.com/agrovendors-demo/posts/100072,2023-04-22T07:20:09.000Z,Anis Khelifi,https://example.com/agrovendors-demo/sellers/seller-073,0700000021,عندي 48 قنطار لفت للبيع، من الفلاح للمستهلك المكان: عين الدفلى بسعر الجملة إمكانية التوصيل واتساب 0700000021
+73,https://example.com/agrovendors-demo/posts/100073,2023-04-18T22:26:05.000Z,أبو يوسف,https://example.com/agrovendors-demo/sellers/seller-074,0600000215,للبيع خس مباشرة من المزرعة. الكمية: 24 صندوق الموقع ولاية سيدي بلعباس السعر 70 دج للكيلو إمكانية التوصيل الهاتف 0600000215
+74,https://example.com/agrovendors-demo/posts/100074,2023-04-17T07:36:04.000Z,Ilyes Mebarki,https://example.com/agrovendors-demo/sellers/seller-075,0600000082,متوفر برتقال من الفلاح للمستهلك، الكمية 26 طن المكان: أدرار 200 دج للكيلو للتواصل: 0600000082
+75,https://example.com/agrovendors-demo/posts/100075,2023-04-16T04:26:02.000Z,مزرعة السهل,https://example.com/agrovendors-demo/sellers/seller-076,0500000131,كاين خس مباشرة من المزرعة للبيع، 447 صندوق بومرداس بسعر معقول بدون توصيل اتصلوا بنا 0500000131
+76,https://example.com/agrovendors-demo/posts/100076,2023-04-11T11:12:31.000Z,مزرعة الهضاب,https://example.com/agrovendors-demo/sellers/seller-077,0500000206,"عندي 70 قنطار زيتون للبيع، سلعة نقية
+الموقع ولاية تيزي وزو
+بسعر الجملة
+اتصلوا بنا 0500000206"
+77,https://example.com/agrovendors-demo/posts/100077,2023-04-01T00:17:02.000Z,Karim Zerrouki,https://example.com/agrovendors-demo/sellers/seller-078,0700000218,متوفر فول من الفلاح للمستهلك، الكمية 118 قنطار المكان: الوادي 120 دج للكيلو النقل على حساب المشتري 📞 0700000218
+78,https://example.com/agrovendors-demo/posts/100078,2023-03-31T23:05:22.000Z,مزرعة البركة,https://example.com/agrovendors-demo/sellers/seller-079,0500000115,"للبيع مشمش محصول هذا الموسم. الكمية: 30 صندوق
+المدية
+السعر قابل للنقاش
+التوصيل متوفر لكل الولايات
+📞 0500000115"
+79,https://example.com/agrovendors-demo/posts/100079,2023-03-29T23:08:45.000Z,Karim Ziani,https://example.com/agrovendors-demo/sellers/seller-080,0600000068,"عندي 131 قنطار زيتون للبيع، مباشرة من المزرعة
+المكان: تيزي وزو
+بسعر الجملة
+بدون توصيل
+الهاتف 0600000068"
+80,https://example.com/agrovendors-demo/posts/100080,2023-03-28T18:02:54.000Z,Hamza Saadi,https://example.com/agrovendors-demo/sellers/seller-081,0500000254,"للبيع عنب درجة أولى. الكمية: 195 قنطار
+الموقع ولاية تيزي وزو
+السعر قابل للنقاش
+📞 0500000254"
+81,https://example.com/agrovendors-demo/posts/100081,2023-03-28T05:38:26.000Z,Bilal Hamidi,https://example.com/agrovendors-demo/sellers/seller-082,0600000191,كاين خس مباشرة من المزرعة للبيع، 107 صندوق المكان: الأغواط أسعار مناسبة للتجار النقل على حساب المشتري واتساب 0600000191
+82,https://example.com/agrovendors-demo/posts/100082,2023-03-27T11:52:35.000Z,فلاح ورقلة,https://example.com/agrovendors-demo/sellers/seller-083,0600000223,عندي 165 قنطار خرشف للبيع، درجة أولى ورقلة السعر قابل للنقاش التوصيل إلى 58 ولاية الهاتف 0600000223
+83,https://example.com/agrovendors-demo/posts/100083,2023-03-26T17:33:49.000Z,Bilal Taleb,https://example.com/agrovendors-demo/sellers/seller-084,0500000085,عندي 32 قنطار ثوم مقشر للبيع، محصول هذا الموسم متواجد في جيجل السعر 960 دج للكيلو اتصلوا بنا 0500000085
+84,https://example.com/agrovendors-demo/posts/100084,2023-03-22T16:03:58.000Z,Adel Sahraoui,https://example.com/agrovendors-demo/sellers/seller-085,0700000197,للبيع تمر دقلة نور سلعة نقية. الكمية: 134 كرتونة الموقع ولاية تلمسان أسعار مناسبة للتجار بدون توصيل واتساب 0700000197
+85,https://example.com/agrovendors-demo/posts/100085,2023-03-22T11:51:01.000Z,أبو كريم,https://example.com/agrovendors-demo/sellers/seller-086,0600000003,"كاين عسل طبيعي نوعية ممتازة للبيع، 37 كيلو
+متواجد في الأغواط
+بسعر معقول
+التوصيل متوفر لكل الولايات
+اتصلوا بنا 0600000003"
+86,https://example.com/agrovendors-demo/posts/100086,2023-03-21T21:04:19.000Z,مزرعة الربيع,https://example.com/agrovendors-demo/sellers/seller-087,0700000130,"متوفر مشمش محصول هذا الموسم، الكمية 58 قنطار
+الموقع ولاية غليزان
+أسعار مناسبة للتجار
+التوصيل إلى 58 ولاية
+المهتم يتصل على 0700000130"
+87,https://example.com/agrovendors-demo/posts/100087,2023-03-21T19:34:34.000Z,Djamel Belkacem,https://example.com/agrovendors-demo/sellers/seller-088,0500000181,"متوفر دلاع مباشرة من المزرعة، الكمية 2 طن
+متواجد في عين الدفلى
+50 دج للكيلو
+التوصيل إلى 58 ولاية
+الهاتف 0500000181"
+88,https://example.com/agrovendors-demo/posts/100088,2023-03-21T07:12:59.000Z,Yacine Cherif,https://example.com/agrovendors-demo/sellers/seller-089,0600000293,عندي 114 قنطار فلفل حلو للبيع، نوعية ممتازة متواجد في الجزائر السعر قابل للنقاش بدون توصيل المهتم يتصل على 0600000293
+89,https://example.com/agrovendors-demo/posts/100089,2023-03-19T01:26:47.000Z,Mourad Amrani,https://example.com/agrovendors-demo/sellers/seller-090,0600000186,"متوفر تبن نوعية ممتازة، الكمية 615 بالة
+المكان: سكيكدة
+السعر 800 دج للبالة
+بدون توصيل
+📞 0600000186"
+90,https://example.com/agrovendors-demo/posts/100090,2023-03-13T14:25:48.000Z,Youcef Khelifi,https://example.com/agrovendors-demo/sellers/seller-091,0600000080,عندي 205 كيلو عسل طبيعي للبيع، مباشرة من المزرعة ورقلة السعر قابل للنقاش النقل على حساب المشتري الهاتف 0600000080
+91,https://example.com/agrovendors-demo/posts/100091,2023-03-13T07:41:23.000Z,أبو ياسين,https://example.com/agrovendors-demo/sellers/seller-092,0600000174,"عندي 64 قنطار تمر دقلة نور للبيع، نوعية ممتازة
+المكان: مستغانم
+بسعر معقول
+واتساب 0600000174"
+92,https://example.com/agrovendors-demo/posts/100092,2023-03-12T03:16:37.000Z,Samira Amrani,https://example.com/agrovendors-demo/sellers/seller-093,0600000243,عندي 261 صندوق خس للبيع، مباشرة من المزرعة الموقع ولاية البليدة السعر 100 دج للكيلو إمكانية التوصيل اتصلوا بنا 0600000243
+93,https://example.com/agrovendors-demo/posts/100093,2023-03-11T19:48:24.000Z,Nassim Bouzid,https://example.com/agrovendors-demo/sellers/seller-094,0700000022,"كاين ثوم مقشر مباشرة من المزرعة للبيع، 158 كيلو
+الأغواط
+بسعر معقول
+التوصيل متوفر لكل الولايات
+للتواصل: 0700000022"
+94,https://example.com/agrovendors-demo/posts/100094,2023-03-11T15:14:32.000Z,أبو رياض,https://example.com/agrovendors-demo/sellers/seller-095,0600000118,كاين باذنجان من الفلاح للمستهلك للبيع، 75 قنطار متواجد في الجزائر بسعر معقول التوصيل متوفر لكل الولايات واتساب 0600000118
+95,https://example.com/agrovendors-demo/posts/100095,2023-03-09T23:58:46.000Z,Yasmine Belkacem,https://example.com/agrovendors-demo/sellers/seller-096,0700000266,متوفر قمح سلعة نقية، الكمية 36 قنطار متواجد في تيزي وزو السعر قابل للنقاش إمكانية التوصيل للتواصل: 0700000266
+96,https://example.com/agrovendors-demo/posts/100096,2023-03-09T21:05:07.000Z,Nabil Haddad,https://example.com/agrovendors-demo/sellers/seller-097,0500000077,عندي 1342 لتر زيت زيتون للبيع، درجة أولى تيبازة أسعار مناسبة للتجار التوصيل متوفر لكل الولايات الهاتف 0500000077
+97,https://example.com/agrovendors-demo/posts/100097,2023-03-07T16:40:59.000Z,Zakaria Amrani,https://example.com/agrovendors-demo/sellers/seller-098,0700000109,"عندي 138 قنطار عنب للبيع، من الفلاح للمستهلك
+الموقع ولاية الجزائر
+بسعر الجملة
+النقل على حساب المشتري
+الهاتف 0700000109"
+98,https://example.com/agrovendors-demo/posts/100098,2023-03-07T13:37:09.000Z,أبو عمر,https://example.com/agrovendors-demo/sellers/seller-099,0500000029,"متوفر عنب محصول هذا الموسم، الكمية 190 قنطار
+المكان: قسنطينة
+بسعر معقول
+التوصيل متوفر لكل الولايات
+📞 0500000029"
+99,https://example.com/agrovendors-demo/posts/100099,2023-03-06T00:28:40.000Z,أبو حمزة,https://example.com/agrovendors-demo/sellers/seller-100,0500000232,متوفر خرشف من الفلاح للمستهلك، الكمية 169 صندوق المكان: الوادي السعر 160 دج للكيلو التوصيل متوفر لكل الولايات المهتم يتصل على 0500000232
+100,https://example.com/agrovendors-demo/posts/100100,2023-03-05T18:57:07.000Z,Khaled Amrani,https://example.com/agrovendors-demo/sellers/seller-101,0700000198,"كاين فول درجة أولى للبيع، 82 قنطار
+متواجد في تيبازة
+بسعر الجملة
+التوصيل إلى 58 ولاية
+للتواصل: 0700000198"
+101,https://example.com/agrovendors-demo/posts/100101,2023-03-04T11:29:32.000Z,Karim Boukhari,https://example.com/agrovendors-demo/sellers/seller-102,0700000047,متوفر بيض مباشرة من المزرعة، الكمية 252 صفيحة الموقع ولاية خنشلة السعر 450 دج للصفيحة التوصيل متوفر لكل الولايات اتصلوا بنا 0700000047
+102,https://example.com/agrovendors-demo/posts/100102,2023-03-02T08:06:53.000Z,Ahmed Belkacem,https://example.com/agrovendors-demo/sellers/seller-103,0600000154,متوفر فراولة من الفلاح للمستهلك، الكمية 277 صندوق الموقع ولاية وهران بسعر الجملة واتساب 0600000154
+103,https://example.com/agrovendors-demo/posts/100103,2023-02-28T10:26:56.000Z,Nabil Saadi,https://example.com/agrovendors-demo/sellers/seller-104,0700000187,كاين ثوم مقشر محصول هذا الموسم للبيع، 191 قنطار متواجد في تيزي وزو السعر 900 دج للكيلو بدون توصيل 📞 0700000187
+104,https://example.com/agrovendors-demo/posts/100104,2023-02-25T09:56:27.000Z,Karim Rahmani,https://example.com/agrovendors-demo/sellers/seller-105,0700000276,"متوفر قمح سلعة نقية، الكمية 61 قنطار
+متواجد في وهران
+5250 دج للقنطار
+إمكانية التوصيل
+الهاتف 0700000276"
+105,https://example.com/agrovendors-demo/posts/100105,2023-02-23T11:34:38.000Z,Salim Rahmani,https://example.com/agrovendors-demo/sellers/seller-106,0500000027,"للبيع بطاطا من الفلاح للمستهلك. الكمية: 110 قنطار
+المكان: الأغواط
+80 دج للكيلو
+للتواصل: 0500000027"
+106,https://example.com/agrovendors-demo/posts/100106,2023-02-21T03:41:33.000Z,Nabil Cherif,https://example.com/agrovendors-demo/sellers/seller-107,0700000150,متوفر طماطم محصول هذا الموسم، الكمية 135 صندوق الموقع ولاية بومرداس السعر قابل للنقاش بدون توصيل 📞 0700000150
+107,https://example.com/agrovendors-demo/posts/100107,2023-02-20T07:54:10.000Z,Fares Bensaid,https://example.com/agrovendors-demo/sellers/seller-108,0500000100,متوفر تبن مباشرة من المزرعة، الكمية 265 بالة الجزائر السعر قابل للنقاش النقل على حساب المشتري اتصلوا بنا 0500000100
+108,https://example.com/agrovendors-demo/posts/100108,2023-02-19T02:31:26.000Z,أبو آدم,https://example.com/agrovendors-demo/sellers/seller-109,0600000199,"عندي 24 طن جزر للبيع، مباشرة من المزرعة
+الموقع ولاية عين الدفلى
+90 دج للكيلو
+التوصيل إلى 58 ولاية
+واتساب 0600000199"
+109,https://example.com/agrovendors-demo/posts/100109,2023-02-18T23:36:46.000Z,Lyes Zerrouki,https://example.com/agrovendors-demo/sellers/seller-110,0600000117,"عندي 17 قنطار دلاع للبيع، مباشرة من المزرعة
+متواجد في معسكر
+30 دج للكيلو
+النقل على حساب المشتري
+📞 0600000117"
+110,https://example.com/agrovendors-demo/posts/100110,2023-02-17T17:18:37.000Z,Yacine Belaid,https://example.com/agrovendors-demo/sellers/seller-111,0700000152,"للبيع عسل طبيعي سلعة نقية. الكمية: 221 كيلو
+المكان: عين الدفلى
+4310 دج للكيلو
+إمكانية التوصيل
+المهتم يتصل على 0700000152"
+111,https://example.com/agrovendors-demo/posts/100111,2023-02-16T15:13:03.000Z,Ahmed Rahmani,https://example.com/agrovendors-demo/sellers/seller-112,0500000015,للبيع ثوم مقشر درجة أولى. الكمية: 142 كيلو المكان: مستغانم السعر قابل للنقاش التوصيل متوفر لكل الولايات المهتم يتصل على 0500000015
+112,https://example.com/agrovendors-demo/posts/100112,2023-02-14T10:33:47.000Z,أبو ياسين,https://example.com/agrovendors-demo/sellers/seller-113,0700000001,متوفر عسل طبيعي من الفلاح للمستهلك، الكمية 230 كيلو متواجد في عين الدفلى السعر قابل للنقاش 📞 0700000001
+113,https://example.com/agrovendors-demo/posts/100113,2023-02-12T11:13:24.000Z,فلاح ورقلة,https://example.com/agrovendors-demo/sellers/seller-114,0500000095,"كاين لفت سلعة نقية للبيع، 57 قنطار
+المكان: ورقلة
+بسعر معقول
+الهاتف 0500000095"
+114,https://example.com/agrovendors-demo/posts/100114,2023-02-10T12:48:04.000Z,أبو إلياس,https://example.com/agrovendors-demo/sellers/seller-115,0600000106,"عندي 75 قنطار مشمش للبيع، درجة أولى
+متواجد في ورقلة
+السعر قابل للنقاش
+التوصيل إلى 58 ولاية
+📞 0600000106"
+115,https://example.com/agrovendors-demo/posts/100115,2023-02-09T08:01:39.000Z,فلاح عين الدفلى,https://example.com/agrovendors-demo/sellers/seller-116,0700000263,كاين تبن مباشرة من المزرعة للبيع، 504 بالة عين الدفلى أسعار مناسبة للتجار بدون توصيل اتصلوا بنا 0700000263
+116,https://example.com/agrovendors-demo/posts/100116,2023-02-05T23:03:20.000Z,Fatima Larbi,https://example.com/agrovendors-demo/sellers/seller-117,0700000214,متوفر زيتون سلعة نقية، الكمية 64 قنطار المكان: عين الدفلى السعر قابل للنقاش النقل على حساب المشتري اتصلوا بنا 0700000214
+117,https://example.com/agrovendors-demo/posts/100117,2023-02-05T11:19:33.000Z,أبو كريم,https://example.com/agrovendors-demo/sellers/seller-118,0600000110,"عندي 154 قنطار جلبانة للبيع، سلعة نقية
+بومرداس
+السعر 140 دج للكيلو
+إمكانية التوصيل
+الهاتف 0600000110"
+118,https://example.com/agrovendors-demo/posts/100118,2023-01-30T14:44:37.000Z,Adel Mansouri,https://example.com/agrovendors-demo/sellers/seller-119,0500000139,عندي 50 قنطار لفت للبيع، من الفلاح للمستهلك الموقع ولاية باتنة السعر 60 دج للكيلو النقل على حساب المشتري الهاتف 0500000139
+119,https://example.com/agrovendors-demo/posts/100119,2023-01-27T14:49:53.000Z,Redouane Bensaid,https://example.com/agrovendors-demo/sellers/seller-120,0700000091,"عندي 180 قنطار قرعة للبيع، نوعية ممتازة
+الموقع ولاية تيزي وزو
+80 دج للكيلو
+بدون توصيل
+المهتم يتصل على 0700000091"
+120,https://example.com/agrovendors-demo/posts/100120,2023-01-27T06:09:01.000Z,Sofiane Slimani,https://example.com/agrovendors-demo/sellers/seller-121,0500000294,عندي 264 صندوق فراولة للبيع، درجة أولى معسكر بسعر الجملة النقل على حساب المشتري واتساب 0500000294
+121,https://example.com/agrovendors-demo/posts/100121,2023-01-25T11:21:03.000Z,Samira Kaci,https://example.com/agrovendors-demo/sellers/seller-122,0600000129,للبيع فلفل حلو درجة أولى. الكمية: 131 قنطار بجاية بسعر معقول واتساب 0600000129
+122,https://example.com/agrovendors-demo/posts/100122,2023-01-24T08:50:45.000Z,Nassim Ziani,https://example.com/agrovendors-demo/sellers/seller-123,0700000287,"كاين فول سلعة نقية للبيع، 6 قنطار
+متواجد في سطيف
+السعر 150 دج للكيلو
+التوصيل متوفر لكل الولايات
+اتصلوا بنا 0700000287"
+123,https://example.com/agrovendors-demo/posts/100123,2023-01-23T04:56:53.000Z,Yasmine Rahmani,https://example.com/agrovendors-demo/sellers/seller-124,0500000265,للبيع بطيخ محصول هذا الموسم. الكمية: 49 قنطار المكان: البليدة بسعر معقول التوصيل متوفر لكل الولايات الهاتف 0500000265
+124,https://example.com/agrovendors-demo/posts/100124,2023-01-18T17:21:53.000Z,فلاح جيجل,https://example.com/agrovendors-demo/sellers/seller-125,0700000235,"متوفر فلفل حلو محصول هذا الموسم، الكمية 87 صندوق
+الموقع ولاية جيجل
+بسعر معقول
+بدون توصيل
+واتساب 0700000235"
+125,https://example.com/agrovendors-demo/posts/100125,2023-01-18T02:55:58.000Z,Bilal Larbi,https://example.com/agrovendors-demo/sellers/seller-126,0500000233,"متوفر تمر دقلة نور درجة أولى، الكمية 196 كرتونة
+متواجد في خنشلة
+السعر 660 دج للكيلو
+إمكانية التوصيل
+للتواصل: 0500000233"
+126,https://example.com/agrovendors-demo/posts/100126,2023-01-15T09:06:55.000Z,Houda Khelifi,https://example.com/agrovendors-demo/sellers/seller-127,0700000112,متوفر طماطم مباشرة من المزرعة، الكمية 129 قنطار المكان: وهران السعر قابل للنقاش التوصيل متوفر لكل الولايات للتواصل: 0700000112
+127,https://example.com/agrovendors-demo/posts/100127,2023-01-14T17:20:12.000Z,فلاح برج بوعريريج,https://example.com/agrovendors-demo/sellers/seller-128,0600000230,"كاين تبن سلعة نقية للبيع، 1397 بالة
+الموقع ولاية برج بوعريريج
+السعر قابل للنقاش
+التوصيل إلى 58 ولاية
+المهتم يتصل على 0600000230"
+128,https://example.com/agrovendors-demo/posts/100128,2023-01-12T17:10:54.000Z,فلاح قسنطينة,https://example.com/agrovendors-demo/sellers/seller-129,0500000229,"كاين لفت محصول هذا الموسم للبيع، 68 قنطار
+الموقع ولاية قسنطينة
+بسعر معقول
+التوصيل إلى 58 ولاية
+واتساب 0500000229"
+129,https://example.com/agrovendors-demo/posts/100129,2023-01-08T23:32:33.000Z,فلاح بجاية,https://example.com/agrovendors-demo/sellers/seller-130,0500000273,عندي 20 صندوق عنب للبيع، مباشرة من المزرعة المكان: بجاية بسعر معقول اتصلوا بنا 0500000273
+130,https://example.com/agrovendors-demo/posts/100130,2023-01-04T15:52:58.000Z,فلاح الوادي,https://example.com/agrovendors-demo/sellers/seller-131,0700000260,"عندي 356 صندوق فلفل حلو للبيع، محصول هذا الموسم
+المكان: الوادي
+أسعار مناسبة للتجار
+📞 0700000260"
+131,https://example.com/agrovendors-demo/posts/100131,2023-01-03T23:53:10.000Z,مزرعة الربيع,https://example.com/agrovendors-demo/sellers/seller-132,0700000193,"عندي 97 قنطار شعير للبيع، من الفلاح للمستهلك
+ميلة
+أسعار مناسبة للتجار
+إمكانية التوصيل
+للتواصل: 0700000193"
+132,https://example.com/agrovendors-demo/posts/100132,2023-01-03T04:42:09.000Z,أبو كريم,https://example.com/agrovendors-demo/sellers/seller-133,0700000286,للبيع طماطم سلعة نقية. الكمية: 493 صندوق سكيكدة السعر قابل للنقاش النقل على حساب المشتري 📞 0700000286
+133,https://example.com/agrovendors-demo/posts/100133,2022-12-30T00:08:42.000Z,مزرعة الخير,https://example.com/agrovendors-demo/sellers/seller-134,0500000262,"عندي 178 قنطار عنب للبيع، من الفلاح للمستهلك
+متواجد في الوادي
+أسعار مناسبة للتجار
+إمكانية التوصيل
+واتساب 0500000262"
+134,https://example.com/agrovendors-demo/posts/100134,2022-12-29T04:48:08.000Z,Hocine Ferhat,https://example.com/agrovendors-demo/sellers/seller-135,0700000278,"كاين قمح مباشرة من المزرعة للبيع، 16 قنطار
+متواجد في تيبازة
+السعر 5060 دج للقنطار
+التوصيل إلى 58 ولاية
+المهتم يتصل على 0700000278"
+135,https://example.com/agrovendors-demo/posts/100135,2022-12-26T05:02:23.000Z,فلاح الأغواط,https://example.com/agrovendors-demo/sellers/seller-136,0700000061,عندي 457 صندوق فراولة للبيع، سلعة نقية الأغواط السعر قابل للنقاش النقل على حساب المشتري للتواصل: 0700000061
+136,https://example.com/agrovendors-demo/posts/100136,2022-12-25T20:50:28.000Z,Ilyes Djebbar,https://example.com/agrovendors-demo/sellers/seller-137,0700000164,للبيع جزر من الفلاح للمستهلك. الكمية: 109 قنطار الموقع ولاية ورقلة بسعر معقول بدون توصيل للتواصل: 0700000164
+137,https://example.com/agrovendors-demo/posts/100137,2022-12-25T15:36:40.000Z,Hamza Ouali,https://example.com/agrovendors-demo/sellers/seller-138,0700000175,"للبيع بطيخ نوعية ممتازة. الكمية: 96 قنطار
+الموقع ولاية قسنطينة
+140 دج للكيلو
+النقل على حساب المشتري
+الهاتف 0700000175"
+138,https://example.com/agrovendors-demo/posts/100138,2022-12-23T09:19:40.000Z,فلاح تلمسان,https://example.com/agrovendors-demo/sellers/seller-139,0600000248,"عندي 142 قنطار جلبانة للبيع، مباشرة من المزرعة
+المكان: تلمسان
+أسعار مناسبة للتجار
+التوصيل إلى 58 ولاية
+الهاتف 0600000248"
+139,https://example.com/agrovendors-demo/posts/100139,2022-12-20T20:19:51.000Z,Riad Messaoudi,https://example.com/agrovendors-demo/sellers/seller-140,0500000062,"للبيع عسل طبيعي محصول هذا الموسم. الكمية: 296 كيلو
+سكيكدة
+السعر 5010 دج للكيلو
+الهاتف 0500000062"
+140,https://example.com/agrovendors-demo/posts/100140,2022-12-17T08:23:48.000Z,Tarek Messaoudi,https://example.com/agrovendors-demo/sellers/seller-141,0500000007,متوفر طماطم مباشرة من المزرعة، الكمية 497 صندوق سيدي بلعباس 100 دج للكيلو التوصيل إلى 58 ولاية المهتم يتصل على 0500000007
+141,https://example.com/agrovendors-demo/posts/100141,2022-12-16T09:16:03.000Z,مزرعة الخير,https://example.com/agrovendors-demo/sellers/seller-142,0700000208,عندي 5 طن بطاطا للبيع، مباشرة من المزرعة المدية 40 دج للكيلو النقل على حساب المشتري للتواصل: 0700000208
+142,https://example.com/agrovendors-demo/posts/100142,2022-12-14T04:26:12.000Z,Hocine Boukhari,https://example.com/agrovendors-demo/sellers/seller-143,0500000176,"كاين فلفل حار محصول هذا الموسم للبيع، 109 قنطار
+الموقع ولاية عين الدفلى
+بسعر الجملة
+إمكانية التوصيل
+المهتم يتصل على 0500000176"
+143,https://example.com/agrovendors-demo/posts/100143,2022-12-13T14:56:59.000Z,Adel Meziane,https://example.com/agrovendors-demo/sellers/seller-144,0600000125,عندي 15 قنطار ثوم مقشر للبيع، نوعية ممتازة المكان: غرداية السعر قابل للنقاش التوصيل إلى 58 ولاية 📞 0600000125
+144,https://example.com/agrovendors-demo/posts/100144,2022-12-11T12:34:06.000Z,مزرعة الهضاب,https://example.com/agrovendors-demo/sellers/seller-145,0500000052,كاين بيض مباشرة من المزرعة للبيع، 383 صفيحة الموقع ولاية تيبازة بسعر معقول النقل على حساب المشتري اتصلوا بنا 0500000052
+145,https://example.com/agrovendors-demo/posts/100145,2022-12-11T04:06:54.000Z,أبو أنس,https://example.com/agrovendors-demo/sellers/seller-146,0500000089,"متوفر قرعة من الفلاح للمستهلك، الكمية 476 صندوق
+تيزي وزو
+السعر قابل للنقاش
+إمكانية التوصيل
+📞 0500000089"
+146,https://example.com/agrovendors-demo/posts/100146,2022-12-11T03:44:37.000Z,Hamza Taleb,https://example.com/agrovendors-demo/sellers/seller-147,0500000201,عندي 151 قنطار تمر دقلة نور للبيع، نوعية ممتازة المكان: غرداية بسعر الجملة المهتم يتصل على 0500000201
+147,https://example.com/agrovendors-demo/posts/100147,2022-12-10T21:28:32.000Z,أبو ياسين,https://example.com/agrovendors-demo/sellers/seller-148,0600000166,"للبيع خرشف مباشرة من المزرعة. الكمية: 178 قنطار
+الموقع ولاية غليزان
+بسعر معقول
+التوصيل إلى 58 ولاية
+الهاتف 0600000166"
+148,https://example.com/agrovendors-demo/posts/100148,2022-12-10T04:06:24.000Z,Riad Messaoudi,https://example.com/agrovendors-demo/sellers/seller-149,0600000279,للبيع خس مباشرة من المزرعة. الكمية: 256 صندوق المكان: بجاية السعر قابل للنقاش النقل على حساب المشتري المهتم يتصل على 0600000279
+149,https://example.com/agrovendors-demo/posts/100149,2022-12-10T00:33:37.000Z,مزرعة الربيع,https://example.com/agrovendors-demo/sellers/seller-150,0700000079,"متوفر لفت محصول هذا الموسم، الكمية 54 قنطار
+متواجد في البليدة
+50 دج للكيلو
+التوصيل إلى 58 ولاية
+للتواصل: 0700000079"
+150,https://example.com/agrovendors-demo/posts/100150,2022-12-09T16:01:18.000Z,أبو سليم,https://example.com/agrovendors-demo/sellers/seller-151,0700000253,عندي 2 طن دلاع للبيع، من الفلاح للمستهلك الموقع ولاية البليدة بسعر معقول إمكانية التوصيل اتصلوا بنا 0700000253
+151,https://example.com/agrovendors-demo/posts/100151,2022-12-09T15:38:27.000Z,مزرعة الربيع,https://example.com/agrovendors-demo/sellers/seller-152,0500000144,"للبيع شعير محصول هذا الموسم. الكمية: 164 قنطار
+الموقع ولاية بومرداس
+السعر قابل للنقاش
+إمكانية التوصيل
+📞 0500000144"
+152,https://example.com/agrovendors-demo/posts/100152,2022-12-08T08:46:43.000Z,Karim Kaci,https://example.com/agrovendors-demo/sellers/seller-153,0500000114,"كاين طماطم محصول هذا الموسم للبيع، 352 صندوق
+الموقع ولاية عين الدفلى
+أسعار مناسبة للتجار
+بدون توصيل
+واتساب 0500000114"
+153,https://example.com/agrovendors-demo/posts/100153,2022-12-07T12:46:21.000Z,Bilal Belaid,https://example.com/agrovendors-demo/sellers/seller-154,0600000025,كاين فلفل حار مباشرة من المزرعة للبيع، 325 صندوق المكان: معسكر بسعر الجملة بدون توصيل الهاتف 0600000025
+154,https://example.com/agrovendors-demo/posts/100154,2022-12-07T12:42:38.000Z,Nabil Benali,https://example.com/agrovendors-demo/sellers/seller-155,0700000161,"عندي 120 كرتونة تمر دقلة نور للبيع، مباشرة من المزرعة
+متواجد في وهران
+بسعر معقول
+التوصيل متوفر لكل الولايات
+للتواصل: 0700000161"
+155,https://example.com/agrovendors-demo/posts/100155,2022-12-07T04:27:04.000Z,فلاح تيبازة,https://example.com/agrovendors-demo/sellers/seller-156,0700000271,للبيع تفاح درجة أولى. الكمية: 273 صندوق متواجد في تيبازة بسعر الجملة إمكانية التوصيل الهاتف 0700000271
+156,https://example.com/agrovendors-demo/posts/100156,2022-12-06T02:27:45.000Z,Riad Boukhari,https://example.com/agrovendors-demo/sellers/seller-157,0700000056,"كاين بطاطا مباشرة من المزرعة للبيع، 4 طن
+المكان: غرداية
+بسعر الجملة
+إمكانية التوصيل
+📞 0700000056"
+157,https://example.com/agrovendors-demo/posts/100157,2022-12-05T22:23:12.000Z,Tarek Benamar,https://example.com/agrovendors-demo/sellers/seller-158,0600000259,"للبيع فلفل حلو من الفلاح للمستهلك. الكمية: 174 قنطار
+المكان: عين الدفلى
+110 دج للكيلو
+النقل على حساب المشتري
+📞 0600000259"
+158,https://example.com/agrovendors-demo/posts/100158,2022-12-03T16:09:46.000Z,Rachid Khelifi,https://example.com/agrovendors-demo/sellers/seller-159,0500000285,للبيع قرعة من الفلاح للمستهلك. الكمية: 369 صندوق متواجد في المدية السعر 140 دج للكيلو النقل على حساب المشتري الهاتف 0500000285
+159,https://example.com/agrovendors-demo/posts/100159,2022-12-02T23:11:00.000Z,Redouane Bensaid,https://example.com/agrovendors-demo/sellers/seller-160,0600000261,"متوفر بصل نوعية ممتازة، الكمية 157 قنطار
+الموقع ولاية الجزائر
+السعر 50 دج للكيلو
+واتساب 0600000261"
+160,https://example.com/agrovendors-demo/posts/100160,2022-12-01T05:53:36.000Z,Sofiane Djebbar,https://example.com/agrovendors-demo/sellers/seller-161,0700000172,"عندي 193 قنطار قمح للبيع، درجة أولى
+ورقلة
+بسعر معقول
+التوصيل متوفر لكل الولايات
+المهتم يتصل على 0700000172"
+161,https://example.com/agrovendors-demo/posts/100161,2022-12-01T01:03:27.000Z,Redouane Benali,https://example.com/agrovendors-demo/sellers/seller-162,0700000148,"كاين باذنجان مباشرة من المزرعة للبيع، 232 صندوق
+الموقع ولاية جيجل
+السعر 70 دج للكيلو
+بدون توصيل
+المهتم يتصل على 0700000148"
+162,https://example.com/agrovendors-demo/posts/100162,2022-11-30T23:20:25.000Z,أبو حمزة,https://example.com/agrovendors-demo/sellers/seller-163,0700000075,عندي 55 صفيحة بيض للبيع، من الفلاح للمستهلك المكان: الوادي بسعر معقول بدون توصيل 📞 0700000075
+163,https://example.com/agrovendors-demo/posts/100163,2022-11-29T09:36:28.000Z,Nadia Bensaid,https://example.com/agrovendors-demo/sellers/seller-164,0500000158,"عندي 441 صندوق جلبانة للبيع، نوعية ممتازة
+الجزائر
+السعر قابل للنقاش
+إمكانية التوصيل
+المهتم يتصل على 0500000158"
+164,https://example.com/agrovendors-demo/posts/100164,2022-11-28T14:17:02.000Z,Samira Ouali,https://example.com/agrovendors-demo/sellers/seller-165,0500000058,للبيع بطيخ درجة أولى. الكمية: 6 طن معسكر السعر 70 دج للكيلو النقل على حساب المشتري واتساب 0500000058
+165,https://example.com/agrovendors-demo/posts/100165,2022-11-25T14:36:33.000Z,مزرعة الهضاب,https://example.com/agrovendors-demo/sellers/seller-166,0600000009,كاين لفت درجة أولى للبيع، 69 قنطار برج بوعريريج أسعار مناسبة للتجار النقل على حساب المشتري 📞 0600000009
+166,https://example.com/agrovendors-demo/posts/100166,2022-11-22T14:23:15.000Z,أبو ياسين,https://example.com/agrovendors-demo/sellers/seller-167,0600000093,"للبيع ثوم سلعة نقية. الكمية: 21 طن
+المكان: سطيف
+بسعر معقول
+النقل على حساب المشتري
+الهاتف 0600000093"
+167,https://example.com/agrovendors-demo/posts/100167,2022-11-22T02:53:55.000Z,Bilal Benamar,https://example.com/agrovendors-demo/sellers/seller-168,0600000076,"عندي 144 صندوق باذنجان للبيع، درجة أولى
+غليزان
+بسعر الجملة
+التوصيل إلى 58 ولاية
+📞 0600000076"
+168,https://example.com/agrovendors-demo/posts/100168,2022-11-21T18:00:06.000Z,Hamza Lounis,https://example.com/agrovendors-demo/sellers/seller-169,0600000155,متوفر شعير سلعة نقية، الكمية 170 قنطار متواجد في تلمسان بسعر معقول بدون توصيل الهاتف 0600000155
+169,https://example.com/agrovendors-demo/posts/100169,2022-11-19T23:21:37.000Z,Djamel Zerrouki,https://example.com/agrovendors-demo/sellers/seller-170,0600000040,للبيع قمح سلعة نقية. الكمية: 196 قنطار متواجد في تيزي وزو السعر قابل للنقاش اتصلوا بنا 0600000040
+170,https://example.com/agrovendors-demo/posts/100170,2022-11-19T05:05:18.000Z,مزرعة الربيع,https://example.com/agrovendors-demo/sellers/seller-171,0500000281,عندي 162 قنطار بصل للبيع، محصول هذا الموسم الموقع ولاية البليدة السعر 50 دج للكيلو للتواصل: 0500000281
+171,https://example.com/agrovendors-demo/posts/100171,2022-11-18T20:47:13.000Z,مزرعة الربيع,https://example.com/agrovendors-demo/sellers/seller-172,0500000050,"عندي 1060 بالة تبن للبيع، نوعية ممتازة
+المكان: سطيف
+السعر 1180 دج للبالة
+للتواصل: 0500000050"
+172,https://example.com/agrovendors-demo/posts/100172,2022-11-18T12:17:05.000Z,مزرعة الزيتون,https://example.com/agrovendors-demo/sellers/seller-173,0500000045,"كاين تمر دقلة نور نوعية ممتازة للبيع، 92 قنطار
+الموقع ولاية أدرار
+860 دج للكيلو
+النقل على حساب المشتري
+اتصلوا بنا 0500000045"
+173,https://example.com/agrovendors-demo/posts/100173,2022-11-16T16:20:26.000Z,Djamel Mebarki,https://example.com/agrovendors-demo/sellers/seller-174,0600000212,"عندي 92 قنطار فول للبيع، محصول هذا الموسم
+الموقع ولاية مستغانم
+بسعر الجملة
+التوصيل إلى 58 ولاية
+الهاتف 0600000212"
+174,https://example.com/agrovendors-demo/posts/100174,2022-11-08T17:40:44.000Z,أبو سليم,https://example.com/agrovendors-demo/sellers/seller-175,0600000280,"كاين تبن نوعية ممتازة للبيع، 1347 بالة
+المكان: سطيف
+بسعر الجملة
+إمكانية التوصيل
+واتساب 0600000280"
+175,https://example.com/agrovendors-demo/posts/100175,2022-10-30T12:56:33.000Z,أبو كريم,https://example.com/agrovendors-demo/sellers/seller-176,0600000087,"للبيع شعير مباشرة من المزرعة. الكمية: 152 قنطار
+الموقع ولاية وهران
+السعر قابل للنقاش
+التوصيل متوفر لكل الولايات
+📞 0600000087"
+176,https://example.com/agrovendors-demo/posts/100176,2022-10-28T21:58:13.000Z,Yasmine Messaoudi,https://example.com/agrovendors-demo/sellers/seller-177,0500000133,"للبيع طماطم درجة أولى. الكمية: 76 قنطار
+تلمسان
+70 دج للكيلو
+النقل على حساب المشتري
+اتصلوا بنا 0500000133"
+177,https://example.com/agrovendors-demo/posts/100177,2022-10-26T05:09:17.000Z,فلاح برج بوعريريج,https://example.com/agrovendors-demo/sellers/seller-178,0500000055,"متوفر دلاع من الفلاح للمستهلك، الكمية 5 طن
+برج بوعريريج
+أسعار مناسبة للتجار
+بدون توصيل
+للتواصل: 0500000055"
+178,https://example.com/agrovendors-demo/posts/100178,2022-10-25T22:59:23.000Z,Sarah Mebarki,https://example.com/agrovendors-demo/sellers/seller-179,0700000283,عندي 114 قنطار دلاع للبيع، من الفلاح للمستهلك المكان: مستغانم السعر 70 دج للكيلو النقل على حساب المشتري الهاتف 0700000283
+179,https://example.com/agrovendors-demo/posts/100179,2022-10-24T02:58:19.000Z,مزرعة النخيل,https://example.com/agrovendors-demo/sellers/seller-180,0700000167,كاين باذنجان من الفلاح للمستهلك للبيع، 430 صندوق متواجد في الشلف بسعر معقول المهتم يتصل على 0700000167
+180,https://example.com/agrovendors-demo/posts/100180,2022-10-23T08:36:58.000Z,أبو عمر,https://example.com/agrovendors-demo/sellers/seller-181,0600000033,"عندي 47 قنطار لفت للبيع، من الفلاح للمستهلك
+متواجد في تلمسان
+بسعر معقول
+التوصيل متوفر لكل الولايات
+المهتم يتصل على 0600000033"
+181,https://example.com/agrovendors-demo/posts/100181,2022-10-22T20:25:56.000Z,Riad Djebbar,https://example.com/agrovendors-demo/sellers/seller-182,0600000190,"كاين بطيخ محصول هذا الموسم للبيع، 66 قنطار
+الموقع ولاية وهران
+بسعر معقول
+اتصلوا بنا 0600000190"
+182,https://example.com/agrovendors-demo/posts/100182,2022-10-20T01:35:33.000Z,فلاح خنشلة,https://example.com/agrovendors-demo/sellers/seller-183,0700000137,"كاين قمح من الفلاح للمستهلك للبيع، 54 قنطار
+متواجد في خنشلة
+بسعر معقول
+بدون توصيل
+واتساب 0700000137"
+183,https://example.com/agrovendors-demo/posts/100183,2022-10-19T16:02:55.000Z,Karim Brahimi,https://example.com/agrovendors-demo/sellers/seller-184,0600000066,عندي 133 قنطار جلبانة للبيع، محصول هذا الموسم متواجد في ورقلة السعر قابل للنقاش المهتم يتصل على 0600000066
+184,https://example.com/agrovendors-demo/posts/100184,2022-10-18T21:43:35.000Z,مزرعة الزيتون,https://example.com/agrovendors-demo/sellers/seller-185,0600000146,"كاين جزر من الفلاح للمستهلك للبيع، 48 قنطار
+المكان: تيزي وزو
+أسعار مناسبة للتجار
+📞 0600000146"
+185,https://example.com/agrovendors-demo/posts/100185,2022-10-16T15:45:00.000Z,Djamel Bensaid,https://example.com/agrovendors-demo/sellers/seller-186,0700000288,كاين برتقال درجة أولى للبيع، 6 طن الموقع ولاية تلمسان السعر قابل للنقاش التوصيل متوفر لكل الولايات 📞 0700000288
+186,https://example.com/agrovendors-demo/posts/100186,2022-10-16T11:09:33.000Z,فلاح برج بوعريريج,https://example.com/agrovendors-demo/sellers/seller-187,0700000257,كاين خس سلعة نقية للبيع، 267 صندوق الموقع ولاية برج بوعريريج السعر قابل للنقاش النقل على حساب المشتري المهتم يتصل على 0700000257
+187,https://example.com/agrovendors-demo/posts/100187,2022-10-16T09:54:38.000Z,Yacine Bensaid,https://example.com/agrovendors-demo/sellers/seller-188,0600000204,عندي 18 طن جزر للبيع، درجة أولى المكان: تيارت 90 دج للكيلو التوصيل إلى 58 ولاية المهتم يتصل على 0600000204
+188,https://example.com/agrovendors-demo/posts/100188,2022-10-15T01:05:53.000Z,Tarek Larbi,https://example.com/agrovendors-demo/sellers/seller-189,0700000023,كاين عسل طبيعي من الفلاح للمستهلك للبيع، 291 كيلو الموقع ولاية الوادي بسعر معقول واتساب 0700000023
+189,https://example.com/agrovendors-demo/posts/100189,2022-10-11T14:06:29.000Z,Fatima Kaci,https://example.com/agrovendors-demo/sellers/seller-190,0500000282,"عندي 159 كرتونة تمر دقلة نور للبيع، محصول هذا الموسم
+المكان: قسنطينة
+بسعر معقول
+التوصيل متوفر لكل الولايات
+📞 0500000282"
+190,https://example.com/agrovendors-demo/posts/100190,2022-10-09T15:12:55.000Z,Zakaria Boukhari,https://example.com/agrovendors-demo/sellers/seller-191,0600000295,"للبيع قرعة سلعة نقية. الكمية: 291 صندوق
+متواجد في الأغواط
+120 دج للكيلو
+بدون توصيل
+الهاتف 0600000295"
+191,https://example.com/agrovendors-demo/posts/100191,2022-10-04T03:54:26.000Z,Fatima Kaci,https://example.com/agrovendors-demo/sellers/seller-192,0700000026,"متوفر بطاطا محصول هذا الموسم، الكمية 15 طن
+المكان: البليدة
+أسعار مناسبة للتجار
+بدون توصيل
+للتواصل: 0700000026"
+192,https://example.com/agrovendors-demo/posts/100192,2022-09-30T10:53:45.000Z,Karim Kaci,https://example.com/agrovendors-demo/sellers/seller-193,0600000134,"متوفر ثوم مقشر محصول هذا الموسم، الكمية 60 كيلو
+تلمسان
+أسعار مناسبة للتجار
+التوصيل إلى 58 ولاية
+المهتم يتصل على 0600000134"
+193,https://example.com/agrovendors-demo/posts/100193,2022-09-29T00:54:27.000Z,أبو إلياس,https://example.com/agrovendors-demo/sellers/seller-194,0600000138,كاين برتقال درجة أولى للبيع، 4 طن المكان: باتنة السعر قابل للنقاش النقل على حساب المشتري اتصلوا بنا 0600000138
+194,https://example.com/agrovendors-demo/posts/100194,2022-09-20T12:28:52.000Z,مزرعة الزيتون,https://example.com/agrovendors-demo/sellers/seller-195,0500000002,"للبيع ثوم مقشر نوعية ممتازة. الكمية: 271 كيلو
+الموقع ولاية ورقلة
+السعر قابل للنقاش
+المهتم يتصل على 0500000002"
+195,https://example.com/agrovendors-demo/posts/100195,2022-09-18T18:24:49.000Z,Djamel Taleb,https://example.com/agrovendors-demo/sellers/seller-196,0600000017,متوفر مشمش مباشرة من المزرعة، الكمية 53 قنطار المكان: الشلف أسعار مناسبة للتجار التوصيل إلى 58 ولاية اتصلوا بنا 0600000017
+196,https://example.com/agrovendors-demo/posts/100196,2022-09-18T05:37:07.000Z,Rachid Taleb,https://example.com/agrovendors-demo/sellers/seller-197,0500000132,عندي 77 كيلو عسل طبيعي للبيع، نوعية ممتازة الجزائر 3180 دج للكيلو التوصيل متوفر لكل الولايات اتصلوا بنا 0500000132
+197,https://example.com/agrovendors-demo/posts/100197,2022-09-17T19:20:18.000Z,Redouane Messaoudi,https://example.com/agrovendors-demo/sellers/seller-198,0700000182,عندي 39 قنطار فلفل حار للبيع، سلعة نقية المكان: مستغانم بسعر الجملة إمكانية التوصيل للتواصل: 0700000182
+198,https://example.com/agrovendors-demo/posts/100198,2022-09-17T03:43:20.000Z,أبو عمر,https://example.com/agrovendors-demo/sellers/seller-199,0500000211,"للبيع جلبانة محصول هذا الموسم. الكمية: 194 قنطار
+البليدة
+بسعر الجملة
+بدون توصيل
+واتساب 0500000211"
+199,https://example.com/agrovendors-demo/posts/100199,2022-09-16T14:04:33.000Z,Salim Haddad,https://example.com/agrovendors-demo/sellers/seller-200,0700000170,كاين باذنجان مباشرة من المزرعة للبيع، 117 قنطار متواجد في بومرداس 120 دج للكيلو إمكانية التوصيل الهاتف 0700000170
+200,https://example.com/agrovendors-demo/posts/100200,2022-09-15T09:19:36.000Z,Lamia Khelifi,https://example.com/agrovendors-demo/sellers/seller-201,0600000059,للبيع بطيخ محصول هذا الموسم. الكمية: 26 قنطار متواجد في سكيكدة بسعر معقول الهاتف 0600000059
+201,https://example.com/agrovendors-demo/posts/100201,2022-09-12T07:22:07.000Z,أبو حمزة,https://example.com/agrovendors-demo/sellers/seller-202,0500000156,"للبيع زيتون درجة أولى. الكمية: 113 قنطار
+الموقع ولاية تلمسان
+370 دج للكيلو
+النقل على حساب المشتري
+واتساب 0500000156"
+202,https://example.com/agrovendors-demo/posts/100202,2022-09-06T20:03:10.000Z,Nadia Slimani,https://example.com/agrovendors-demo/sellers/seller-203,0700000157,"للبيع بطاطا من الفلاح للمستهلك. الكمية: 111 قنطار
+المكان: تيزي وزو
+بسعر معقول
+اتصلوا بنا 0700000157"
+203,https://example.com/agrovendors-demo/posts/100203,2022-09-06T05:56:50.000Z,مزرعة النخيل,https://example.com/agrovendors-demo/sellers/seller-204,0700000289,كاين خس درجة أولى للبيع، 206 صندوق متواجد في بسكرة بسعر الجملة التوصيل متوفر لكل الولايات اتصلوا بنا 0700000289
+204,https://example.com/agrovendors-demo/posts/100204,2022-09-05T09:36:26.000Z,أبو كريم,https://example.com/agrovendors-demo/sellers/seller-205,0500000220,للبيع قمح مباشرة من المزرعة. الكمية: 91 قنطار الوادي بسعر الجملة النقل على حساب المشتري واتساب 0500000220
+205,https://example.com/agrovendors-demo/posts/100205,2022-09-05T03:28:00.000Z,أبو كريم,https://example.com/agrovendors-demo/sellers/seller-206,0700000065,متوفر عنب سلعة نقية، الكمية 52 صندوق الموقع ولاية غرداية السعر 310 دج للكيلو إمكانية التوصيل واتساب 0700000065
+206,https://example.com/agrovendors-demo/posts/100206,2022-09-04T17:00:01.000Z,فلاح الشلف,https://example.com/agrovendors-demo/sellers/seller-207,0500000078,عندي 197 قنطار لفت للبيع، سلعة نقية متواجد في الشلف بسعر معقول بدون توصيل اتصلوا بنا 0500000078
+207,https://example.com/agrovendors-demo/posts/100207,2022-09-04T12:27:04.000Z,Samira Brahimi,https://example.com/agrovendors-demo/sellers/seller-208,0500000014,"للبيع فول مباشرة من المزرعة. الكمية: 167 قنطار
+الموقع ولاية البليدة
+150 دج للكيلو
+إمكانية التوصيل
+الهاتف 0500000014"
+208,https://example.com/agrovendors-demo/posts/100208,2022-08-30T16:34:53.000Z,مزرعة الهضاب,https://example.com/agrovendors-demo/sellers/seller-209,0700000018,للبيع خرشف من الفلاح للمستهلك. الكمية: 217 صندوق متواجد في سيدي بلعباس 200 دج للكيلو المهتم يتصل على 0700000018
+209,https://example.com/agrovendors-demo/posts/100209,2022-08-29T08:20:26.000Z,Youcef Ferhat,https://example.com/agrovendors-demo/sellers/seller-210,0700000169,"للبيع عسل طبيعي سلعة نقية. الكمية: 40 كيلو
+الموقع ولاية وهران
+السعر 4390 دج للكيلو
+النقل على حساب المشتري
+واتساب 0700000169"
+210,https://example.com/agrovendors-demo/posts/100210,2022-08-28T20:20:58.000Z,Fatima Taleb,https://example.com/agrovendors-demo/sellers/seller-211,0700000246,"عندي 98 صندوق فلفل حار للبيع، درجة أولى
+الموقع ولاية باتنة
+السعر قابل للنقاش
+التوصيل إلى 58 ولاية
+الهاتف 0700000246"
+211,https://example.com/agrovendors-demo/posts/100211,2022-08-27T17:00:57.000Z,Bilal Benali,https://example.com/agrovendors-demo/sellers/seller-212,0700000070,كاين تمر دقلة نور من الفلاح للمستهلك للبيع، 167 كرتونة متواجد في الأغواط أسعار مناسبة للتجار إمكانية التوصيل اتصلوا بنا 0700000070
+212,https://example.com/agrovendors-demo/posts/100212,2022-08-26T08:45:31.000Z,فلاح ميلة,https://example.com/agrovendors-demo/sellers/seller-213,0700000107,"عندي 262 صندوق خس للبيع، درجة أولى
+المكان: ميلة
+السعر 120 دج للكيلو
+اتصلوا بنا 0700000107"
+213,https://example.com/agrovendors-demo/posts/100213,2022-08-22T18:18:48.000Z,Mourad Meziane,https://example.com/agrovendors-demo/sellers/seller-214,0600000192,"متوفر جزر سلعة نقية، الكمية 91 قنطار
+الموقع ولاية الشلف
+بسعر معقول
+التوصيل متوفر لكل الولايات
+المهتم يتصل على 0600000192"
+214,https://example.com/agrovendors-demo/posts/100214,2022-08-14T15:58:58.000Z,Redouane Bensaid,https://example.com/agrovendors-demo/sellers/seller-215,0600000165,كاين بطاطا من الفلاح للمستهلك للبيع، 22 طن المكان: تلمسان السعر 80 دج للكيلو التوصيل متوفر لكل الولايات للتواصل: 0600000165
+215,https://example.com/agrovendors-demo/posts/100215,2022-08-14T12:24:57.000Z,Anis Larbi,https://example.com/agrovendors-demo/sellers/seller-216,0600000185,كاين برتقال سلعة نقية للبيع، 31 قنطار المكان: قسنطينة السعر 170 دج للكيلو التوصيل إلى 58 ولاية اتصلوا بنا 0600000185
+216,https://example.com/agrovendors-demo/posts/100216,2022-08-13T01:27:16.000Z,مزرعة الواحة,https://example.com/agrovendors-demo/sellers/seller-217,0700000177,"كاين قرعة درجة أولى للبيع، 30 قنطار
+المكان: بومرداس
+السعر 70 دج للكيلو
+النقل على حساب المشتري
+📞 0700000177"
+217,https://example.com/agrovendors-demo/posts/100217,2022-08-08T19:58:08.000Z,أبو سليم,https://example.com/agrovendors-demo/sellers/seller-218,0600000226,متوفر فراولة سلعة نقية، الكمية 224 صندوق المكان: خنشلة السعر قابل للنقاش الهاتف 0600000226
+218,https://example.com/agrovendors-demo/posts/100218,2022-08-08T07:38:35.000Z,فلاح البليدة,https://example.com/agrovendors-demo/sellers/seller-219,0600000113,"كاين شعير سلعة نقية للبيع، 164 قنطار
+متواجد في البليدة
+أسعار مناسبة للتجار
+التوصيل إلى 58 ولاية
+📞 0600000113"
+219,https://example.com/agrovendors-demo/posts/100219,2022-07-30T19:28:40.000Z,فلاح سطيف,https://example.com/agrovendors-demo/sellers/seller-220,0600000147,"كاين عسل طبيعي سلعة نقية للبيع، 236 كيلو
+سطيف
+السعر قابل للنقاش
+واتساب 0600000147"
+220,https://example.com/agrovendors-demo/posts/100220,2022-07-29T20:42:49.000Z,Sarah Sahraoui,https://example.com/agrovendors-demo/sellers/seller-221,0500000228,"للبيع فلفل حار درجة أولى. الكمية: 57 قنطار
+المدية
+السعر 120 دج للكيلو
+اتصلوا بنا 0500000228"
+221,https://example.com/agrovendors-demo/posts/100221,2022-07-29T10:33:44.000Z,مزرعة الزيتون,https://example.com/agrovendors-demo/sellers/seller-222,0500000203,"كاين قرعة مباشرة من المزرعة للبيع، 153 صندوق
+الموقع ولاية بومرداس
+بسعر الجملة
+النقل على حساب المشتري
+واتساب 0500000203"
+222,https://example.com/agrovendors-demo/posts/100222,2022-07-26T16:02:37.000Z,Lamia Mebarki,https://example.com/agrovendors-demo/sellers/seller-223,0600000245,"كاين فول من الفلاح للمستهلك للبيع، 168 قنطار
+الموقع ولاية سيدي بلعباس
+السعر 120 دج للكيلو
+النقل على حساب المشتري
+اتصلوا بنا 0600000245"
+223,https://example.com/agrovendors-demo/posts/100223,2022-07-25T23:02:30.000Z,Sarah Ferhat,https://example.com/agrovendors-demo/sellers/seller-224,0500000123,متوفر باذنجان درجة أولى، الكمية 100 قنطار المكان: غليزان أسعار مناسبة للتجار إمكانية التوصيل 📞 0500000123
+224,https://example.com/agrovendors-demo/posts/100224,2022-07-21T02:17:30.000Z,Abdelkader Messaoudi,https://example.com/agrovendors-demo/sellers/seller-225,0600000231,عندي 116 قنطار مشمش للبيع، سلعة نقية جيجل بسعر الجملة إمكانية التوصيل واتساب 0600000231
+225,https://example.com/agrovendors-demo/posts/100225,2022-07-21T01:13:40.000Z,مزرعة السهل,https://example.com/agrovendors-demo/sellers/seller-226,0600000035,"عندي 105 قنطار لفت للبيع، محصول هذا الموسم
+المكان: سطيف
+السعر 60 دج للكيلو
+التوصيل متوفر لكل الولايات
+الهاتف 0600000035"
+226,https://example.com/agrovendors-demo/posts/100226,2022-07-18T05:37:03.000Z,Nadia Ouali,https://example.com/agrovendors-demo/sellers/seller-227,0700000250,"عندي 137 قنطار خرشف للبيع، سلعة نقية
+تلمسان
+بسعر الجملة
+إمكانية التوصيل
+📞 0700000250"
+227,https://example.com/agrovendors-demo/posts/100227,2022-07-16T04:28:53.000Z,مزرعة الهضاب,https://example.com/agrovendors-demo/sellers/seller-228,0600000120,عندي 53 قنطار لفت للبيع، نوعية ممتازة الموقع ولاية بومرداس بسعر الجملة بدون توصيل المهتم يتصل على 0600000120
+228,https://example.com/agrovendors-demo/posts/100228,2022-07-15T07:04:59.000Z,Ahmed Hamidi,https://example.com/agrovendors-demo/sellers/seller-229,0600000103,"كاين فول سلعة نقية للبيع، 94 قنطار
+المكان: معسكر
+بسعر معقول
+التوصيل متوفر لكل الولايات
+اتصلوا بنا 0600000103"
+229,https://example.com/agrovendors-demo/posts/100229,2022-07-14T08:50:19.000Z,Djamel Saadi,https://example.com/agrovendors-demo/sellers/seller-230,0500000242,"كاين عنب من الفلاح للمستهلك للبيع، 338 صندوق
+متواجد في معسكر
+السعر قابل للنقاش
+بدون توصيل
+الهاتف 0500000242"
+230,https://example.com/agrovendors-demo/posts/100230,2022-07-13T09:32:51.000Z,Redouane Belaid,https://example.com/agrovendors-demo/sellers/seller-231,0700000028,عندي 30 قنطار بطاطا للبيع، محصول هذا الموسم المكان: الوادي بسعر معقول بدون توصيل واتساب 0700000028
+231,https://example.com/agrovendors-demo/posts/100231,2022-07-13T03:08:12.000Z,Nassim Zerrouki,https://example.com/agrovendors-demo/sellers/seller-232,0500000090,متوفر ثوم مقشر سلعة نقية، الكمية 282 كيلو المكان: مستغانم بسعر الجملة التوصيل متوفر لكل الولايات واتساب 0500000090
+232,https://example.com/agrovendors-demo/posts/100232,2022-07-10T23:20:50.000Z,فلاح مستغانم,https://example.com/agrovendors-demo/sellers/seller-233,0600000036,للبيع ثوم محصول هذا الموسم. الكمية: 163 قنطار الموقع ولاية مستغانم 710 دج للكيلو بدون توصيل 📞 0600000036
+233,https://example.com/agrovendors-demo/posts/100233,2022-07-09T03:51:02.000Z,Samira Messaoudi,https://example.com/agrovendors-demo/sellers/seller-234,0500000255,للبيع شعير محصول هذا الموسم. الكمية: 151 قنطار الموقع ولاية غليزان السعر 5000 دج للقنطار التوصيل إلى 58 ولاية اتصلوا بنا 0500000255
+234,https://example.com/agrovendors-demo/posts/100234,2022-07-08T16:04:03.000Z,Lamia Boukhari,https://example.com/agrovendors-demo/sellers/seller-235,0700000104,"كاين خس محصول هذا الموسم للبيع، 138 صندوق
+الموقع ولاية تيبازة
+السعر 90 دج للكيلو
+التوصيل متوفر لكل الولايات
+واتساب 0700000104"
+235,https://example.com/agrovendors-demo/posts/100235,2022-07-07T22:38:13.000Z,Abdelkader Sahraoui,https://example.com/agrovendors-demo/sellers/seller-236,0500000099,للبيع برتقال من الفلاح للمستهلك. الكمية: 22 طن المكان: ورقلة السعر قابل للنقاش بدون توصيل اتصلوا بنا 0500000099
+236,https://example.com/agrovendors-demo/posts/100236,2022-07-05T10:31:56.000Z,Tarek Ferhat,https://example.com/agrovendors-demo/sellers/seller-237,0600000145,للبيع عنب نوعية ممتازة. الكمية: 114 قنطار المكان: غرداية 330 دج للكيلو التوصيل إلى 58 ولاية للتواصل: 0600000145
+237,https://example.com/agrovendors-demo/posts/100237,2022-07-05T01:16:49.000Z,أبو عمر,https://example.com/agrovendors-demo/sellers/seller-238,0600000057,متوفر عسل طبيعي سلعة نقية، الكمية 34 كيلو المكان: مستغانم بسعر معقول التوصيل إلى 58 ولاية واتساب 0600000057
+238,https://example.com/agrovendors-demo/posts/100238,2022-07-03T15:00:57.000Z,أبو رياض,https://example.com/agrovendors-demo/sellers/seller-239,0600000094,للبيع جلبانة سلعة نقية. الكمية: 69 صندوق متواجد في بسكرة السعر 190 دج للكيلو بدون توصيل 📞 0600000094
+239,https://example.com/agrovendors-demo/posts/100239,2022-06-30T16:26:50.000Z,Fatima Boukhari,https://example.com/agrovendors-demo/sellers/seller-240,0700000237,"كاين زيتون من الفلاح للمستهلك للبيع، 29 قنطار
+متواجد في سطيف
+أسعار مناسبة للتجار
+📞 0700000237"
+240,https://example.com/agrovendors-demo/posts/100240,2022-06-28T08:57:20.000Z,فلاح تيبازة,https://example.com/agrovendors-demo/sellers/seller-241,0500000097,"عندي 107 قنطار شعير للبيع، من الفلاح للمستهلك
+متواجد في تيبازة
+بسعر معقول
+بدون توصيل
+الهاتف 0500000097"
+241,https://example.com/agrovendors-demo/posts/100241,2022-06-27T08:35:22.000Z,أبو أنس,https://example.com/agrovendors-demo/sellers/seller-242,0600000032,"متوفر بطاطا مباشرة من المزرعة، الكمية 164 قنطار
+متواجد في وهران
+بسعر معقول
+إمكانية التوصيل
+الهاتف 0600000032"
+242,https://example.com/agrovendors-demo/posts/100242,2022-06-23T13:34:24.000Z,أبو أنس,https://example.com/agrovendors-demo/sellers/seller-243,0700000141,للبيع زيتون من الفلاح للمستهلك. الكمية: 93 قنطار المكان: أدرار 310 دج للكيلو اتصلوا بنا 0700000141
+243,https://example.com/agrovendors-demo/posts/100243,2022-06-23T05:11:09.000Z,Redouane Sahraoui,https://example.com/agrovendors-demo/sellers/seller-244,0600000269,"كاين بطيخ محصول هذا الموسم للبيع، 25 قنطار
+المكان: بسكرة
+120 دج للكيلو
+التوصيل متوفر لكل الولايات
+📞 0600000269"
+244,https://example.com/agrovendors-demo/posts/100244,2022-06-19T19:34:24.000Z,Abdelkader Ferhat,https://example.com/agrovendors-demo/sellers/seller-245,0700000086,متوفر ثوم مباشرة من المزرعة، الكمية 141 قنطار المكان: ورقلة بسعر الجملة التوصيل متوفر لكل الولايات الهاتف 0700000086
+245,https://example.com/agrovendors-demo/posts/100245,2022-06-19T08:06:33.000Z,Walid Bensaid,https://example.com/agrovendors-demo/sellers/seller-246,0700000046,عندي 102 صندوق خرشف للبيع، درجة أولى متواجد في الجزائر بسعر الجملة التوصيل إلى 58 ولاية اتصلوا بنا 0700000046
+246,https://example.com/agrovendors-demo/posts/100246,2022-06-16T19:02:43.000Z,مزرعة السهل,https://example.com/agrovendors-demo/sellers/seller-247,0700000290,"للبيع بصل مباشرة من المزرعة. الكمية: 144 قنطار
+بسكرة
+السعر 70 دج للكيلو
+بدون توصيل
+الهاتف 0700000290"
+247,https://example.com/agrovendors-demo/posts/100247,2022-06-12T20:57:25.000Z,Bilal Belkacem,https://example.com/agrovendors-demo/sellers/seller-248,0700000083,"كاين تبن سلعة نقية للبيع، 1277 بالة
+تيزي وزو
+1160 دج للبالة
+التوصيل إلى 58 ولاية
+اتصلوا بنا 0700000083"
+248,https://example.com/agrovendors-demo/posts/100248,2022-06-12T15:20:59.000Z,Youcef Ziani,https://example.com/agrovendors-demo/sellers/seller-249,0700000267,"متوفر طماطم مباشرة من المزرعة، الكمية 55 قنطار
+المكان: الشلف
+60 دج للكيلو
+النقل على حساب المشتري
+📞 0700000267"
+249,https://example.com/agrovendors-demo/posts/100249,2022-06-11T22:05:37.000Z,فلاح تيبازة,https://example.com/agrovendors-demo/sellers/seller-250,0500000270,"للبيع فراولة سلعة نقية. الكمية: 229 صندوق
+المكان: تيبازة
+بسعر الجملة
+اتصلوا بنا 0500000270"
+250,https://example.com/agrovendors-demo/posts/100250,2022-06-11T02:22:30.000Z,Youcef Messaoudi,https://example.com/agrovendors-demo/sellers/seller-251,0600000031,متوفر فلفل حار محصول هذا الموسم، الكمية 225 صندوق وهران السعر قابل للنقاش التوصيل إلى 58 ولاية 📞 0600000031
+251,https://example.com/agrovendors-demo/posts/100251,2022-06-10T05:22:53.000Z,Karim Mansouri,https://example.com/agrovendors-demo/sellers/seller-252,0500000108,"كاين فلفل حار من الفلاح للمستهلك للبيع، 144 قنطار
+الموقع ولاية بومرداس
+بسعر الجملة
+النقل على حساب المشتري
+اتصلوا بنا 0500000108"
+252,https://example.com/agrovendors-demo/posts/100252,2022-06-08T16:48:21.000Z,أبو ياسين,https://example.com/agrovendors-demo/sellers/seller-253,0600000049,متوفر ثوم مقشر محصول هذا الموسم، الكمية 176 قنطار الموقع ولاية قسنطينة 720 دج للكيلو إمكانية التوصيل واتساب 0600000049
+253,https://example.com/agrovendors-demo/posts/100253,2022-06-08T08:21:00.000Z,أبو ياسين,https://example.com/agrovendors-demo/sellers/seller-254,0600000188,"متوفر ثوم مقشر من الفلاح للمستهلك، الكمية 99 كيلو
+المكان: تلمسان
+أسعار مناسبة للتجار
+النقل على حساب المشتري
+الهاتف 0600000188"
+254,https://example.com/agrovendors-demo/posts/100254,2022-06-08T05:10:27.000Z,أبو رياض,https://example.com/agrovendors-demo/sellers/seller-255,0500000013,"متوفر باذنجان درجة أولى، الكمية 417 صندوق
+المكان: البليدة
+بسعر معقول
+النقل على حساب المشتري
+واتساب 0500000013"
+255,https://example.com/agrovendors-demo/posts/100255,2022-06-04T22:42:03.000Z,Hamza Benamar,https://example.com/agrovendors-demo/sellers/seller-256,0600000180,كاين برتقال سلعة نقية للبيع، 19 طن قسنطينة السعر قابل للنقاش المهتم يتصل على 0600000180
+256,https://example.com/agrovendors-demo/posts/100256,2022-06-04T07:37:53.000Z,Youcef Ziani,https://example.com/agrovendors-demo/sellers/seller-257,0500000042,"كاين ثوم نوعية ممتازة للبيع، 55 قنطار
+متواجد في تيارت
+أسعار مناسبة للتجار
+النقل على حساب المشتري
+للتواصل: 0500000042"
+257,https://example.com/agrovendors-demo/posts/100257,2022-06-03T12:44:58.000Z,أبو يوسف,https://example.com/agrovendors-demo/sellers/seller-258,0500000189,عندي 2 طن بصل للبيع، محصول هذا الموسم الموقع ولاية بسكرة بسعر الجملة إمكانية التوصيل الهاتف 0500000189
+258,https://example.com/agrovendors-demo/posts/100258,2022-06-01T19:05:27.000Z,أبو سليم,https://example.com/agrovendors-demo/sellers/seller-259,0700000054,للبيع جلبانة مباشرة من المزرعة. الكمية: 127 قنطار المكان: وهران السعر قابل للنقاش التوصيل إلى 58 ولاية واتساب 0700000054
+259,https://example.com/agrovendors-demo/posts/100259,2022-05-30T18:33:36.000Z,أبو يوسف,https://example.com/agrovendors-demo/sellers/seller-260,0700000162,"عندي 898 بالة تبن للبيع، مباشرة من المزرعة
+المكان: المدية
+أسعار مناسبة للتجار
+اتصلوا بنا 0700000162"
+260,https://example.com/agrovendors-demo/posts/100260,2022-05-29T04:15:00.000Z,Salim Slimani,https://example.com/agrovendors-demo/sellers/seller-261,0700000184,"كاين بطيخ سلعة نقية للبيع، 26 طن
+متواجد في تلمسان
+السعر 120 دج للكيلو
+التوصيل إلى 58 ولاية
+📞 0700000184"
+261,https://example.com/agrovendors-demo/posts/100261,2022-05-26T08:07:35.000Z,فلاح بجاية,https://example.com/agrovendors-demo/sellers/seller-262,0600000098,"للبيع برتقال نوعية ممتازة. الكمية: 5 طن
+بجاية
+السعر قابل للنقاش
+النقل على حساب المشتري
+اتصلوا بنا 0600000098"
+262,https://example.com/agrovendors-demo/posts/100262,2022-05-26T02:07:13.000Z,Yacine Haddad,https://example.com/agrovendors-demo/sellers/seller-263,0600000006,"متوفر لفت درجة أولى، الكمية 46 قنطار
+متواجد في تيارت
+السعر 40 دج للكيلو
+إمكانية التوصيل
+المهتم يتصل على 0600000006"
+263,https://example.com/agrovendors-demo/posts/100263,2022-05-22T21:39:49.000Z,أبو رياض,https://example.com/agrovendors-demo/sellers/seller-264,0500000238,عندي 234 صندوق طماطم للبيع، محصول هذا الموسم الموقع ولاية تيارت أسعار مناسبة للتجار التوصيل إلى 58 ولاية للتواصل: 0500000238
+264,https://example.com/agrovendors-demo/posts/100264,2022-05-20T20:54:57.000Z,Houda Ouali,https://example.com/agrovendors-demo/sellers/seller-265,0700000081,متوفر طماطم نوعية ممتازة، الكمية 81 قنطار متواجد في بجاية 110 دج للكيلو المهتم يتصل على 0700000081
+265,https://example.com/agrovendors-demo/posts/100265,2022-05-18T04:43:35.000Z,Ilyes Larbi,https://example.com/agrovendors-demo/sellers/seller-266,0500000251,عندي 465 صندوق تفاح للبيع، مباشرة من المزرعة الموقع ولاية بسكرة بسعر الجملة النقل على حساب المشتري اتصلوا بنا 0500000251
+266,https://example.com/agrovendors-demo/posts/100266,2022-05-14T22:07:00.000Z,Salim Cherif,https://example.com/agrovendors-demo/sellers/seller-267,0700000179,"للبيع فلفل حار نوعية ممتازة. الكمية: 89 صندوق
+متواجد في سطيف
+بسعر الجملة
+التوصيل إلى 58 ولاية
+اتصلوا بنا 0700000179"
+267,https://example.com/agrovendors-demo/posts/100267,2022-05-13T09:20:43.000Z,Salim Benamar,https://example.com/agrovendors-demo/sellers/seller-268,0500000012,متوفر بصل درجة أولى، الكمية 140 قنطار المكان: مستغانم السعر 70 دج للكيلو التوصيل إلى 58 ولاية للتواصل: 0500000012
+268,https://example.com/agrovendors-demo/posts/100268,2022-05-11T20:37:35.000Z,Adel Ouali,https://example.com/agrovendors-demo/sellers/seller-269,0600000024,متوفر زيت زيتون درجة أولى، الكمية 1742 لتر الموقع ولاية سيدي بلعباس 1080 دج للتر إمكانية التوصيل 📞 0600000024
+269,https://example.com/agrovendors-demo/posts/100269,2022-05-11T17:17:03.000Z,Hamza Zerrouki,https://example.com/agrovendors-demo/sellers/seller-270,0700000210,للبيع فراولة محصول هذا الموسم. الكمية: 330 صندوق المكان: سطيف 440 دج للكيلو التوصيل متوفر لكل الولايات المهتم يتصل على 0700000210
+270,https://example.com/agrovendors-demo/posts/100270,2022-05-09T20:32:42.000Z,Yacine Haddad,https://example.com/agrovendors-demo/sellers/seller-271,0500000291,عندي 1157 لتر زيت زيتون للبيع، مباشرة من المزرعة الموقع ولاية تيزي وزو السعر قابل للنقاش إمكانية التوصيل واتساب 0500000291
+271,https://example.com/agrovendors-demo/posts/100271,2022-05-06T06:35:29.000Z,فلاح معسكر,https://example.com/agrovendors-demo/sellers/seller-272,0700000004,كاين زيت زيتون نوعية ممتازة للبيع، 291 لتر الموقع ولاية معسكر 1190 دج للتر التوصيل متوفر لكل الولايات واتساب 0700000004
+272,https://example.com/agrovendors-demo/posts/100272,2022-05-01T22:05:39.000Z,Ilyes Brahimi,https://example.com/agrovendors-demo/sellers/seller-273,0500000034,كاين جلبانة مباشرة من المزرعة للبيع، 131 صندوق الموقع ولاية البليدة بسعر معقول إمكانية التوصيل اتصلوا بنا 0500000034
+273,https://example.com/agrovendors-demo/posts/100273,2022-05-01T13:35:58.000Z,أبو ياسين,https://example.com/agrovendors-demo/sellers/seller-274,0500000126,متوفر بصل درجة أولى، الكمية 14 طن برج بوعريريج بسعر الجملة التوصيل متوفر لكل الولايات واتساب 0500000126
+274,https://example.com/agrovendors-demo/posts/100274,2022-04-30T13:22:37.000Z,Mourad Taleb,https://example.com/agrovendors-demo/sellers/seller-275,0700000284,كاين دلاع محصول هذا الموسم للبيع، 2 طن الوادي السعر قابل للنقاش النقل على حساب المشتري واتساب 0700000284
+275,https://example.com/agrovendors-demo/posts/100275,2022-04-29T00:17:20.000Z,Sofiane Ouali,https://example.com/agrovendors-demo/sellers/seller-276,0600000200,عندي 178 قنطار شعير للبيع، مباشرة من المزرعة الموقع ولاية المدية السعر 4420 دج للقنطار إمكانية التوصيل للتواصل: 0600000200
+276,https://example.com/agrovendors-demo/posts/100276,2022-04-28T02:06:51.000Z,مزرعة النخيل,https://example.com/agrovendors-demo/sellers/seller-277,0700000041,"كاين خرشف درجة أولى للبيع، 343 صندوق
+متواجد في البليدة
+بسعر معقول
+النقل على حساب المشتري
+📞 0700000041"
+277,https://example.com/agrovendors-demo/posts/100277,2022-04-26T21:44:30.000Z,أبو حمزة,https://example.com/agrovendors-demo/sellers/seller-278,0600000105,عندي 144 صندوق طماطم للبيع، من الفلاح للمستهلك متواجد في معسكر السعر قابل للنقاش اتصلوا بنا 0600000105
+278,https://example.com/agrovendors-demo/posts/100278,2022-04-24T17:02:23.000Z,Amina Djebbar,https://example.com/agrovendors-demo/sellers/seller-279,0500000213,للبيع خرشف من الفلاح للمستهلك. الكمية: 146 قنطار متواجد في جيجل أسعار مناسبة للتجار بدون توصيل واتساب 0500000213
+279,https://example.com/agrovendors-demo/posts/100279,2022-04-24T16:07:31.000Z,أبو كريم,https://example.com/agrovendors-demo/sellers/seller-280,0500000205,"متوفر فول نوعية ممتازة، الكمية 49 قنطار
+أدرار
+بسعر معقول
+النقل على حساب المشتري
+المهتم يتصل على 0500000205"
+280,https://example.com/agrovendors-demo/posts/100280,2022-04-23T22:42:56.000Z,Samir Cherif,https://example.com/agrovendors-demo/sellers/seller-281,0700000241,"عندي 163 صندوق تفاح للبيع، درجة أولى
+الموقع ولاية جيجل
+السعر 270 دج للكيلو
+بدون توصيل
+اتصلوا بنا 0700000241"
+281,https://example.com/agrovendors-demo/posts/100281,2022-04-22T12:07:06.000Z,أبو رياض,https://example.com/agrovendors-demo/sellers/seller-282,0600000221,للبيع ثوم مقشر مباشرة من المزرعة. الكمية: 118 كيلو المكان: أدرار بسعر الجملة بدون توصيل واتساب 0600000221
+282,https://example.com/agrovendors-demo/posts/100282,2022-04-20T21:33:02.000Z,Bilal Benamar,https://example.com/agrovendors-demo/sellers/seller-283,0600000163,"متوفر برتقال مباشرة من المزرعة، الكمية 20 طن
+ميلة
+أسعار مناسبة للتجار
+التوصيل إلى 58 ولاية
+واتساب 0600000163"
+283,https://example.com/agrovendors-demo/posts/100283,2022-04-19T21:03:28.000Z,أبو أنس,https://example.com/agrovendors-demo/sellers/seller-284,0700000071,"كاين باذنجان محصول هذا الموسم للبيع، 392 صندوق
+المكان: مستغانم
+السعر قابل للنقاش
+بدون توصيل
+المهتم يتصل على 0700000071"
+284,https://example.com/agrovendors-demo/posts/100284,2022-04-18T01:58:26.000Z,Nadia Brahimi,https://example.com/agrovendors-demo/sellers/seller-285,0700000069,"عندي 142 قنطار لفت للبيع، محصول هذا الموسم
+أدرار
+أسعار مناسبة للتجار
+إمكانية التوصيل
+المهتم يتصل على 0700000069"
+285,https://example.com/agrovendors-demo/posts/100285,2022-04-17T04:08:08.000Z,مزرعة الهضاب,https://example.com/agrovendors-demo/sellers/seller-286,0700000268,"للبيع زيتون نوعية ممتازة. الكمية: 186 قنطار
+متواجد في باتنة
+بسعر معقول
+بدون توصيل
+واتساب 0700000268"
+286,https://example.com/agrovendors-demo/posts/100286,2022-04-16T18:13:06.000Z,Salim Bouzid,https://example.com/agrovendors-demo/sellers/seller-287,0500000072,"للبيع بطيخ من الفلاح للمستهلك. الكمية: 87 قنطار
+متواجد في تيارت
+السعر قابل للنقاش
+للتواصل: 0500000072"
+287,https://example.com/agrovendors-demo/posts/100287,2022-04-14T17:05:36.000Z,Nadia Taleb,https://example.com/agrovendors-demo/sellers/seller-288,0700000020,"متوفر قمح محصول هذا الموسم، الكمية 139 قنطار
+الأغواط
+السعر 6030 دج للقنطار
+للتواصل: 0700000020"
+288,https://example.com/agrovendors-demo/posts/100288,2022-04-12T06:27:30.000Z,مزرعة الزيتون,https://example.com/agrovendors-demo/sellers/seller-289,0700000135,متوفر زيتون مباشرة من المزرعة، الكمية 178 قنطار المكان: جيجل أسعار مناسبة للتجار التوصيل متوفر لكل الولايات 📞 0700000135
+289,https://example.com/agrovendors-demo/posts/100289,2022-04-07T20:16:11.000Z,Amine Mebarki,https://example.com/agrovendors-demo/sellers/seller-290,0700000236,"للبيع طماطم مباشرة من المزرعة. الكمية: 269 صندوق
+متواجد في المدية
+بسعر معقول
+بدون توصيل
+واتساب 0700000236"
+290,https://example.com/agrovendors-demo/posts/100290,2022-04-07T05:11:01.000Z,Nassim Bouzid,https://example.com/agrovendors-demo/sellers/seller-291,0700000207,كاين تبن نوعية ممتازة للبيع، 270 بالة المكان: تلمسان السعر 900 دج للبالة الهاتف 0700000207
+291,https://example.com/agrovendors-demo/posts/100291,2022-04-05T04:56:08.000Z,Abdelkader Bensaid,https://example.com/agrovendors-demo/sellers/seller-292,0700000264,متوفر فراولة محصول هذا الموسم، الكمية 425 صندوق وهران بسعر معقول النقل على حساب المشتري 📞 0700000264
+292,https://example.com/agrovendors-demo/posts/100292,2022-04-04T23:04:44.000Z,مزرعة السهل,https://example.com/agrovendors-demo/sellers/seller-293,0700000143,متوفر لفت من الفلاح للمستهلك، الكمية 181 قنطار الموقع ولاية باتنة 60 دج للكيلو بدون توصيل المهتم يتصل على 0700000143
+293,https://example.com/agrovendors-demo/posts/100293,2022-04-03T16:40:44.000Z,Sofiane Hamidi,https://example.com/agrovendors-demo/sellers/seller-294,0600000127,للبيع تفاح درجة أولى. الكمية: 67 قنطار متواجد في غليزان بسعر معقول 📞 0600000127
+294,https://example.com/agrovendors-demo/posts/100294,2022-04-03T09:16:12.000Z,أبو عمر,https://example.com/agrovendors-demo/sellers/seller-295,0600000140,"كاين زيتون سلعة نقية للبيع، 114 قنطار
+المكان: تلمسان
+330 دج للكيلو
+التوصيل إلى 58 ولاية
+📞 0600000140"

@@ -27,7 +27,7 @@
   <img src="https://img.shields.io/badge/DB_models-6-1565C0?style=flat-square" alt="6 models"/>
   <img src="https://img.shields.io/badge/migrations-16-6A1B9A?style=flat-square" alt="16 migrations"/>
   <img src="https://img.shields.io/badge/merged_PRs-11-FB8C00?style=flat-square" alt="11 merged PRs"/>
-  <img src="https://img.shields.io/badge/seeded_real_offers-295-00897B?style=flat-square" alt="295 seeded offers"/>
+  <img src="https://img.shields.io/badge/seeded_mock_offers-295-00897B?style=flat-square" alt="295 seeded mock offers"/>
 </p>
 
 <p align="center">
@@ -44,7 +44,7 @@
 
 ## 🌱 The problem
 
-In Algeria, farmers often sell produce in **Facebook groups**. The posts are unstructured Arabic text, they are hard to search, and the only way to reach the seller is a phone number somewhere in the text. One example from the dataset says *"Peeled garlic available at good prices, delivery to all 58 wilayas, contact us at 06…"*.
+In Algeria, farmers often sell produce in **Facebook groups**. The posts are unstructured Arabic text, they are hard to search, and the only way to reach the seller is a phone number somewhere in the text. A typical post reads like *"Garlic for sale, good prices, delivery to all 58 wilayas, call 06…"*.
 
 **AgroVendors** is the backend for a marketplace that turns these posts into structured, searchable offers. Sellers get real accounts, and the platform has the security, access control and observability that a production API needs.
 
@@ -64,7 +64,7 @@ In Algeria, farmers often sell produce in **Facebook groups**. The posts are uns
 | **Secure file handling** | Uploads are checked by their **magic bytes**, not by the extension or the `Content-Type` header. Size limits, UUID file names, and images are streamed back to the client | [`custom-file-type.validator.ts`](src/validators/custom-file-type.validator.ts) |
 | **Observability** | Winston with 3 separate log streams. A global interceptor times **every request** | [`profiling.interceptor.ts`](src/interceptors/profiling/profiling.interceptor.ts) |
 | **Error handling** | Two layers of global exception filters return one consistent error format and never leak internals | [`filters/`](src/filters) |
-| **Data engineering** | Imports **295 real-world scraped posts** (Arabic, UTF-8) with a streaming CSV parser and removes duplicate sellers by phone number | [`seed.ts`](prisma/seed.ts) |
+| **Data engineering** | Streams a CSV of **295 Arabic (UTF-8) marketplace posts** into the database and matches sellers by phone number. The data is synthetic, in the same format as scraped Facebook posts | [`seed.ts`](prisma/seed.ts) |
 | **API design & docs** | DTO validation with a strict whitelist, filtering, sorting and pagination, and Swagger/OpenAPI docs that list the error responses of each endpoint | [`main.ts`](src/main.ts) |
 | **Workflow** | Feature branches, 11 merged PRs, and conventional commits (`feat(...)`, `fix(...)`, `refactor:`) | Git history |
 
@@ -270,15 +270,15 @@ The client never sees a stack trace or a database error, and every unexpected fa
 </details>
 
 <details>
-<summary><b>🌾 Turning scraped posts into seller accounts</b></summary>
+<summary><b>🌾 Turning marketplace posts into seller accounts</b></summary>
 <br/>
 
-The database is seeded with **295 real offers** from an Algerian agricultural Facebook group, posted between April 2022 and August 2023. The seed script **streams** the CSV, removes duplicate sellers by phone number, and creates a **seller account with no password** for each new phone number.
+The seed script imports offers from a CSV in the format of posts scraped from Algerian agricultural Facebook groups: Arabic text with a product, a quantity, a wilaya and a phone number. The repo ships **295 synthetic posts** in that format, and every name, phone number and link in them is made up. The script **streams** the CSV, matches sellers by phone number, and creates a **seller account with no password** for each new phone number.
 
 ```mermaid
 flowchart LR
-    FB["📘 Facebook group<br/>Arabic posts"] --> SCR["🕷️ Scrape and clean<br/>(done outside this repo)"]
-    SCR --> CSV[("📄 CSV<br/>295 posts")]
+    FB["📘 Scraped Facebook posts<br/>Arabic text"] -.->|"same format"| CSV[("📄 CSV<br/>prisma/data")]
+    MOCK["🧪 295 synthetic posts<br/>shipped in this repo"] --> CSV
     CSV --> SEED["🌱 prisma/seed.ts<br/>streamed with csv-parser"]
     SEED --> Q{"📞 Phone number<br/>already known?"}
     Q -- "yes" --> A1["➕ Add the offer to<br/>the existing seller"]
@@ -290,7 +290,7 @@ flowchart LR
     classDef dec fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#E65100
     classDef out fill:#FCE4EC,stroke:#E0234E,stroke-width:2px,color:#880E4F
     class FB,CSV src
-    class SCR,SEED,A1,A2 proc
+    class MOCK,SEED,A1,A2 proc
     class Q dec
     class CLAIM out
 ```
@@ -452,7 +452,7 @@ APP_URL="http://localhost:3001"
 ```bash
 yarn db:dev:up            # 🐳 start PostgreSQL in Docker (port 5434)
 yarn prisma:dev:deploy    # 🗄️ apply the 16 migrations
-yarn db:dev:seed          # 🌱 create roles and admin, import the 295 scraped offers
+yarn db:dev:seed          # 🌱 create roles and admin, import 295 mock offers
 ```
 
 > [!TIP]
@@ -477,6 +477,7 @@ agrovendors/
 ├── 📂 prisma/
 │   ├── schema.prisma               # 6 models + Permission enum
 │   ├── migrations/                 # 16 versioned SQL migrations
+│   ├── data/                       # 295 synthetic offers (CSV)
 │   └── seed.ts                     # roles, admin, streaming CSV import
 ├── 📂 src/
 │   ├── main.ts                     # bootstrap: ValidationPipe + Swagger
@@ -492,8 +493,7 @@ agrovendors/
 │       ├── phone-numbers/          # several phone numbers per user
 │       ├── logging/                # Winston configs + LoggingService
 │       └── prisma/                 # shared PrismaService
-├── 🐳 docker-compose.yml
-└── 📄 cleaned_Agriculture_people_data.csv
+└── 🐳 docker-compose.yml
 ```
 
 ---
@@ -513,7 +513,7 @@ timeline
                : Global exception handling, Winston logging, profiling (PR 4)
     July 2024  : Hardening and refactors, sensitive fields hidden (PRs 5 to 8)
                : Phone numbers module (PR 9)
-               : Import of scraped marketplace data (PR 10)
+               : Marketplace data import pipeline (PR 10)
                : Swagger and OpenAPI docs (PR 11)
 ```
 
@@ -525,7 +525,7 @@ timeline
 - [x] 🛡️ Permission-based RBAC with audited permission grants
 - [x] 📸 Image uploads checked by content
 - [x] 🚨 Global error handling, logging and request profiling
-- [x] 🌾 Import of scraped real-world marketplace data
+- [x] 🌾 Import pipeline for marketplace posts, with 295 mock offers
 - [x] 📚 Swagger / OpenAPI documentation
 - [ ] 🧪 Unit and e2e test suite (Jest and Supertest are already set up)
 - [ ] ⚡ Move filtering, sorting and pagination into the SQL query (`where` / `orderBy` / `skip` / `take`)
