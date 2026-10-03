@@ -31,7 +31,7 @@
 </p>
 
 <p align="center">
-  <a href="#-for-recruiters--tldr">🎯 TL;DR</a> •
+  <a href="#-at-a-glance">🎯 At a glance</a> •
   <a href="#%EF%B8%8F-architecture">🏗️ Architecture</a> •
   <a href="#-engineering-highlights">💎 Highlights</a> •
   <a href="#%EF%B8%8F-data-model">🗄️ Data model</a> •
@@ -49,13 +49,13 @@ In Algeria, farmers often sell produce in **Facebook groups**. The posts are uns
 **AgroVendors** is the backend for a marketplace that turns these posts into structured, searchable offers. Sellers get real accounts, and the platform has the security, access control and observability that a production API needs.
 
 > [!TIP]
-> **Short on time?** Read the [TL;DR](#-for-recruiters--tldr), look at the [architecture diagram](#%EF%B8%8F-architecture), then open [`auth.service.ts`](src/modules/auth/auth.service.ts) and [`permissions.guard.ts`](src/modules/authorization/permissions/permissions.guard.ts).
+> **Where to start in the code:** [`auth.service.ts`](src/modules/auth/auth.service.ts) for the token lifecycle, [`permissions.guard.ts`](src/modules/authorization/permissions/permissions.guard.ts) for authorization, and the [architecture diagram](#%EF%B8%8F-architecture) for how a request flows.
 
 ---
 
-## 🎯 For recruiters — TL;DR
+## 🎯 At a glance
 
-| 🧠 Skill | 💡 How the project shows it | 📍 Where to look |
+| 🧩 Area | 💡 What is implemented | 📍 Where to look |
 |---|---|---|
 | **Backend architecture** | A modular NestJS app with 7 feature modules, dependency injection, and global filters and interceptors registered through DI tokens | [`app.module.ts`](src/app.module.ts) |
 | **Authentication** | Access and refresh JWTs signed with separate secrets. The refresh token is **rotated** on every use, stored **bcrypt-hashed**, and revoked on logout | [`auth.service.ts`](src/modules/auth/auth.service.ts) |
@@ -541,13 +541,10 @@ timeline
   <b>Mohamed Amine Chadli</b><br/>
   <i>Backend developer: Node.js · NestJS · TypeScript · PostgreSQL</i><br/><br/>
   <a href="https://github.com/chadlimedamine"><img src="https://img.shields.io/badge/GitHub-chadlimedamine-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
-  <!-- Add your LinkedIn / email / portfolio badges here, e.g.:
-  <a href="https://www.linkedin.com/in/YOUR-HANDLE"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  -->
 </p>
 
 <p align="center">
-  <i>⭐ If this project interests you, a star is appreciated and I'm happy to talk about it.</i>
+  <i>⭐ If you find this project useful, consider giving it a star.</i>
 </p>
 
 <p align="center">
